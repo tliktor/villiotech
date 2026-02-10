@@ -160,7 +160,7 @@ export default function Lakossagnak() {
         title="Kérjen ajánlatot"
         subtitle="Válaszolok 1 munkanapon belül. Budán dolgozom, kalibrált műszerekkel, garanciával."
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36000000000' }}
+        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
       />
     </>
   )

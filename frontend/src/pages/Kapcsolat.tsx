@@ -89,7 +89,7 @@ export default function Kapcsolat() {
           <CheckCircle className="w-16 h-16 text-success mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">{t('contact.success.title')}</h2>
           <p className="opacity-80 mb-4">{t('contact.success.message')}</p>
-          <p className="text-sm opacity-60">{t('contact.success.urgent')} <a href="tel:+36000000000" className="text-primary font-semibold">+36 00 000 0000</a></p>
+          <p className="text-sm opacity-60">{t('contact.success.urgent')} <a href="tel:+36302389945" className="text-primary font-semibold">+36 30 238 9945</a></p>
         </ThemeCard>
       </section>
     )
@@ -107,7 +107,7 @@ export default function Kapcsolat() {
         title={t('contact.hero.title')}
         subtitle={t('contact.hero.subtitle')}
         cta1={{ label: t('contact.hero.cta1'), to: '#form' }}
-        cta2={{ label: t('contact.hero.cta2'), href: 'tel:+36000000000' }}
+        cta2={{ label: t('contact.hero.cta2'), href: 'tel:+36302389945' }}
       />
 
       {/* Contact info */}
@@ -117,7 +117,7 @@ export default function Kapcsolat() {
             <Phone className="w-8 h-8 text-primary shrink-0" />
             <div>
               <p className="font-semibold">{t('contact.phone')}</p>
-              <a href="tel:+36000000000" className="text-primary">+36 00 000 0000</a>
+              <a href="tel:+36302389945" className="text-primary">+36 30 238 9945</a>
             </div>
           </ThemeCard>
           <ThemeCard className="flex items-center gap-4">
@@ -244,7 +244,7 @@ export default function Kapcsolat() {
               <button type="submit" className="btn btn-primary btn-lg flex-1" disabled={submitting}>
                 {submitting ? <><Loader2 className="w-5 h-5 animate-spin" /> {t('contact.form.submit_loading')}</> : t('contact.form.submit')}
               </button>
-              <a href="tel:+36000000000" className="btn btn-warning btn-lg flex-1">
+              <a href="tel:+36302389945" className="btn btn-warning btn-lg flex-1">
                 {t('contact.form.urgent_call')}
               </a>
             </div>

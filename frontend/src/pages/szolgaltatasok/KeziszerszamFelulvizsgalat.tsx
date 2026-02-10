@@ -94,7 +94,7 @@ export default function KeziszerszamFelulvizsgalat() {
         title="Kérjen ajánlatot kéziszerszám felülvizsgálatra"
         subtitle="Helyszínen végzem, nem kell sehová vinni az eszközöket."
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36000000000' }}
+        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
       />
     </>
   )

@@ -83,7 +83,7 @@ export default function Home() {
         title={t('home.hero.title')}
         subtitle={t('home.hero.subtitle')}
         cta1={{ label: t('home.hero.cta1'), to: '/kapcsolat' }}
-        cta2={{ label: t('home.hero.cta2'), href: 'tel:+36000000000' }}
+        cta2={{ label: t('home.hero.cta2'), href: 'tel:+36302389945' }}
       />
 
       {/* Bento target cards */}
@@ -184,7 +184,7 @@ export default function Home() {
           title={t('home.final_cta.title')}
           subtitle={t('home.final_cta.subtitle')}
           cta1={{ label: t('home.final_cta.cta1'), to: '/kapcsolat' }}
-          cta2={{ label: t('home.final_cta.cta2'), href: 'tel:+36000000000' }}
+          cta2={{ label: t('home.final_cta.cta2'), href: 'tel:+36302389945' }}
         />
       </ScrollReveal>
     </>

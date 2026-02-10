@@ -146,7 +146,7 @@ export default function Tarsashazaknak() {
         title="Kérjen árajánlatot a közgyűléshez"
         subtitle="Tételes árajánlatot küldök, amit bemutathat a lakóközösségnek."
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Telefonos egyeztetés', href: 'tel:+36000000000' }}
+        cta2={{ label: '☎ Telefonos egyeztetés', href: 'tel:+36302389945' }}
       />
     </>
   )

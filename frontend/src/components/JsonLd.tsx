@@ -9,7 +9,7 @@ const localBusinessSchema = {
   name: 'Villiotech',
   description: 'Villamos biztonsági felülvizsgálat, villanyszerelés, IT hálózat kiépítés Budán. Villamosmérnök, kalibrált műszerek, joghatályos jegyzőkönyv.',
   url: 'https://villiotech.hu',
-  telephone: '+36000000000', // TODO: valódi telefonszám
+  telephone: '+36302389945',
   email: 'info@villiotech.hu',
   address: {
     '@type': 'PostalAddress',

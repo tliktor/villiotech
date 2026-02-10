@@ -88,7 +88,7 @@ export default function ItHalozat() {
       <CTASection
         title="Kérjen ajánlatot hálózat kiépítésre"
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36000000000' }}
+        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
       />
     </>
   )

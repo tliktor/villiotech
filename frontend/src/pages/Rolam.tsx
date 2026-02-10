@@ -46,7 +46,7 @@ export default function Rolam() {
         title="Villamosmérnök, 20 év tapasztalattal – most Önnek dolgozom."
         subtitle="Vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. Két évtizednyi multinacionális tapasztalat után a budai otthonok, társasházak és munkahelyek villamos biztonságáért dolgozom."
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36000000000' }}
+        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
       />
 
       {/* Bemutatkozás */}
@@ -113,7 +113,7 @@ export default function Rolam() {
         title="Dolgozzunk együtt"
         subtitle="Ha precíz, megbízható villamos szakembert keres Budán – keressen bizalommal."
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36000000000' }}
+        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
       />
     </>
   )

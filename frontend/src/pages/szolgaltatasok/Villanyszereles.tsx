@@ -37,7 +37,7 @@ export default function Villanyszereles() {
       <Hero
         subtitle="Kapcsolócsere, biztosítéktábla, teljes lakás villanyszerelés. Tételes árajánlat, tiszta munkavégzés, garancia minden munkára."
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: 'Sürgős? 4 órán belül', href: 'tel:+36000000000' }}
+        cta2={{ label: 'Sürgős? 4 órán belül', href: 'tel:+36302389945' }}
       />
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
@@ -85,7 +85,7 @@ export default function Villanyszereles() {
       <CTASection
         title="Kérjen ajánlatot villanyszerelésre"
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36000000000' }}
+        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
       />
     </>
   )

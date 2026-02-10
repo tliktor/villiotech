@@ -77,7 +77,7 @@ export default function Munkahelyeknek() {
       <Hero
         subtitle="Irodája, üzlete vagy vendéglátóhelye van? A villamos biztonsági felülvizsgálat 3 évente kötelező. Az elektromos kéziszerszámok éves ellenőrzését helyszínen végzem."
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: 'Sürgős? 4 órán belül', href: 'tel:+36000000000' }}
+        cta2={{ label: 'Sürgős? 4 órán belül', href: 'tel:+36302389945' }}
       />
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
@@ -171,7 +171,7 @@ export default function Munkahelyeknek() {
         title="Ne várja meg a hatósági ellenőrzést"
         subtitle="A kötelező felülvizsgálat elmulasztása bírságot vonhat maga után. Kérjen ajánlatot, és legyen naprakész."
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Telefonos egyeztetés', href: 'tel:+36000000000' }}
+        cta2={{ label: '☎ Telefonos egyeztetés', href: 'tel:+36302389945' }}
       />
     </>
   )

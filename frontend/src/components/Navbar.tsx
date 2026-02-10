@@ -70,7 +70,7 @@ export default function Navbar() {
           {/* Right side */}
           <div className="flex items-center gap-2">
             {/* Urgent badge */}
-            <a href="tel:+36000000000" className="hidden md:flex btn btn-sm btn-warning gap-1">
+            <a href="tel:+36302389945" className="hidden md:flex btn btn-sm btn-warning gap-1">
               <Phone className="w-4 h-4" />
               {t('nav.urgent')}
             </a>
