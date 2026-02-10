@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "home": "Kezdőlap",
+    "residents": "Lakosságnak",
+    "condos": "Társasházaknak",
+    "businesses": "Munkahelyeknek",
+    "services": "Szolgáltatások",
+    "about": "Rólam",
+    "contact": "Kapcsolat",
+    "urgent": "Sürgős? 4h",
+    "theme": "Téma váltás",
+    "menu": "Menü"
+  },
+  "services": {
+    "electrical_inspection": "Villamos felülvizsgálat",
+    "electrical_work": "Villanyszerelés",
+    "it_network": "IT hálózat",
+    "tool_inspection": "Kéziszerszám felülvizsgálat"
+  },
+  "footer": {
+    "tagline": "Villamos biztonság, mérnöki precizitással – Budán.",
+    "card_payment": "Kártyás fizetés elfogadva",
+    "services_title": "Szolgáltatások",
+    "it_network_full": "IT hálózat (WiFi/UTP)",
+    "target_title": "Kinek?",
+    "contact_title": "Kapcsolat",
+    "location": "Budapest – Buda",
+    "english_service": "🇬🇧 English service available",
+    "copyright": "Minden jog fenntartva.",
+    "privacy": "Adatvédelem",
+    "terms": "ÁSZF",
+    "quality": "Kalibrált műszerek · Joghatályos mérések · Garancia"
+  },
+  "home": {
+    "hero": {
+      "title": "Villamos biztonság, mérnöki precizitással – Budán.",
+      "subtitle": "Joghatályos felülvizsgálat, szakszerű villanyszerelés és IT hálózat kiépítés. Kalibrált műszerek, tételes árajánlat, garancia minden munkára.",
+      "cta1": "Ajánlatot kérek",
+      "cta2": "Sürgős? Hívjon most"
+    },
+    "target_section": "Válassza ki, miben segíthetek",
+    "residents": {
+      "title": "Otthonok és lakástulajdonosok",
+      "description": "Eladás vagy bérbeadás előtt áll? Felújítás után kell jegyzőkönyv? Villanyszerelés vagy IT hálózat kell az otthonába?",
+      "bullet1": "Villamos biztonsági felülvizsgálat eladás/bérbeadás előtt",
+      "bullet2": "Villanyszerelés, javítás, korszerűsítés",
+      "bullet3": "WiFi/UTP hálózat otthoni irodához",
+      "bullet4": "Kalibrált műszerek, joghatályos jegyzőkönyv"
+    },
+    "condos": {
+      "title": "Társasházak és közös képviselők",
+      "description": "A társasház villamos hálózata az összes lakó biztonsága. Tételes árajánlat a közgyűléshez, ÁFA-mentes számlázás.",
+      "bullet1": "Kötelező villamos biztonsági felülvizsgálat",
+      "bullet2": "Közös területek villanyszerelése",
+      "bullet3": "Tételes árajánlat a közgyűléshez",
+      "bullet4": "ÁFA-mentes számlázás társasházaknak"
+    },
+    "businesses": {
+      "title": "Irodák, üzletek, vendéglátóhelyek",
+      "description": "A villamos biztonsági felülvizsgálat 3 évente kötelező. Kéziszerszámok éves ellenőrzése helyszínen.",
+      "bullet1": "3 évenkénti kötelező villamos felülvizsgálat",
+      "bullet2": "Kéziszerszámok éves felülvizsgálata helyszínen",
+      "bullet3": "Villanyszerelés, bővítés, javítás",
+      "bullet4": "Fodrászat, vendéglátás, rendelő – bármilyen iparág"
+    },
+    "details_cta": "Részletek és ajánlatkérés",
+    "why_me": "Miért engem válasszon?",
+    "process": "Így dolgozunk együtt",
+    "pricing": "Átlátható árazás, meglepetések nélkül",
+    "deliverables": "Mit kap kézhez?",
+    "quote_testimonial": "\"Nem ígérek olyat, amit nem tudok tartani. Amit vállalok, azt pontosan és precízen teljesítem.\"",
+    "english": {
+      "title": "English-speaking clients welcome",
+      "description": "I provide all electrical services in fluent English – inspections, installations, IT networking. Full documentation in English available upon request. Serving the Buda side of Budapest.",
+      "cta": "Request a quote in English →"
+    },
+    "final_cta": {
+      "title": "Kérjen ajánlatot most",
+      "subtitle": "Válaszolok 1 munkanapon belül. Budán dolgozom, kalibrált műszerekkel, garanciával.",
+      "cta1": "Ajánlatot kérek",
+      "cta2": "☎ Telefonos egyeztetés"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Kérjen ajánlatot – válaszolok 1 munkanapon belül.",
+      "subtitle": "Töltse ki az űrlapot, vagy hívjon közvetlenül. Budán dolgozom, kalibrált műszerekkel, garanciával.",
+      "cta1": "☎ Hívjon most",
+      "cta2": "Sürgős? 4 órán belül"
+    },
+    "phone": "Telefon",
+    "email": "E-mail",
+    "service_area": "Szolgáltatási terület",
+    "form_title": "Ajánlatkérés",
+    "success": {
+      "title": "Köszönjük az ajánlatkérést!",
+      "message": "Megkaptuk az üzenetét. Visszajelzünk 1 munkanapon belül a megadott telefonszámon.",
+      "urgent": "Ha sürgős, hívjon közvetlenül:"
+    },
+    "form": {
+      "name": "Név",
+      "phone": "Telefonszám",
+      "phone_help": "Ezen a számon keresem vissza",
+      "email_help": "Ide küldöm az árajánlatot",
+      "service_question": "Milyen szolgáltatásra van szüksége?",
+      "service_options": {
+        "choose": "Válasszon…",
+        "inspection": "Villamos biztonsági felülvizsgálat",
+        "electrical": "Villanyszerelés / javítás",
+        "it": "IT hálózat (WiFi / UTP)",
+        "tools": "Kéziszerszám felülvizsgálat",
+        "other": "Egyéb"
+      },
+      "client_type": "Ön…",
+      "client_options": {
+        "individual": "Magánszemély",
+        "condo": "Társasház",
+        "business": "Vállalkozás"
+      },
+      "address": "Ingatlan/munkahely címe (kerület)",
+      "address_help": "A pontos cím az egyeztetéskor",
+      "description": "Rövid leírás",
+      "description_placeholder": "Írja le pár mondatban, mire van szüksége…",
+      "preferred_time": "Mikor lenne jó időpont?",
+      "preferred_time_placeholder": "Pl. jövő hét kedd délelőtt",
+      "urgent_checkbox": "Sürgős kiszállás kell (4 órán belül, +50% felár)",
+      "privacy_checkbox": "Elfogadom az adatvédelmi tájékoztatót",
+      "submit": "Ajánlatot kérek",
+      "submit_loading": "Küldés…",
+      "urgent_call": "Sürgős – hívjon vissza 4 órán belül"
+    },
+    "trust": {
+      "response": "Válaszolok 1 munkanapon belül",
+      "detailed": "Tételes árajánlatot kap",
+      "confidential": "Adatait bizalmasan kezelem",
+      "no_spam": "Nem küldök hírlevelet"
+    },
+    "english": {
+      "title": "Request a quote in English",
+      "description": "Fill out the form above or call me directly. I provide all services in fluent English. Serving the Buda side of Budapest."
+    },
+    "validation": {
+      "required": "Kérem, töltse ki ezt a mezőt",
+      "phone_required": "Kérem, adjon meg érvényes telefonszámot",
+      "email_invalid": "Kérem, adjon meg érvényes e-mail címet",
+      "service_required": "Kérem, válassza ki a kívánt szolgáltatást",
+      "client_type_required": "Kérem, válassza ki, hogy magánszemély, társasház vagy vállalkozás",
+      "privacy_required": "Az ajánlatkéréshez el kell fogadnia az adatvédelmi tájékoztatót"
+    }
+  }
+}

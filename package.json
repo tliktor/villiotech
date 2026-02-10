@@ -1,0 +1,27 @@
+{
+  "name": "villiotech",
+  "version": "1.0.0",
+  "description": "Serverless React application on AWS",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "infrastructure",
+    "shared"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --workspaces",
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspaces",
+    "deploy": "npm run deploy --workspace=infrastructure",
+    "test": "npm run test --workspaces"
+  },
+  "keywords": [
+    "react",
+    "aws",
+    "serverless",
+    "cdk"
+  ],
+  "author": "",
+  "license": "MIT"
+}

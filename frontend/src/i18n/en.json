@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "home": "Home",
+    "residents": "For Residents",
+    "condos": "For Condos",
+    "businesses": "For Businesses",
+    "services": "Services",
+    "about": "About Me",
+    "contact": "Contact",
+    "urgent": "Urgent? 4h",
+    "theme": "Toggle theme",
+    "menu": "Menu"
+  },
+  "services": {
+    "electrical_inspection": "Electrical inspection",
+    "electrical_work": "Electrical work",
+    "it_network": "IT network",
+    "tool_inspection": "Tool inspection"
+  },
+  "footer": {
+    "tagline": "Electrical safety with engineering precision – in Buda.",
+    "card_payment": "Card payment accepted",
+    "services_title": "Services",
+    "it_network_full": "IT network (WiFi/UTP)",
+    "target_title": "For whom?",
+    "contact_title": "Contact",
+    "location": "Budapest – Buda",
+    "english_service": "🇬🇧 English service available",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "quality": "Calibrated instruments · Legal measurements · Warranty"
+  },
+  "home": {
+    "hero": {
+      "title": "Electrical safety with engineering precision – in Buda.",
+      "subtitle": "Legal inspections, professional electrical work and IT network installation. Calibrated instruments, detailed quotes, warranty on all work.",
+      "cta1": "Request quote",
+      "cta2": "Urgent? Call now"
+    },
+    "target_section": "Choose how I can help you",
+    "residents": {
+      "title": "Homes and property owners",
+      "description": "Planning to sell or rent? Need a certificate after renovation? Need electrical work or IT network at home?",
+      "bullet1": "Electrical safety inspection before sale/rental",
+      "bullet2": "Electrical work, repairs, upgrades",
+      "bullet3": "WiFi/UTP network for home office",
+      "bullet4": "Calibrated instruments, legal certificate"
+    },
+    "condos": {
+      "title": "Condominiums and property managers",
+      "description": "The building's electrical network is the safety of all residents. Detailed quote for the assembly, VAT-free billing.",
+      "bullet1": "Mandatory electrical safety inspection",
+      "bullet2": "Common area electrical work",
+      "bullet3": "Detailed quote for the assembly",
+      "bullet4": "VAT-free billing for condominiums"
+    },
+    "businesses": {
+      "title": "Offices, shops, restaurants",
+      "description": "Electrical safety inspection is mandatory every 3 years. Annual tool inspection on-site.",
+      "bullet1": "Mandatory electrical inspection every 3 years",
+      "bullet2": "Annual tool inspection on-site",
+      "bullet3": "Electrical work, expansion, repairs",
+      "bullet4": "Hair salon, catering, clinic – any industry"
+    },
+    "details_cta": "Details and quote request",
+    "why_me": "Why choose me?",
+    "process": "How we work together",
+    "pricing": "Transparent pricing, no surprises",
+    "deliverables": "What do you get?",
+    "quote_testimonial": "\"I don't promise what I can't deliver. What I undertake, I complete accurately and precisely.\"",
+    "english": {
+      "title": "English-speaking clients welcome",
+      "description": "I provide all electrical services in fluent English – inspections, installations, IT networking. Full documentation in English available upon request. Serving the Buda side of Budapest.",
+      "cta": "Request a quote in English →"
+    },
+    "final_cta": {
+      "title": "Request a quote now",
+      "subtitle": "I respond within 1 business day. Working in Buda with calibrated instruments and warranty.",
+      "cta1": "Request quote",
+      "cta2": "☎ Phone consultation"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Request a quote – I respond within 1 business day.",
+      "subtitle": "Fill out the form or call directly. Working in Buda with calibrated instruments and warranty.",
+      "cta1": "☎ Call now",
+      "cta2": "Urgent? Within 4 hours"
+    },
+    "phone": "Phone",
+    "email": "Email",
+    "service_area": "Service area",
+    "form_title": "Quote request",
+    "success": {
+      "title": "Thank you for your quote request!",
+      "message": "We received your message. We'll call you back within 1 business day at the provided phone number.",
+      "urgent": "If urgent, call directly:"
+    },
+    "form": {
+      "name": "Name",
+      "phone": "Phone number",
+      "phone_help": "I'll call you back on this number",
+      "email_help": "I'll send the quote here",
+      "service_question": "What service do you need?",
+      "service_options": {
+        "choose": "Choose…",
+        "inspection": "Electrical safety inspection",
+        "electrical": "Electrical work / repair",
+        "it": "IT network (WiFi / UTP)",
+        "tools": "Tool inspection",
+        "other": "Other"
+      },
+      "client_type": "You are…",
+      "client_options": {
+        "individual": "Individual",
+        "condo": "Condominium",
+        "business": "Business"
+      },
+      "address": "Property/workplace address (district)",
+      "address_help": "Exact address during consultation",
+      "description": "Brief description",
+      "description_placeholder": "Describe in a few sentences what you need…",
+      "preferred_time": "When would be a good time?",
+      "preferred_time_placeholder": "E.g. next week Tuesday morning",
+      "urgent_checkbox": "Urgent call-out needed (within 4 hours, +50% surcharge)",
+      "privacy_checkbox": "I accept the privacy policy",
+      "submit": "Request quote",
+      "submit_loading": "Sending…",
+      "urgent_call": "Urgent – call back within 4 hours"
+    },
+    "trust": {
+      "response": "I respond within 1 business day",
+      "detailed": "You get a detailed quote",
+      "confidential": "I handle your data confidentially",
+      "no_spam": "I don't send newsletters"
+    },
+    "english": {
+      "title": "Request a quote in English",
+      "description": "Fill out the form above or call me directly. I provide all services in fluent English. Serving the Buda side of Budapest."
+    },
+    "validation": {
+      "required": "Please fill out this field",
+      "phone_required": "Please provide a valid phone number",
+      "email_invalid": "Please provide a valid email address",
+      "service_required": "Please select the desired service",
+      "client_type_required": "Please select whether you are an individual, condominium or business",
+      "privacy_required": "You must accept the privacy policy to request a quote"
+    }
+  }
+}
