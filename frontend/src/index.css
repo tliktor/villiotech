@@ -73,8 +73,8 @@
     radial-gradient(ellipse 60% 70% at 85% 25%, oklch(0.30 0.15 230 / 0.45) 0%, transparent 60%),
     radial-gradient(ellipse 50% 50% at 50% 85%, oklch(0.32 0.14 300 / 0.4) 0%, transparent 60%),
     radial-gradient(ellipse 40% 40% at 5% 65%, oklch(0.28 0.12 250 / 0.35) 0%, transparent 60%),
-    oklch(0.10 0.03 260);
-  background-attachment: fixed;
+    oklch(0.10 0.03 260) !important;
+  background-attachment: fixed !important;
 }
 
 /* ============================================

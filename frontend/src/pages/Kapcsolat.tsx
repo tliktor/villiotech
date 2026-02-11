@@ -34,10 +34,16 @@ export default function Kapcsolat() {
   const { t, i18n } = useTranslation()
   const seo = useSEO('kapcsolat')
   const [searchParams] = useSearchParams()
+  const isEnglish = searchParams.get('lng') === 'en'
   const [form, setForm] = useState<FormData>({
     ...initialForm,
-    preferredLanguage: searchParams.get('lng') === 'en' ? 'en' : 'hu'
+    preferredLanguage: isEnglish ? 'en' : 'hu'
   })
+
+  // Switch UI language if coming from English landing page
+  if (isEnglish && i18n.language !== 'en') {
+    i18n.changeLanguage('en')
+  }
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [apiError, setApiError] = useState<string | null>(null)
