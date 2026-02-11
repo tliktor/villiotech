@@ -60,6 +60,7 @@ export default function App() {
                   <Route path="/rolam" element={<Rolam />} />
                   <Route path="/kapcsolat" element={<Kapcsolat />} />
                   <Route path="/adatvedelem" element={<Adatvedelem />} />
+                  <Route path="/en/adatvedelem" element={<Adatvedelem />} />
                   <Route path="/aszf" element={<ASZF />} />
                 </Route>
               </Routes>
