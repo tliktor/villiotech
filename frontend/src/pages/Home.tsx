@@ -111,6 +111,7 @@ export default function Home() {
         'Buda service area',
       ],
       to: '/en/english-speaking',
+      cta: 'Learn more',
     },
   ]
 
@@ -155,7 +156,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="btn btn-primary btn-sm gap-1 self-center">
-                  {t('home.details_cta')} <ArrowRight className="w-4 h-4" />
+                  {card.cta || t('home.details_cta')} <ArrowRight className="w-4 h-4" />
                 </div>
               </ThemeCard>
               </Link>
