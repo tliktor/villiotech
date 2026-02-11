@@ -38,6 +38,13 @@ A weboldal **MVP COMPLETE** - production-ready és élőben van.
 
 **Megjegyzés:** A legtöbb "hiba" valójában teszt selektor probléma, nem funkcionális hiba. Az oldal működik.
 
+## Munkafolyamat szabály
+🛑 **KRITIKUS**: SOHA ne kezdj implementálást a tulajdonos explicit engedélye nélkül!
+- Plan mode-ban CSAK tervezz, NE írj kódot
+- Implementálás előtt MINDIG kérj jóváhagyást
+- Ha engedély nélkül kezdesz dolgozni, nem lehet leállítani és hibákat okozol
+- Ez a szabály FELÜLÍR minden mást
+
 ## Következő lépések
 - Opcionális: E2E tesztek finomítása
 - Opcionális: Framer Motion animációk

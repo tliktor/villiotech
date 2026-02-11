@@ -26,17 +26,17 @@ const whenToCallCards = [
 
 const processSteps = [
   { number: 1, title: 'Get in touch', description: 'Call, WhatsApp, or fill out the form. Describe your situation — I respond in English within a few hours.' },
-  { number: 2, title: 'Site visit', description: 'I arrive on time, assess the situation, and explain clearly what needs to be done and what it will cost.' },
+  { number: 2, title: 'Site visit', description: 'I arrive on time, assess the situation, and explain clearly what needs to be done and what it will cost. You\'ll get a confirmed time window and I\'ll message you when I\'m on my way.' },
   { number: 3, title: 'Work & documentation', description: 'I complete the work, take measurements with calibrated instruments, and prepare your report or invoice.' },
   { number: 4, title: 'Payment', description: 'Pay by card or cash on-site. You receive an e-invoice immediately — no chasing paperwork later.' },
 ]
 
 const deliverables = [
-  { icon: FileCheck, text: 'Official electrical safety report (accepted by notaries, insurers, landlords)' },
-  { icon: FileText, text: 'E-invoice on-site (VAT-free for individuals)' },
-  { icon: CheckCircle, text: 'Written scope of work — no hidden costs' },
-  { icon: Shield, text: 'Warranty on all work performed' },
   { icon: Globe, text: 'Full English communication from start to finish' },
+  { icon: FileText, text: 'Written scope of work and quote — no hidden costs' },
+  { icon: FileCheck, text: 'Official electrical safety report (accepted by notaries, insurers, landlords)' },
+  { icon: CreditCard, text: 'E-invoice on-site (VAT-free for individuals, VAT included for companies/entrepreneurs)' },
+  { icon: Shield, text: 'Warranty on all work performed' },
 ]
 
 const whyChooseCards = [
@@ -56,19 +56,19 @@ const typicalJobs = [
 ]
 
 const pricingRows = [
-  { label: 'Call-out fee — Buda', price: '10,000 HUF (~€25)' },
-  { label: 'Call-out fee — Pest (urgent cases only)', price: '20,000 HUF (~€50)' },
+  { label: 'Call-out fee — Buda', price: '€30' },
+  { label: 'Call-out fee — Pest (urgent cases)', price: '€60' },
   { label: 'Urgent (within 4 hours)', price: '+50% surcharge' },
 ]
 
 const faqData = [
   { question: 'Do you really speak English?', answer: "Yes — fluently. I spent 20 years working in multinational environments. I explain everything in plain English: what I found, what I'm doing, and what you should know." },
-  { question: 'How much will it cost?', answer: "I provide a written quote before starting any work. The call-out fee is fixed (Buda: 10,000 HUF). Beyond that, pricing depends on scope — but you'll always know the cost upfront. No hidden fees." },
-  { question: 'Will you actually show up on time?', answer: 'Yes. I confirm the appointment, give you a time window, and arrive when I say I will. If anything changes, I let you know in advance.' },
-  { question: 'Is the documentation officially accepted?', answer: 'Yes. My inspection reports are legally valid — accepted by notaries, insurance companies, landlords, and authorities. I use calibrated instruments for all measurements.' },
-  { question: 'Can I get an invoice?', answer: 'Yes. E-invoice issued on-site immediately. VAT-free for individuals, VAT invoice for businesses.' },
+  { question: 'How much will it cost?', answer: "I charge a fixed call-out fee (Buda: €30, Pest: €60), then I give a written quote based on the scope. No hidden costs, no surprise extras. You approve the quote before any work starts." },
+  { question: 'Will you actually show up on time?', answer: 'Yes. You get a confirmed time window. If anything changes, I message you in advance — no ghosting.' },
+  { question: 'Is the documentation officially accepted?', answer: "Yes. I'm a licensed electrical safety inspector with legally valid measurement authority. My reports are accepted by notaries, insurance companies, landlords, and authorities. I use calibrated instruments for all measurements." },
+  { question: 'Can I get an invoice?', answer: 'Yes. E-invoice issued on-site immediately. VAT-free for individuals, VAT included for companies and entrepreneurs.' },
   { question: 'How fast can you come?', answer: 'Usually within 1–2 business days. Urgent service (within 4 hours) is available with a +50% surcharge.' },
-  { question: 'Do you work in Pest?', answer: 'My main service area is Buda (districts 1, 2, 3, 11, 12). I take jobs in Pest only for urgent cases, with a 20,000 HUF call-out fee.' },
+  { question: 'Do you work in Pest?', answer: 'My main service area is Buda (districts 1, 2, 3, 11, 12). I take jobs in Pest for urgent cases, with a €60 call-out fee.' },
   { question: 'What is an RCD/FI relay?', answer: "A Residual Current Device — a safety switch that cuts power when it detects a fault. If yours keeps tripping, there's likely a wiring issue that needs inspection." },
   { question: 'Can I pay by card?', answer: 'Yes. Card and cash both accepted on-site.' },
 ]
@@ -98,11 +98,25 @@ export default function EnglishSpeaking() {
       </Helmet>
 
       <Hero
-        title="Your English-speaking electrician in Buda"
-        subtitle={'Clear communication, transparent pricing, official documentation.\nSafety inspections · Electrical work · IT networking'}
+        title="Your English-speaking electrician in Buda (Budapest)"
+        subtitle="I diagnose the issue, explain it in plain English, fix it safely — and provide the documentation your landlord/insurer may request."
         cta1={{ label: 'Request a Quote', to: '/kapcsolat?lng=en' }}
         cta2={{ label: '📱 WhatsApp', href: 'https://wa.me/36302389945' }}
       />
+
+      {/* Mini-proof line */}
+      <div className="max-w-7xl mx-auto px-4 -mt-12 mb-12">
+        <div className="text-center text-sm opacity-70">
+          On-time arrival • Written quote before work • E-invoice on-site
+        </div>
+      </div>
+
+      {/* WhatsApp microcopy */}
+      <div className="max-w-7xl mx-auto px-4 -mt-8 mb-16">
+        <div className="text-center text-xs opacity-60 italic">
+          💬 Message me your district + a photo of the breaker panel or issue (if possible)
+        </div>
+      </div>
 
       {/* When to Call */}
       <section className="py-20">
@@ -185,7 +199,7 @@ export default function EnglishSpeaking() {
             <ThemeCard hover={false}>
               <div className="flex items-start gap-3 mb-4">
                 <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <p className="font-medium">Based in Buda, Budapest. Serving the following districts:</p>
+                <p className="font-medium">Buda-focused service. Serving the following districts:</p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 ml-9">
                 {serviceArea.map((area, i) => (
@@ -195,7 +209,7 @@ export default function EnglishSpeaking() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm opacity-60 mt-4 ml-9">Pest available for urgent cases only (20,000 HUF call-out fee).</p>
+              <p className="text-sm opacity-60 mt-4 ml-9">Pest is possible for urgent call-outs — fixed call-out fee: 20,000 HUF.</p>
             </ThemeCard>
           </div>
         </div>
@@ -208,7 +222,7 @@ export default function EnglishSpeaking() {
           <div className="max-w-lg mx-auto">
             <PricingTable
               rows={pricingRows}
-              note="You receive a written quote before work begins. No hidden costs."
+              note="After the site visit, you'll receive a written quote based on the agreed scope. No work starts without your approval. If it's a small fix, we can often do it on the spot."
             />
           </div>
         </div>
@@ -257,6 +271,13 @@ export default function EnglishSpeaking() {
         cta1={{ label: 'Request a Quote', to: '/kapcsolat?lng=en' }}
         cta2={{ label: '📱 WhatsApp', href: 'https://wa.me/36302389945' }}
       />
+      
+      {/* WhatsApp microcopy at bottom */}
+      <div className="max-w-7xl mx-auto px-4 pb-12 -mt-8">
+        <div className="text-center text-xs opacity-60 italic">
+          💬 Message me your district + a photo of the breaker panel or issue (if possible)
+        </div>
+      </div>
     </>
   )
 }
