@@ -166,13 +166,13 @@ export default function Home() {
 
         {/* English banner */}
         <ScrollReveal delay={0.3}>
-          <Link to="/en/english-speaking" className="block mt-6 cursor-pointer hover:scale-[1.02] transition-transform">
+          <Link to="/en/english-speaking" className="block mt-6 mx-auto max-w-2xl cursor-pointer hover:scale-[1.02] transition-transform">
             <ThemeCard className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
               <div className="flex items-center gap-4">
                 <span className="text-4xl">🇬🇧</span>
                 <div>
                   <h3 className="text-lg font-bold">English-speaking clients welcome</h3>
-                  <p className="text-sm opacity-70">Licensed engineer · Clear communication · Official documentation · Buda service area</p>
+                  <p className="text-sm opacity-70">Licensed engineer · Clear communication · Official documentation</p>
                 </div>
               </div>
               <div className="btn btn-primary btn-sm gap-1 shrink-0">
