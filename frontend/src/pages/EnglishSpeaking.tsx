@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { useTheme } from '../hooks/useTheme'
 import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
 import ThemeCard from '../components/ThemeCard'
@@ -7,7 +9,6 @@ import ProcessSteps from '../components/ProcessSteps'
 import DeliverablesList from '../components/DeliverablesList'
 import PricingTable from '../components/PricingTable'
 import FAQ from '../components/FAQ'
-import CTASection from '../components/CTASection'
 import {
   Zap, Home, FileCheck, Wrench, Shield, Wifi, CheckCircle,
   GraduationCap, Globe, FileText, CreditCard,
@@ -82,6 +83,8 @@ const serviceArea = [
 ]
 
 export default function EnglishSpeaking() {
+  const { isDark } = useTheme()
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -265,15 +268,23 @@ export default function EnglishSpeaking() {
       </section>
 
       {/* Final CTA */}
-      <CTASection
-        title="Need an electrician who speaks English?"
-        subtitle="Based in Buda. Clear pricing, official documentation, no language barrier."
-        cta1={{ label: 'Request a Quote', to: '/kapcsolat?lng=en' }}
-        cta2={{ label: '📱 WhatsApp', href: 'https://wa.me/36302389945' }}
-      />
+      <section className={`py-16 transition-theme ${isDark ? 'glass-card-strong' : 'neu-convex'}`}>
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Need an electrician who speaks English?
+          </h2>
+          <p className="text-lg opacity-80 mb-8">
+            Based in Buda. Clear pricing, official documentation, no language barrier.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/kapcsolat?lng=en" className="btn btn-primary btn-lg">Request a Quote</Link>
+            <a href="https://wa.me/36302389945" className="btn btn-outline btn-lg">📱 WhatsApp</a>
+          </div>
+        </div>
+      </section>
       
       {/* WhatsApp microcopy at bottom */}
-      <div className="max-w-7xl mx-auto px-4 pb-12 -mt-8">
+      <div className="max-w-7xl mx-auto px-4 pb-12 pt-4">
         <div className="text-center text-xs opacity-60 italic">
           💬 Message me your district + a photo of the breaker panel or issue (if possible)
         </div>
