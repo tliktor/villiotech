@@ -27,7 +27,7 @@ export default function Navbar() {
   const linkClass = (to: string) => `btn btn-ghost text-[15px] ${isActive(to) ? 'btn-active' : ''}`
 
   return (
-    <nav className={`sticky top-0 z-50 transition-theme ${isDark ? 'glass-card-strong' : 'neu-flat'}`}>
+    <nav className={`sticky top-0 z-50 transition-theme backdrop-blur-md ${isDark ? 'bg-base-100/95' : 'bg-base-100 neu-flat'}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
