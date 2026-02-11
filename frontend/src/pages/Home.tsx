@@ -138,7 +138,7 @@ export default function Home() {
           <SectionTitle title={t('home.target_section')} />
         </ScrollReveal>
         <div className="bento-grid-home bento-grid">
-          {targetCards.map((card, i) => (
+          {targetCards.slice(0, 3).map((card, i) => (
             <ScrollReveal key={i} delay={i * 0.1} fallback={<SkeletonCard />}>
               <Link to={card.to} className="cursor-pointer hover:scale-105 transition-transform">
                 <ThemeCard className="flex flex-col justify-between h-full">
@@ -163,6 +163,24 @@ export default function Home() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* English banner */}
+        <ScrollReveal delay={0.3}>
+          <Link to="/en/english-speaking" className="block mt-6 cursor-pointer hover:scale-[1.02] transition-transform">
+            <ThemeCard className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+              <div className="flex items-center gap-4">
+                <span className="text-4xl">🇬🇧</span>
+                <div>
+                  <h3 className="text-lg font-bold">English-speaking clients welcome</h3>
+                  <p className="text-sm opacity-70">Licensed engineer · Clear communication · Official documentation · Buda service area</p>
+                </div>
+              </div>
+              <div className="btn btn-primary btn-sm gap-1 shrink-0">
+                Learn more <ArrowRight className="w-4 h-4" />
+              </div>
+            </ThemeCard>
+          </Link>
+        </ScrollReveal>
       </section>
 
       {/* Why me */}
