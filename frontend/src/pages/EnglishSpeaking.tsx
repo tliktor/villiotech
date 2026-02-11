@@ -89,7 +89,7 @@ export default function EnglishSpeaking() {
   return (
     <>
       <Helmet>
-        <title>English-Speaking Electrician in Buda, Budapest | Villiotech</title>
+        <title>Your English-Speaking Electrician in Buda, Budapest | Villiotech</title>
         <meta name="description" content="English-speaking electrician in Buda, Budapest. Clear communication, transparent pricing, official documentation. Safety inspections, repairs, IT networking for expats." />
         <link rel="canonical" href="https://villiotech.hu/en/english-speaking" />
         <meta property="og:title" content="English-Speaking Electrician in Buda, Budapest" />
@@ -98,7 +98,7 @@ export default function EnglishSpeaking() {
       </Helmet>
 
       <Hero
-        title="English-speaking electrician in Buda"
+        title="Your English-speaking electrician in Buda"
         subtitle={'Clear communication, transparent pricing, official documentation.\nSafety inspections · Electrical work · IT networking'}
         cta1={{ label: 'Request a Quote', to: '/kapcsolat?lng=en' }}
         cta2={{ label: '📱 WhatsApp', href: 'https://wa.me/36302389945' }}
