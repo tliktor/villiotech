@@ -102,13 +102,13 @@ export default function Home() {
     },
     {
       icon: () => <span className="text-4xl mb-4">🇬🇧</span>,
-      title: 'Expats & English Speakers',
-      description: 'Licensed electrical engineer serving English-speaking residents in Buda. Safety inspections, repairs, IT networking – clear communication, official documentation.',
+      title: '🇬🇧 English-speaking clients',
+      description: 'Licensed electrical engineer serving English-speaking residents in Buda. Clear communication, official documentation, transparent pricing.',
       bullets: [
-        'English communication',
-        'Official documentation',
-        'Licensed engineer',
-        'Buda area service',
+        'Fluent English communication',
+        'Official documentation in English',
+        'Transparent pricing — no surprises',
+        'Buda service area',
       ],
       to: '/en/english-speaking',
     },
@@ -216,11 +216,11 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 pb-20">
         <ScrollReveal>
           <ThemeCard hover={false} className="text-center">
-            <h2 className="text-2xl font-bold mb-3">{t('home.english.title')}</h2>
+            <h2 className="text-2xl font-bold mb-3">🇬🇧 English-speaking clients welcome</h2>
             <p className="opacity-80 mb-6 max-w-xl mx-auto">
               {t('home.english.description')}
             </p>
-            <Link to="/kapcsolat" className="btn btn-primary">{t('home.english.cta')}</Link>
+            <Link to="/en/english-speaking" className="btn btn-primary">English Service →</Link>
           </ThemeCard>
         </ScrollReveal>
       </section>
