@@ -1,3 +1,6 @@
+import { useSEO } from '../../hooks/useSEO'
+import { useTranslation } from 'react-i18next'
+import { getTranslationArray } from '../../utils/i18n'
 import SEO from '../../components/SEO'
 import Hero from '../../components/Hero'
 import SectionTitle from '../../components/SectionTitle'
@@ -6,49 +9,30 @@ import ProcessSteps from '../../components/ProcessSteps'
 import PricingTable from '../../components/PricingTable'
 import CTASection from '../../components/CTASection'
 
-const industries = [
-  'Fodrászatok, szépségszalonok – hajszárító, hajvasaló, hajgöndörítő',
-  'Vendéglátóhelyek – kávégép, mixer, kenyérpirító, szeletelő',
-  'Műhelyek – fúrógép, flex, csiszológép, hegesztő',
-  'Irodák – nyomtató, lamináló, iratmegsemmisítő',
-  'Rendelők – sterilizáló, elektromos berendezések',
-  'Takarítócégek – porszívó, gőztisztító',
-]
-
-const steps = [
-  { number: 1, title: 'Eszközlista', description: 'Ön megadja, hány és milyen eszközt kell ellenőrizni.' },
-  { number: 2, title: 'Időpont', description: 'Egyeztetünk egy időpontot, ami Önnek megfelel.' },
-  { number: 3, title: 'Helyszíni mérés', description: 'Kalibrált hordozható műszerrel ellenőrzöm az eszközöket a helyszínen.' },
-  { number: 4, title: 'Jegyzőkönyv', description: 'Minden eszközről külön jegyzőkönyvet kap, „megfelelt" vagy „nem felelt meg" minősítéssel.' },
-]
-
-const whatWeCheck = [
-  'Védővezetők folytonossága',
-  'Szigetelési ellenállás',
-  'Érintésvédelmi vizsgálat',
-  'Szemrevételezés (kábel, csatlakozó, ház állapota)',
-]
-
 export default function KeziszerszamFelulvizsgalat() {
+  const seo = useSEO('keziszerszamFelulvizsgalat')
+  const { t } = useTranslation()
+  
   return (
     <>
       <SEO
-        title="Kéziszerszám felülvizsgálat helyszínen"
-        description="Elektromos kéziszerszámok éves felülvizsgálata helyszínen, kalibrált műszerrel. Fodrászat, vendéglátás, műhely. Budán."
+        title={seo.title}
+        description={seo.description}
         canonical="/szolgaltatasok/keziszerszam-felulvizsgalat"
+        keywords={seo.keywords}
       />
 
       <Hero
-        subtitle="Az elektromos kéziszerszámok éves felülvizsgálata kötelező. Helyszínen végzem, nem kell sehová szállítani az eszközöket."
-        cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: 'Visszahívást kérek', to: '/kapcsolat' }}
+        subtitle={t('pages.keziszerszam_felulvizsgalat.hero_subtitle')}
+        cta1={{ label: t('pages.keziszerszam_felulvizsgalat.cta1'), to: '/kapcsolat' }}
+        cta2={{ label: t('pages.keziszerszam_felulvizsgalat.cta2'), to: '/kapcsolat' }}
       />
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Kinek kötelező?" />
-        <p className="text-center mb-8 opacity-80">Minden munkáltatónak és egyéni vállalkozónak, aki elektromos kéziszerszámokat használ. Évente egyszer kötelező.</p>
+        <SectionTitle title={t('pages.keziszerszam_felulvizsgalat.who_mandatory_title')} />
+        <p className="text-center mb-8 opacity-80">{t('pages.keziszerszam_felulvizsgalat.who_mandatory_subtitle')}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {industries.map((item, i) => (
+          {getTranslationArray(t('pages.keziszerszam_felulvizsgalat.industries', { returnObjects: true })).map((item: string, i: number) => (
             <ThemeCard key={i} className="flex items-start gap-3">
               <span className="text-primary">🔧</span>
               <span>{item}</span>
@@ -58,15 +42,15 @@ export default function KeziszerszamFelulvizsgalat() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Hogyan zajlik a felülvizsgálat?" />
-        <ProcessSteps steps={steps} />
+        <SectionTitle title={t('pages.keziszerszam_felulvizsgalat.process_title')} />
+        <ProcessSteps steps={getTranslationArray(t('pages.keziszerszam_felulvizsgalat.process_steps', { returnObjects: true }))} />
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Mit mér a felülvizsgálat?" />
+        <SectionTitle title={t('pages.keziszerszam_felulvizsgalat.what_we_check_title')} />
         <ThemeCard hover={false}>
           <ul className="space-y-3">
-            {whatWeCheck.map((item, i) => (
+            {getTranslationArray(t('pages.keziszerszam_felulvizsgalat.what_we_check', { returnObjects: true })).map((item: string, i: number) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="text-primary">⚡</span>
                 <span>{item}</span>
@@ -77,24 +61,20 @@ export default function KeziszerszamFelulvizsgalat() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Árazás" />
+        <SectionTitle title={t('pages.keziszerszam_felulvizsgalat.pricing_title')} />
         <div className="max-w-lg mx-auto">
           <PricingTable
-            rows={[
-              { label: 'Kiszállás – Buda', price: '10 000 Ft' },
-              { label: 'Kiszállás – Pest (kivételesen)', price: '20 000 Ft' },
-              { label: 'Minimum munkadíj', price: '50 000 Ft' },
-            ]}
-            note="Az ár az eszközök számától függ. Nagyobb mennyiségnél kedvezőbb egységár."
+            rows={getTranslationArray(t('pages.keziszerszam_felulvizsgalat.pricing_rows', { returnObjects: true }))}
+            note={t('pages.keziszerszam_felulvizsgalat.pricing_note')}
           />
         </div>
       </section>
 
       <CTASection
-        title="Kérjen ajánlatot kéziszerszám felülvizsgálatra"
-        subtitle="Helyszínen végzem, nem kell sehová vinni az eszközöket."
-        cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
+        title={t('pages.keziszerszam_felulvizsgalat.cta_title')}
+        subtitle={t('pages.keziszerszam_felulvizsgalat.cta_subtitle')}
+        cta1={{ label: t('pages.keziszerszam_felulvizsgalat.cta1'), to: '/kapcsolat' }}
+        cta2={{ label: t('pages.keziszerszam_felulvizsgalat.cta_phone'), href: 'tel:+36302389945' }}
       />
     </>
   )

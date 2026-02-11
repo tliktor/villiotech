@@ -29,7 +29,8 @@
     "copyright": "All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms",
-    "quality": "Calibrated instruments · Legal measurements · Warranty"
+    "quality": "Calibrated instruments · Legal measurements · Warranty",
+    "accessibility": "WCAG 2.1 AA Compliant • Accessible to all users"
   },
   "home": {
     "hero": {
@@ -70,9 +71,9 @@
     "deliverables": "What do you get?",
     "quote_testimonial": "\"I don't promise what I can't deliver. What I undertake, I complete accurately and precisely.\"",
     "english": {
-      "title": "English-speaking clients welcome",
+      "title": "🇬🇧 English-speaking clients welcome",
       "description": "I provide all electrical services in fluent English – inspections, installations, IT networking. Full documentation in English available upon request. Serving the Buda side of Budapest.",
-      "cta": "Request a quote in English →"
+      "cta": "🇬🇧 Request a quote in English →"
     },
     "final_cta": {
       "title": "Request a quote now",
@@ -146,6 +147,383 @@
       "service_required": "Please select the desired service",
       "client_type_required": "Please select whether you are an individual, condominium or business",
       "privacy_required": "You must accept the privacy policy to request a quote"
+    }
+  },
+  "pages": {
+    "lakossagnak": {
+      "hero_subtitle": "Are you selling, renting or renovating? Electrical safety inspection with legal report, electrical installation with guarantee, IT network installation - from a reliable engineer.",
+      "target_section": "It's for you if you...",
+      "bullets": [
+        "Selling your property - the buyer or the notary requests an electrical safety review",
+        "Renting out your home - both the tenant and the insurer expect a valid report",
+        "It is after renovation - the new electrical network must be documented",
+        "Looking for electricians - switch, socket, fuse, distribution, lighting",
+        "WiFi or network needed - home office, home office, stable internet connection",
+        "Foreign and English speaking - full service in English"
+      ],
+      "why_me_section": "Why choose me?",
+      "why_me_intro_bold": "I am a qualified electrical engineer and electrician.",
+      "why_me_intro": "I have worked for 20 years in a multinational environment where punctuality and responsibility were not an option, but a standard requirement.",
+      "why_me_points": [
+        "I work with calibrated, certified instruments - measurements are legal",
+        "You receive a legally binding notarial record, which is accepted by the authority, notary, insurer",
+        "I will give you a quotation before starting the work",
+        "I guarantee all work carried out",
+        "I clean up after myself - I leave the work area clean",
+        "Payment by card on the spot",
+        "VAT-free invoice for private persons"
+      ],
+      "services_section": "Services for the population",
+      "services": [
+        {
+          "title": "Electrical safety review",
+          "desc": "Mandatory before selling or renting a property. I use calibrated instruments and you will receive a legally binding report."
+        },
+        {
+          "title": "Electrical installation, repair, construction",
+          "desc": "Replacement of switches, sockets, fuse boards, lighting, complete electrical installation of the apartment. Itemized quotation, guarantee."
+        },
+        {
+          "title": "IT network - WiFi / UTP",
+          "desc": "Home office, home office, stable WiFi coverage. Especially recommended for foreign clients."
+        }
+      ],
+      "process_section": "How we work together",
+      "process_steps": [
+        {
+          "title": "Request for quotation",
+          "description": "Describe briefly what you need - on the form or by phone."
+        },
+        {
+          "title": "Contact",
+          "description": "I'll get back to you to arrange a time and details."
+        },
+        {
+          "title": "On-site work",
+          "description": "I arrive on time, take the measurements or do the installation work."
+        },
+        {
+          "title": "Documentation",
+          "description": "You will receive a legally binding report or an itemised bill and a guarantee voucher."
+        },
+        {
+          "title": "Payment",
+          "description": "Cash or credit card, on the spot. Invoice will be issued immediately."
+        }
+      ],
+      "pricing_section": "Transparent pricing",
+      "pricing_note": "I issue VAT-free invoices for private individuals.",
+      "deliverables_section": "What do you get?",
+      "faq_section": "Frequently asked questions",
+      "cta_title": "Ask for a quote",
+      "cta_subtitle": "I will reply within 1 working day. I work in Buda, with calibrated instruments, guarantee."
+    },
+    "tarsashazaknak": {
+      "hero_subtitle": "As a joint representative, you are responsible for the safety of your residents. I will carry out the mandatory electrical safety inspection, with a legally binding report and itemised quotation for the general assembly.",
+      "target_section": "It's for you if you...",
+      "bullets": [
+        "Joint representative and condominium electrical review due",
+        "Bids must be submitted to the decision-maker and the general assembly",
+        "The condominium has been served with an administrative notice to check its electricity network",
+        "Electrical installation of common areas required (staircase, basement, garage)",
+        "Insurance event due to need documentation",
+        "Condominium about to be renovated and survey needed"
+      ],
+      "why_me_section": "Why choose me?",
+      "why_me_intro_bold": "I know that as a joint representative you also have to be accountable to the assembly.",
+      "why_me_intro": "That is why I will give you an itemised quotation to present to the residents' association and a legally binding protocol to be accepted by the authority.",
+      "why_me_points": [
+        "Certified electrical safety inspector - with a degree in electrical engineering",
+        "Calibrated instruments - legal metrology results",
+        "Batch bid - to be presented at the General Assembly",
+        "Authentic record - accepted before public authority",
+        "VAT-free invoicing for condominiums",
+        "20 years multinational experience - punctuality, correct communication",
+        "Guarantee on the work, I clean up after myself"
+      ],
+      "process_section": "How we work together",
+      "cta_title": "Request a quote for the General Assembly",
+      "cta_subtitle": "I'll send you an itemised quote, which you can present to the residents' association."
+    },
+    "munkahelyeknek": {
+      "hero_subtitle": "Do you have an office, shop or restaurant? An electrical safety inspection is mandatory every 3 years. Annual inspection of power tools is carried out on site.",
+      "target_section": "It's for you if you...",
+      "bullets": [
+        "Operates an office and is due for an electrical inspection every 3 years",
+        "You run a business or shop and need a valid protocol",
+        "You have a catering establishment and the authority requests documentation",
+        "Operates a hairdressing salon, beauty salon and is due for an annual review of its assets",
+        "Running a surgery, medical practice and documenting electrical safety",
+        "Uses hand tools and is due for annual inspection"
+      ],
+      "why_me_section": "Why choose me?",
+      "why_me_intro_bold": "I know that for a business, regulatory compliance is not an option - it is an obligation.",
+      "why_me_intro": "That's why I work quickly, accurately and with minimal disruption.",
+      "services_section": "My services for workplaces",
+      "cta_title": "Don't wait for an official inspection",
+      "cta_subtitle": "Failure to comply with the mandatory review may result in a fine. Get a quote and be up to date."
+    },
+    "rolam": {
+      "hero_title": "Electrical engineer, 20 years' experience - now I work for you.",
+      "hero_subtitle": "Certified electrical safety inspector with fire safety qualifications. After two decades of multinational experience, I am working for the electrical safety of homes, condominiums and workplaces in Buda.",
+      "intro_section": "Who is behind Villiotech?",
+      "intro_content": [
+        "I am an electrical engineer, qualified as an electrical safety inspector, with fire safety qualifications. I will soon also be available as a lightning safety inspector.",
+        "I spent 20 years working in a multinational environment, where I learned that punctuality, responsibility and fair communication are not optional extras - they are standard. I brought this approach with me to the private sector.",
+        "I live and work in Buda. My main area is the 2nd district and the whole of Buda, but I also work in Pest.",
+        "I work in both English and Hungarian - I serve my foreign clients with the same precision."
+      ],
+      "qualifications_section": "My photos",
+      "values_section": "What I believe in",
+      "english_title": "🇬🇧 About me - for English-speaking clients",
+      "english_content": "I'm a qualified electrical engineer and certified electrical safety inspector based in Buda, Budapest. With 20 years of experience in multinational environments, I bring precision, accountability, and clear communication to every project.",
+      "cta_title": "Let's work together",
+      "cta_subtitle": "If you are looking for a precise, reliable electrician in Buda - contact us."
+    },
+    "villamos_felulvizsgalat": {
+      "hero_subtitle": "Measurements with calibrated instruments, documentation accepted by the authorities. For homes, condominiums and workplaces.",
+      "cta1": "Request quote",
+      "cta2": "Request callback",
+      "when_needed_title": "When do you need an electrical safety review?",
+      "when_needed": [
+        "Before selling or renting a property",
+        "After renovation, electrical installation work",
+        "At work every 3 years (mandatory)",
+        "Common network of condominiums (regular)",
+        "To document an insurance event",
+        "On administrative notice"
+      ],
+      "what_includes_title": "What is included in the review?",
+      "what_includes": [
+        "Contact protection measurement",
+        "Insulation resistance measurement",
+        "Short circuit loop impedance measurement",
+        "Checking the continuity of protective conductors",
+        "Testing the operation of overcurrent protection devices",
+        "Visual inspection (wiring, connections, distributors)"
+      ],
+      "calibrated_note": "All measurements are carried out with calibrated, certified instruments. The results are legally binding.",
+      "results_title": "Result of the review",
+      "results": [
+        "Legally binding measurement report - accepted by authority, notary, insurer",
+        "Detailed measurement results - all measurement points documented",
+        "Rating - the network meets or fails to meet",
+        "Errata - list of errors detected, if any",
+        "Repair suggestion - what to fix for compliance"
+      ],
+      "pricing_title": "Pricing",
+      "pricing_rows": [
+        { "label": "Call-out - Buda", "price": "10,000 HUF" },
+        { "label": "Call-out - Pest (exceptionally)", "price": "20,000 HUF" },
+        { "label": "Minimum fee", "price": "50,000 HUF" },
+        { "label": "Urgent (within 4 hours)", "price": "+50% surcharge" }
+      ],
+      "pricing_note": "The final price depends on the size of the property and the complexity of the network.",
+      "cta_title": "Get a quote for an electrical review",
+      "cta_phone": "☎ Call now"
+    },
+    "villanyszereles": {
+      "hero_subtitle": "Switch replacement, fuse board, complete apartment electrical installation. Itemised quotation, clean workmanship, guarantee on all work.",
+      "cta1": "Request quote",
+      "cta2": "Urgent? Within 4 hours",
+      "services_title": "My electrical installation services",
+      "services": [
+        "Replacement and extension of switches, sockets",
+        "Lighting installation, installation of chandeliers",
+        "Fuse board replacement, upgrading",
+        "Complete apartment or office electrical installation",
+        "Electricity network extension, conversion",
+        "Troubleshooting, fault finding",
+        "Outdoor lighting, garden electricity network",
+        "Installation of electricity in common areas of a block of flats"
+      ],
+      "promises_title": "What you can expect",
+      "promises": [
+        { "title": "Itemised quotation", "desc": "In writing before starting work." },
+        { "title": "On time arrival", "desc": "At the agreed time." },
+        { "title": "Professional execution", "desc": "With knowledge in electrical engineering." },
+        { "title": "Clean working", "desc": "I clean up after myself." },
+        { "title": "Guarantee", "desc": "For all work done." },
+        { "title": "Payment by card", "desc": "On the spot." }
+      ],
+      "disclaimer": "Breakdowns may occur during the work. I do not do painting, but I can recommend a reliable painting contractor.",
+      "pricing_title": "Pricing",
+      "pricing_rows": [
+        { "label": "Call-out - Buda", "price": "10,000 HUF" },
+        { "label": "Call-out - Pest (exceptionally)", "price": "20,000 HUF" },
+        { "label": "Minimum fee", "price": "50,000 HUF" },
+        { "label": "Urgent (within 4 hours)", "price": "+50% surcharge" }
+      ],
+      "pricing_note": "The final price is determined by the nature and scope of the work.",
+      "cta_title": "Get a quote for electrical installation",
+      "cta_phone": "☎ Call now"
+    },
+    "it_halozat": {
+      "hero_subtitle": "UTP cabling, WiFi coverage optimization, home office network installation. Full service in English as well.",
+      "hero_cta1": "Request quote",
+      "hero_cta2": "Request a quote in English",
+      "services_title": "IT network services",
+      "services": [
+        "UTP cabling - Cat5e / Cat6 network cable laying, connectors installation",
+        "WiFi coverage - installation of access points, optimal placement",
+        "Home office - a stable, reliable network for teleworking",
+        "Office network - connecting multiple workstations, network infrastructure",
+        "Network cabinet - patch panel, switch placement, tidy cabling"
+      ],
+      "target_title": "Who do I recommend?",
+      "target_items": [
+        "Foreign residents in Buda - who want to do their networking in English",
+        "Home office workers - who need stable, fast internet for work",
+        "Small offices - where reliable network connectivity is required for multiple machines",
+        "New home / renovation - where you need to build the network from the ground up"
+      ],
+      "english_section_title": "🇬🇧 IT Network Services in English",
+      "english_section_description": "Setting up your home office or need reliable WiFi coverage in your Buda apartment? I provide complete IT networking services in fluent English – from UTP cabling to WiFi optimization. Clean installation, tested connections, full documentation.",
+      "english_section_cta": "🇬🇧 Request a quote →",
+      "pricing_title": "Pricing",
+      "pricing_rows": [
+        {
+          "label": "Call-out – Buda",
+          "price": "10,000 HUF"
+        },
+        {
+          "label": "Call-out – Pest (exceptionally)",
+          "price": "20,000 HUF"
+        },
+        {
+          "label": "Minimum work fee",
+          "price": "50,000 HUF"
+        }
+      ],
+      "pricing_note": "The final price is determined by the size and complexity of the network.",
+      "cta_title": "Get a quote for network installation",
+      "cta_button1": "Request quote",
+      "cta_button2": "☎ Call now"
+    },
+    "keziszerszam_felulvizsgalat": {
+      "hero_subtitle": "Annual inspection of power tools is mandatory. I do it on site, no need to transport the tools anywhere.",
+      "cta1": "Request quote",
+      "cta2": "Request callback",
+      "who_mandatory_title": "Who is it mandatory for?",
+      "who_mandatory_subtitle": "All employers and self-employed persons who use power tools. Mandatory once a year.",
+      "industries": [
+        "Hairdressers, beauty salons – hairdryers, hair straighteners, curling irons",
+        "Catering establishments – coffee machine, blender, toaster, slicer",
+        "Workshops – drill, flex, grinder, welder",
+        "Offices – printer, laminator, shredder",
+        "Surgeries – sterilizer, electrical equipment",
+        "Cleaning companies – vacuum cleaner, steam cleaner"
+      ],
+      "process_title": "How is the inspection carried out?",
+      "process_steps": [
+        {
+          "title": "Equipment list",
+          "description": "You specify how many and which tools need to be checked."
+        },
+        {
+          "title": "Appointment",
+          "description": "We will arrange a time that suits you."
+        },
+        {
+          "title": "On-site measurement",
+          "description": "I will check the tools on site with a calibrated portable instrument."
+        },
+        {
+          "title": "Report",
+          "description": "You will receive a separate report for each tool, with a \"passed\" or \"failed\" rating."
+        }
+      ],
+      "what_we_check_title": "What does the inspection measure?",
+      "what_we_check": [
+        "Continuity of protective conductors",
+        "Insulation resistance",
+        "Contact protection test",
+        "Visual inspection (cable, connector, housing condition)"
+      ],
+      "pricing_title": "Pricing",
+      "pricing_rows": [
+        {
+          "label": "Call-out – Buda",
+          "price": "10,000 HUF"
+        },
+        {
+          "label": "Call-out – Pest (exceptionally)",
+          "price": "20,000 HUF"
+        },
+        {
+          "label": "Minimum work fee",
+          "price": "50,000 HUF"
+        }
+      ],
+      "pricing_note": "Price depends on the number of tools. Lower unit price for larger quantities.",
+      "cta_title": "Request a quote for hand tool inspection",
+      "cta_subtitle": "I do it on site, no need to take the tools anywhere.",
+      "cta_phone": "☎ Call now"
+    },
+    "adatvedelem": {
+      "seo_title": "Data protection information",
+      "seo_description": "Villiotech Privacy Notice - personal data processing, rights, contact.",
+      "title": "Data protection information",
+      "section1_title": "1. Data Controller",
+      "section1_content": "Name: [Name of data controller]\nHeadquarters.\nE-mail: info@villiotech.hu\nPhone: [phone number]",
+      "section2_title": "2. Personal data processed",
+      "section2_intro": "When you fill in the application form, the following data will be processed:",
+      "section2_list": [
+        "Name",
+        "Phone number",
+        "E-mail address (optional)",
+        "Address of property/workplace (district)",
+        "Content of the request"
+      ],
+      "section3_title": "3. Purpose and legal basis for processing",
+      "section3_content": "The purpose of data processing is to process the request for a quote and to contact you. Legal basis: consent of the data subject (Article 6(1)(a) GDPR).",
+      "section4_title": "4. Duration of data processing",
+      "section4_content": "Personal data will be stored until the request is processed, but for a maximum of 1 year. The data subject may request the deletion of his/her data at any time.",
+      "section5_title": "5. Data transmission",
+      "section5_content": "We will not pass on your personal data to third parties. The data is stored and processed on Amazon Web Services (AWS) servers in the EU.",
+      "section6_title": "6. Cookies (cookies)",
+      "section6_content": "The website uses technical cookies to function (theme selection). Analytical cookies (Google Analytics) are only used with your consent.",
+      "section7_title": "7. Rights of the data subject",
+      "section7_list": [
+        "Right of access - you can request information about your data",
+        "Right to rectification - you can ask for your data to be corrected",
+        "Right to erasure - you can request the erasure of your data",
+        "Withdraw consent - at any time, without affecting the lawfulness of the previous processing",
+        "Right to complain - to the National Authority for Data Protection and Freedom of Information (NAIH)"
+      ],
+      "section8_title": "8. Contact us",
+      "section8_content": "If you have any privacy questions, please contact us at info@villiotech.hu",
+      "last_updated": "Last update: February 2026"
+    },
+    "aszf": {
+      "seo_title": "General Terms and Conditions",
+      "seo_description": "Villiotech general terms and conditions - services, pricing, warranty, liability.",
+      "title": "General Terms and Conditions",
+      "section1_title": "1. Service provider details",
+      "section1_content": "Név:\n- Liktor Tibor E.V. (67824469-1-41)\n- Nanotech Solutions 2005 Kft. (13438917-2-41)\n- Villiotech Kft. (26395674-1-41)\nSzékhely: 1025 Budapest, Verecke út 138/D\nE-mail: info@villiotech.hu",
+      "section2_title": "2. Services",
+      "section2_content": "The Service Provider provides the following services: electrical safety inspection, electrical installation, IT network installation, power tool inspection. Detailed description of the services can be found on the website.",
+      "section3_title": "3. Pricing and payment",
+      "section3_list": [
+        "Exit fee Buda: 10 000 HUF",
+        "Exit fee Pest (exceptionally): 20 000 HUF",
+        "Minimum fee: 50 000 Ft",
+        "Rush delivery (within 4 hours): +50% surcharge",
+        "The final price is included in the itemised quotation",
+        "Payment: cash or credit card, on the spot",
+        "Billing: VAT-free for individuals, VAT for businesses, VAT-free for condominiums"
+      ],
+      "section4_title": "4. Order and date",
+      "section4_content": "You can place an order by filling in the request for quote form or by calling us. The Service Provider will get back to you within 1 working day. The date will be agreed by mutual agreement.",
+      "section5_title": "5. Guarantee",
+      "section5_content": "The Service Provider guarantees all work carried out. The terms and duration of the guarantee are set out in the itemised quotation.",
+      "section6_title": "6. Responsibility",
+      "section6_content": "The Service Provider shall be responsible for the work carried out in a professional manner. In the event that demolition is necessary, the Service Provider shall inform the Customer in advance. The Service Provider shall not undertake painting work, but shall recommend a specialist.",
+      "section7_title": "7. Resignation",
+      "section7_content": "Cancellations must be made at least 24 hours in advance. Late cancellation may result in a delivery charge.",
+      "section8_title": "8. Legal disputes",
+      "section8_content": "The parties shall settle any disputes primarily by conciliation. If this fails, the Hungarian courts shall have jurisdiction.",
+      "effective_date": "Effective: February 2026"
     }
   }
 }

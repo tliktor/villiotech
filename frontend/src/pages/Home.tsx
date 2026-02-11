@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
-import { useTheme } from '../hooks/useTheme'
 import { useTranslation } from 'react-i18next'
+import { useSEO } from '../hooks/useSEO'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
 import ThemeCard from '../components/ThemeCard'
+import SkeletonCard from '../components/SkeletonCard'
 import WhyMe from '../components/WhyMe'
 import ProcessSteps from '../components/ProcessSteps'
 import PricingTable from '../components/PricingTable'
@@ -29,8 +30,39 @@ const pricingRows = [
 ]
 
 export default function Home() {
-  const { isDark } = useTheme()
   const { t } = useTranslation()
+  const seo = useSEO('home')
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Villiotech',
+    description: seo.description,
+    url: 'https://villiotech.hu',
+    telephone: '+36302389945',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Budapest',
+      addressRegion: 'Buda',
+      addressCountry: 'HU',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 47.4979,
+      longitude: 19.0402,
+    },
+    priceRange: '10000-50000 HUF',
+    areaServed: {
+      '@type': 'City',
+      name: 'Budapest',
+    },
+    serviceType: [
+      'Villamos felülvizsgálat',
+      'Villanyszerelés',
+      'IT hálózat kiépítés',
+      'Kéziszerszám felülvizsgálat',
+    ],
+  }
 
   const targetCards = [
     {
@@ -74,9 +106,11 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Villamos biztonság, mérnöki precizitással – Budán"
-        description="Joghatályos villamos felülvizsgálat, szakszerű villanyszerelés és IT hálózat kiépítés Budán. Kalibrált műszerek, tételes árajánlat, garancia. Villamosmérnök, 20 év tapasztalat."
+        title={seo.title}
+        description={seo.description}
         canonical="/"
+        keywords={seo.keywords}
+        structuredData={structuredData}
       />
 
       <Hero
@@ -93,10 +127,10 @@ export default function Home() {
         </ScrollReveal>
         <div className="bento-grid-home bento-grid">
           {targetCards.map((card, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
+            <ScrollReveal key={i} delay={i * 0.1} fallback={<SkeletonCard />}>
               <ThemeCard className="flex flex-col justify-between h-full">
                 <div>
-                  <card.icon className="w-10 h-10 text-primary mb-4" />
+                  <card.icon className="w-10 h-10 text-primary mb-4 mx-auto" />
                   <h3 className="text-xl font-bold mb-2">{card.title}</h3>
                   <p className="text-sm opacity-70 mb-4">{card.description}</p>
                   <ul className="space-y-2 mb-6">
@@ -108,7 +142,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <Link to={card.to} className="btn btn-primary btn-sm gap-1 self-start">
+              <Link to={card.to} className="btn btn-primary btn-sm gap-1 self-center">
                 {t('home.details_cta')} <ArrowRight className="w-4 h-4" />
               </Link>
             </ThemeCard>

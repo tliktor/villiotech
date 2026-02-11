@@ -1,6 +1,8 @@
 import { APIGatewayProxyEventV2, APIGatewayProxyResultV2 } from 'aws-lambda'
 import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses'
 import { validateContactForm, sanitize } from './validator'
+import { checkRateLimit, updateRateLimit } from './rateLimit'
+import { SERVICE_TYPES, CLIENT_TYPES } from './types'
 
 const ses = new SESClient({ region: process.env.AWS_REGION || 'eu-central-1' })
 const RECIPIENT = process.env.RECIPIENT_EMAIL || 'info@villiotech.hu'
@@ -17,6 +19,17 @@ export const handler = async (event: APIGatewayProxyEventV2): Promise<APIGateway
   // CORS preflight
   if (event.requestContext.http.method === 'OPTIONS') {
     return { statusCode: 200, headers: corsHeaders, body: '' }
+  }
+
+  // Rate limiting
+  const clientIp = event.requestContext.http.sourceIp
+  const canProceed = await checkRateLimit(clientIp)
+  if (!canProceed) {
+    return {
+      statusCode: 429,
+      headers: corsHeaders,
+      body: JSON.stringify({ success: false, error: 'Túl sok kérés. Kérjük, próbálja újra 1 óra múlva.' })
+    }
   }
 
   try {
@@ -45,16 +58,16 @@ export const handler = async (event: APIGatewayProxyEventV2): Promise<APIGateway
 
     // Email összeállítás
     const serviceLabels: Record<string, string> = {
-      felulvizsgalat: 'Villamos biztonsági felülvizsgálat',
-      villanyszereles: 'Villanyszerelés / javítás',
-      'it-halozat': 'IT hálózat (WiFi / UTP)',
-      keziszerszam: 'Kéziszerszám felülvizsgálat',
-      egyeb: 'Egyéb',
+      [SERVICE_TYPES.WEB_DEVELOPMENT]: 'Villamos biztonsági felülvizsgálat',
+      [SERVICE_TYPES.MOBILE_APP]: 'Villanyszerelés / javítás',
+      [SERVICE_TYPES.CLOUD_SOLUTIONS]: 'IT hálózat (WiFi / UTP)',
+      [SERVICE_TYPES.CONSULTING]: 'Kéziszerszám felülvizsgálat',
+      [SERVICE_TYPES.OTHER]: 'Egyéb',
     }
     const clientLabels: Record<string, string> = {
-      maganszemely: 'Magánszemély',
-      tarsashaz: 'Társasház',
-      vallalkozas: 'Vállalkozás',
+      [CLIENT_TYPES.INDIVIDUAL]: 'Magánszemély',
+      [CLIENT_TYPES.SMALL_BUSINESS]: 'Társasház',
+      [CLIENT_TYPES.ENTERPRISE]: 'Vállalkozás',
     }
 
     const name = sanitize(body.name)
@@ -92,6 +105,9 @@ export const handler = async (event: APIGatewayProxyEventV2): Promise<APIGateway
         Body: { Html: { Data: htmlBody, Charset: 'UTF-8' } },
       },
     }))
+
+    // Update rate limit after successful send
+    await updateRateLimit(clientIp)
 
     return {
       statusCode: 200,

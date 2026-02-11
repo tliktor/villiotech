@@ -79,7 +79,7 @@ export default function Navbar() {
             <button
               onClick={toggleLanguage}
               className="btn btn-ghost btn-circle btn-sm"
-              aria-label="Language toggle"
+              aria-label={`${t('nav.language_toggle')} (${i18n.language === 'hu' ? 'English' : 'Magyar'})`}
             >
               <Globe className="w-5 h-5" />
               <span className="text-xs font-bold">{i18n.language.toUpperCase()}</span>
@@ -89,7 +89,7 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               className="btn btn-ghost btn-circle btn-sm"
-              aria-label={t('nav.theme')}
+              aria-label={`${t('nav.theme_toggle')} (${isDark ? t('nav.light_mode') : t('nav.dark_mode')})`}
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
@@ -98,7 +98,8 @@ export default function Navbar() {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="btn btn-ghost btn-circle btn-sm lg:hidden"
-              aria-label={t('nav.menu')}
+              aria-label={mobileOpen ? t('nav.close_menu') : t('nav.open_menu')}
+              aria-expanded={mobileOpen}
             >
               <Menu className="w-5 h-5" />
             </button>

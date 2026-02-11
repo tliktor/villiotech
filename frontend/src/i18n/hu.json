@@ -9,7 +9,13 @@
     "contact": "Kapcsolat",
     "urgent": "Sürgős? 4h",
     "theme": "Téma váltás",
-    "menu": "Menü"
+    "menu": "Menü",
+    "open_menu": "Menü megnyitása",
+    "close_menu": "Menü bezárása",
+    "language_toggle": "Nyelv váltása",
+    "theme_toggle": "Téma váltása",
+    "light_mode": "Világos mód",
+    "dark_mode": "Sötét mód"
   },
   "services": {
     "electrical_inspection": "Villamos felülvizsgálat",
@@ -29,7 +35,8 @@
     "copyright": "Minden jog fenntartva.",
     "privacy": "Adatvédelem",
     "terms": "ÁSZF",
-    "quality": "Kalibrált műszerek · Joghatályos mérések · Garancia"
+    "quality": "Kalibrált műszerek · Joghatályos mérések · Garancia",
+    "accessibility": "WCAG 2.1 AA megfelelő • Mindenki számára elérhető"
   },
   "home": {
     "hero": {
@@ -70,9 +77,9 @@
     "deliverables": "Mit kap kézhez?",
     "quote_testimonial": "\"Nem ígérek olyat, amit nem tudok tartani. Amit vállalok, azt pontosan és precízen teljesítem.\"",
     "english": {
-      "title": "English-speaking clients welcome",
+      "title": "🇬🇧 English-speaking clients welcome",
       "description": "I provide all electrical services in fluent English – inspections, installations, IT networking. Full documentation in English available upon request. Serving the Buda side of Budapest.",
-      "cta": "Request a quote in English →"
+      "cta": "🇬🇧 Request a quote in English →"
     },
     "final_cta": {
       "title": "Kérjen ajánlatot most",
@@ -146,6 +153,383 @@
       "service_required": "Kérem, válassza ki a kívánt szolgáltatást",
       "client_type_required": "Kérem, válassza ki, hogy magánszemély, társasház vagy vállalkozás",
       "privacy_required": "Az ajánlatkéréshez el kell fogadnia az adatvédelmi tájékoztatót"
+    }
+  },
+  "pages": {
+    "lakossagnak": {
+      "hero_subtitle": "Eladás, bérbeadás vagy felújítás előtt áll? Villamos biztonsági felülvizsgálat joghatályos jegyzőkönyvvel, villanyszerelés garanciával, IT hálózat kiépítés – egy megbízható mérnöktől.",
+      "target_section": "Önnek szól, ha…",
+      "bullets": [
+        "Eladja az ingatlanát – a vevő vagy a közjegyző kéri a villamos biztonsági felülvizsgálatot",
+        "Bérbe adja a lakását – a bérlő és a biztosító is elvárja az érvényes jegyzőkönyvet",
+        "Felújítás után van – az új villamos hálózatot dokumentálni kell",
+        "Villanyszerelőt keres – kapcsoló, konnektor, biztosíték, elosztó, világítás",
+        "WiFi vagy hálózat kell – otthoni iroda, home office, stabil internetkapcsolat",
+        "Külföldi és angolul beszél – teljes körű szolgáltatás angol nyelven is"
+      ],
+      "why_me_section": "Miért engem válasszon?",
+      "why_me_intro_bold": "Képzett villamosmérnök, villanyszerelő vagyok.",
+      "why_me_intro": "Vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. 20 évet dolgoztam multinacionális környezetben, ahol a pontosság és a felelősség nem opció, hanem alapelvárás volt.",
+      "why_me_points": [
+        "Kalibrált, hitelesített műszerekkel dolgozom – a mérések joghatályosak",
+        "Joghatályos jegyzőkönyvet kap, amit a hatóság, közjegyző, biztosító elfogad",
+        "Tételes árajánlatot adok a munka megkezdése előtt",
+        "Garanciát vállalok minden elvégzett munkára",
+        "Magam után takarítok – a munkaterületet tisztán hagyom",
+        "Kártyás fizetés a helyszínen",
+        "Magánszemélyeknek ÁFA-mentes számla"
+      ],
+      "services_section": "Szolgáltatásaim lakosságnak",
+      "services": [
+        {
+          "title": "Villamos biztonsági felülvizsgálat",
+          "desc": "Ingatlan eladás vagy bérbeadás előtt kötelező. Kalibrált műszerekkel végzem, joghatályos jegyzőkönyvet kap kézhez."
+        },
+        {
+          "title": "Villanyszerelés, javítás, kivitelezés",
+          "desc": "Kapcsolócsere, konnektor, biztosítéktábla, világítás, teljes lakás villanyszerelés. Tételes árajánlat, garancia."
+        },
+        {
+          "title": "IT hálózat – WiFi / UTP",
+          "desc": "Otthoni iroda, home office, stabil WiFi lefedettség. Különösen ajánlom külföldi ügyfeleknek."
+        }
+      ],
+      "process_section": "Így dolgozunk együtt",
+      "process_steps": [
+        {
+          "title": "Ajánlatkérés",
+          "description": "Írja le röviden, mire van szüksége – az űrlapon vagy telefonon."
+        },
+        {
+          "title": "Egyeztetés",
+          "description": "Visszajelzek, egyeztetjük az időpontot és a részleteket."
+        },
+        {
+          "title": "Helyszíni munka",
+          "description": "Megérkezem pontosan, elvégzem a méréseket vagy a szerelési munkát."
+        },
+        {
+          "title": "Dokumentáció",
+          "description": "Joghatályos jegyzőkönyvet vagy tételes elszámolást és garanciajegyet kap."
+        },
+        {
+          "title": "Fizetés",
+          "description": "Készpénzzel vagy bankkártyával, a helyszínen. Számlát azonnal kiállítom."
+        }
+      ],
+      "pricing_section": "Átlátható árazás",
+      "pricing_note": "Magánszemélyeknek ÁFA-mentes számlát állítok ki.",
+      "deliverables_section": "Mit kap kézhez?",
+      "faq_section": "Gyakori kérdések",
+      "cta_title": "Kérjen ajánlatot",
+      "cta_subtitle": "Válaszolok 1 munkanapon belül. Budán dolgozom, kalibrált műszerekkel, garanciával."
+    },
+    "tarsashazaknak": {
+      "hero_subtitle": "Közös képviselőként Ön felel a lakók biztonságáért. Elvégzem a kötelező villamos biztonsági felülvizsgálatot, joghatályos jegyzőkönyvvel, tételes árajánlattal a közgyűléshez.",
+      "target_section": "Önnek szól, ha…",
+      "bullets": [
+        "Közös képviselő és a társasház villamos felülvizsgálása esedékes",
+        "Társasházi döntéshozó és a közgyűlés elé kell vinni az árajánlatot",
+        "Hatósági felszólítást kapott a társasház villamos hálózatának ellenőrzésére",
+        "Közös területek villanyszerelése szükséges (lépcsőház, pince, garázs)",
+        "Biztosítási esemény miatt kell dokumentáció",
+        "Felújítás előtt áll a társasház és felmérés kell"
+      ],
+      "why_me_section": "Miért engem válasszon?",
+      "why_me_intro_bold": "Tudom, hogy közös képviselőként Önnek a közgyűlés felé is el kell számolnia.",
+      "why_me_intro": "Ezért adok tételes árajánlatot, amit bemutathat a lakóközösségnek, és joghatályos jegyzőkönyvet, amit a hatóság elfogad.",
+      "why_me_points": [
+        "Vizsgázott villamos biztonsági felülvizsgáló – villamosmérnöki végzettséggel",
+        "Kalibrált műszerek – joghatályos mérési eredmények",
+        "Tételes árajánlat – bemutatható a közgyűlésen",
+        "Joghatályos jegyzőkönyv – hatóság előtt elfogadott",
+        "ÁFA-mentes számlázás társasházaknak",
+        "20 év multinacionális tapasztalat – pontosság, korrekt kommunikáció",
+        "Garancia a munkára, magam után takarítok"
+      ],
+      "process_section": "Így dolgozunk együtt",
+      "cta_title": "Kérjen árajánlatot a közgyűléshez",
+      "cta_subtitle": "Tételes árajánlatot küldök, amit bemutathat a lakóközösségnek."
+    },
+    "munkahelyeknek": {
+      "hero_subtitle": "Irodája, üzlete vagy vendéglátóhelye van? A villamos biztonsági felülvizsgálat 3 évente kötelező. Az elektromos kéziszerszámok éves ellenőrzését helyszínen végzem.",
+      "target_section": "Önnek szól, ha…",
+      "bullets": [
+        "Irodát üzemeltet és esedékes a 3 évenkénti villamos felülvizsgálat",
+        "Üzletet vagy boltot vezet és szüksége van az érvényes jegyzőkönyvre",
+        "Vendéglátóhelye van és a hatóság kéri a dokumentációt",
+        "Fodrászatot, szépségszalont működtet és az eszközök éves felülvizsgálata esedékes",
+        "Rendelőt, orvosi praxist vezet és a villamos biztonság dokumentálása szükséges",
+        "Kéziszerszámokat használ és az éves felülvizsgálat esedékes"
+      ],
+      "why_me_section": "Miért engem válasszon?",
+      "why_me_intro_bold": "Tudom, hogy egy vállalkozásnak a hatósági megfelelés nem opció – kötelesség.",
+      "why_me_intro": "Ezért gyorsan, precízen és minimális fennakadással dolgozom.",
+      "services_section": "Szolgáltatásaim munkahelyeknek",
+      "cta_title": "Ne várja meg a hatósági ellenőrzést",
+      "cta_subtitle": "A kötelező felülvizsgálat elmulasztása bírságot vonhat maga után. Kérjen ajánlatot, és legyen naprakész."
+    },
+    "rolam": {
+      "hero_title": "Villamosmérnök, 20 év tapasztalattal – most Önnek dolgozom.",
+      "hero_subtitle": "Vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. Két évtizednyi multinacionális tapasztalat után a budai otthonok, társasházak és munkahelyek villamos biztonságáért dolgozom.",
+      "intro_section": "Ki áll a Villiotech mögött?",
+      "intro_content": [
+        "Villamosmérnök vagyok, vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. Hamarosan villámvédelmi felülvizsgálóként is rendelkezésre állok.",
+        "20 évet dolgoztam multinacionális környezetben, ahol megtanultam, hogy a pontosság, a felelősség és a korrekt kommunikáció nem választható extra – hanem alapelvárás. Ezt a szemléletet hoztam magammal a magánszektorba is.",
+        "Budán élek és dolgozom. Fő területem a II. kerület és egész Buda, de kivételesen Pesten is vállalok munkát.",
+        "Magyarul és angolul egyaránt dolgozom – külföldi ügyfeleimet ugyanazzal a precizitással szolgálom ki."
+      ],
+      "qualifications_section": "Képesítéseim",
+      "values_section": "Amiben hiszek",
+      "english_title": "🇬🇧 About me – for English-speaking clients",
+      "english_content": "I'm a qualified electrical engineer and certified electrical safety inspector based in Buda, Budapest. With 20 years of experience in multinational environments, I bring precision, accountability, and clear communication to every project.",
+      "cta_title": "Dolgozzunk együtt",
+      "cta_subtitle": "Ha precíz, megbízható villamos szakembert keres Budán – keressen bizalommal."
+    },
+    "villamos_felulvizsgalat": {
+      "hero_subtitle": "Kalibrált műszerekkel végzett mérések, hatóság előtt elfogadott dokumentáció. Lakásoknak, társasházaknak és munkahelyeknek egyaránt.",
+      "cta1": "Ajánlatot kérek",
+      "cta2": "Visszahívást kérek",
+      "when_needed_title": "Mikor van szükség villamos biztonsági felülvizsgálatra?",
+      "when_needed": [
+        "Ingatlan eladás vagy bérbeadás előtt",
+        "Felújítás, villanyszerelési munka után",
+        "Munkahelyeken 3 évente (kötelező)",
+        "Társasházak közös hálózatánál (rendszeres)",
+        "Biztosítási esemény dokumentálásához",
+        "Hatósági felszólításra"
+      ],
+      "what_includes_title": "Mit tartalmaz a felülvizsgálat?",
+      "what_includes": [
+        "Érintésvédelmi mérés",
+        "Szigetelési ellenállás mérés",
+        "Rövidzárlati hurokimpedancia mérés",
+        "Védővezetők folytonosságának ellenőrzése",
+        "Túláramvédelmi eszközök működésének vizsgálata",
+        "Szemrevételezéses ellenőrzés (vezetékek, csatlakozások, elosztók)"
+      ],
+      "calibrated_note": "Minden mérést kalibrált, hitelesített műszerekkel végzek. Az eredmények joghatályosak.",
+      "results_title": "A felülvizsgálat eredménye",
+      "results": [
+        "Joghatályos mérési jegyzőkönyv – hatóság, közjegyző, biztosító előtt elfogadott",
+        "Részletes mérési eredmények – minden mérési pont dokumentálva",
+        "Minősítés – a hálózat megfelel vagy nem felel meg",
+        "Hibajegyzék – ha van, a feltárt hibák listája",
+        "Javítási javaslat – mit kell kijavítani a megfelelőséghez"
+      ],
+      "pricing_title": "Árazás",
+      "pricing_rows": [
+        { "label": "Kiszállás – Buda", "price": "10 000 Ft" },
+        { "label": "Kiszállás – Pest (kivételesen)", "price": "20 000 Ft" },
+        { "label": "Minimum munkadíj", "price": "50 000 Ft" },
+        { "label": "Sürgős (4 órán belül)", "price": "+50% felár" }
+      ],
+      "pricing_note": "A végleges ár az ingatlan méretétől és a hálózat összetettségétől függ.",
+      "cta_title": "Kérjen ajánlatot villamos felülvizsgálatra",
+      "cta_phone": "☎ Hívjon most"
+    },
+    "villanyszereles": {
+      "hero_subtitle": "Kapcsolócsere, biztosítéktábla, teljes lakás villanyszerelés. Tételes árajánlat, tiszta munkavégzés, garancia minden munkára.",
+      "cta1": "Ajánlatot kérek",
+      "cta2": "Sürgős? 4 órán belül",
+      "services_title": "Villanyszerelési szolgáltatásaim",
+      "services": [
+        "Kapcsolók, konnektorok cseréje, bővítése",
+        "Világítás szerelés, csillárok felszerelése",
+        "Biztosítéktábla csere, korszerűsítés",
+        "Teljes lakás vagy iroda villanyszerelés",
+        "Villamos hálózat bővítés, átalakítás",
+        "Hibaelhárítás, zárlat keresés",
+        "Kültéri világítás, kerti elektromos hálózat",
+        "Társasházi közös területek villanyszerelése"
+      ],
+      "promises_title": "Amire számíthat",
+      "promises": [
+        { "title": "Tételes árajánlat", "desc": "A munka megkezdése előtt, írásban." },
+        { "title": "Pontos érkezés", "desc": "A megbeszélt időpontban." },
+        { "title": "Szakszerű kivitelezés", "desc": "Villamosmérnöki tudással." },
+        { "title": "Tiszta munkavégzés", "desc": "Magam után takarítok." },
+        { "title": "Garancia", "desc": "Minden elvégzett munkára." },
+        { "title": "Kártyás fizetés", "desc": "A helyszínen." }
+      ],
+      "disclaimer": "Bontás előfordulhat a munka során. Festést nem vállalok, de ajánlok megbízható festő szakembert.",
+      "pricing_title": "Árazás",
+      "pricing_rows": [
+        { "label": "Kiszállás – Buda", "price": "10 000 Ft" },
+        { "label": "Kiszállás – Pest (kivételesen)", "price": "20 000 Ft" },
+        { "label": "Minimum munkadíj", "price": "50 000 Ft" },
+        { "label": "Sürgős (4 órán belül)", "price": "+50% felár" }
+      ],
+      "pricing_note": "A végleges árat a munka jellege és terjedelme határozza meg.",
+      "cta_title": "Kérjen ajánlatot villanyszerelésre",
+      "cta_phone": "☎ Hívjon most"
+    },
+    "it_halozat": {
+      "hero_subtitle": "UTP kábelezés, WiFi lefedettség optimalizálás, otthoni iroda hálózat kiépítés. Teljes szolgáltatás angol nyelven is.",
+      "hero_cta1": "Ajánlatot kérek",
+      "hero_cta2": "Request a quote in English",
+      "services_title": "IT hálózati szolgáltatásaim",
+      "services": [
+        "UTP kábelezés – Cat5e / Cat6 hálózati kábel fektetés, csatlakozók szerelése",
+        "WiFi lefedettség – access point-ok telepítése, optimális elhelyezés",
+        "Otthoni iroda (home office) – stabil, megbízható hálózat a távmunkához",
+        "Irodai hálózat – több munkaállomás bekötése, hálózati infrastruktúra",
+        "Hálózati szekrény – patch panel, switch elhelyezés, rendezett kábelezés"
+      ],
+      "target_title": "Kinek ajánlom?",
+      "target_items": [
+        "Külföldi rezidensek Budán – akik angolul szeretnék intézni a hálózat kiépítést",
+        "Home office dolgozók – akiknek stabil, gyors internet kell a munkához",
+        "Kis irodák – ahol több gép megbízható hálózati kapcsolata szükséges",
+        "Új lakás / felújítás – ahol az alapoktól kell kiépíteni a hálózatot"
+      ],
+      "english_section_title": "🇬🇧 IT Network Services in English",
+      "english_section_description": "Setting up your home office or need reliable WiFi coverage in your Buda apartment? I provide complete IT networking services in fluent English – from UTP cabling to WiFi optimization. Clean installation, tested connections, full documentation.",
+      "english_section_cta": "🇬🇧 Request a quote →",
+      "pricing_title": "Árazás",
+      "pricing_rows": [
+        {
+          "label": "Kiszállás – Buda",
+          "price": "10 000 Ft"
+        },
+        {
+          "label": "Kiszállás – Pest (kivételesen)",
+          "price": "20 000 Ft"
+        },
+        {
+          "label": "Minimum munkadíj",
+          "price": "50 000 Ft"
+        }
+      ],
+      "pricing_note": "A végleges árat a hálózat mérete és összetettsége határozza meg.",
+      "cta_title": "Kérjen ajánlatot hálózat kiépítésre",
+      "cta_button1": "Ajánlatot kérek",
+      "cta_button2": "☎ Hívjon most"
+    },
+    "keziszerszam_felulvizsgalat": {
+      "hero_subtitle": "Az elektromos kéziszerszámok éves felülvizsgálata kötelező. Helyszínen végzem, nem kell sehová szállítani az eszközöket.",
+      "cta1": "Ajánlatot kérek",
+      "cta2": "Visszahívást kérek",
+      "who_mandatory_title": "Kinek kötelező?",
+      "who_mandatory_subtitle": "Minden munkáltatónak és egyéni vállalkozónak, aki elektromos kéziszerszámokat használ. Évente egyszer kötelező.",
+      "industries": [
+        "Fodrászatok, szépségszalonok – hajszárító, hajvasaló, hajgöndörítő",
+        "Vendéglátóhelyek – kávégép, mixer, kenyérpirító, szeletelő",
+        "Műhelyek – fúrógép, flex, csiszológép, hegesztő",
+        "Irodák – nyomtató, lamináló, iratmegsemmisítő",
+        "Rendelők – sterilizáló, elektromos berendezések",
+        "Takarítócégek – porszívó, gőztisztító"
+      ],
+      "process_title": "Hogyan zajlik a felülvizsgálat?",
+      "process_steps": [
+        {
+          "title": "Eszközlista",
+          "description": "Ön megadja, hány és milyen eszközt kell ellenőrizni."
+        },
+        {
+          "title": "Időpont",
+          "description": "Egyeztetünk egy időpontot, ami Önnek megfelel."
+        },
+        {
+          "title": "Helyszíni mérés",
+          "description": "Kalibrált hordozható műszerrel ellenőrzöm az eszközöket a helyszínen."
+        },
+        {
+          "title": "Jegyzőkönyv",
+          "description": "Minden eszközről külön jegyzőkönyvet kap, \"megfelelt\" vagy \"nem felelt meg\" minősítéssel."
+        }
+      ],
+      "what_we_check_title": "Mit mér a felülvizsgálat?",
+      "what_we_check": [
+        "Védővezetők folytonossága",
+        "Szigetelési ellenállás",
+        "Érintésvédelmi vizsgálat",
+        "Szemrevételezés (kábel, csatlakozó, ház állapota)"
+      ],
+      "pricing_title": "Árazás",
+      "pricing_rows": [
+        {
+          "label": "Kiszállás – Buda",
+          "price": "10 000 Ft"
+        },
+        {
+          "label": "Kiszállás – Pest (kivételesen)",
+          "price": "20 000 Ft"
+        },
+        {
+          "label": "Minimum munkadíj",
+          "price": "50 000 Ft"
+        }
+      ],
+      "pricing_note": "Az ár az eszközök számától függ. Nagyobb mennyiségnél kedvezőbb egységár.",
+      "cta_title": "Kérjen ajánlatot kéziszerszám felülvizsgálatra",
+      "cta_subtitle": "Helyszínen végzem, nem kell sehová vinni az eszközöket.",
+      "cta_phone": "☎ Hívjon most"
+    },
+    "adatvedelem": {
+      "seo_title": "Adatvédelmi tájékoztató",
+      "seo_description": "A Villiotech adatvédelmi tájékoztatója – személyes adatok kezelése, jogok, kapcsolat.",
+      "title": "Adatvédelmi tájékoztató",
+      "section1_title": "1. Adatkezelő",
+      "section1_content": "Név: [Adatkezelő neve]\nSzékhely: Budapest, [cím]\nE-mail: info@villiotech.hu\nTelefon: [telefonszám]",
+      "section2_title": "2. Kezelt személyes adatok",
+      "section2_intro": "Az ajánlatkérő űrlap kitöltésekor az alábbi adatokat kezeljük:",
+      "section2_list": [
+        "Név",
+        "Telefonszám",
+        "E-mail cím (opcionális)",
+        "Ingatlan/munkahely címe (kerület)",
+        "A megkeresés tartalma"
+      ],
+      "section3_title": "3. Adatkezelés célja és jogalapja",
+      "section3_content": "Az adatkezelés célja az ajánlatkérés feldolgozása és a kapcsolatfelvétel. Jogalap: az érintett hozzájárulása (GDPR 6. cikk (1) a) pont).",
+      "section4_title": "4. Adatkezelés időtartama",
+      "section4_content": "A személyes adatokat az ajánlatkérés feldolgozásáig, de legfeljebb 1 évig tároljuk. Az érintett bármikor kérheti adatai törlését.",
+      "section5_title": "5. Adattovábbítás",
+      "section5_content": "Személyes adatait harmadik félnek nem adjuk tovább. Az adatok az Amazon Web Services (AWS) EU-s szerverein kerülnek tárolásra és feldolgozásra.",
+      "section6_title": "6. Sütik (cookie-k)",
+      "section6_content": "A weboldal technikai sütiket használ a működéshez (témaválasztás). Analitikai sütiket (Google Analytics) csak az Ön hozzájárulásával használunk.",
+      "section7_title": "7. Az érintett jogai",
+      "section7_list": [
+        "Hozzáférés joga – tájékoztatást kérhet a kezelt adatairól",
+        "Helyesbítés joga – kérheti adatai javítását",
+        "Törlés joga – kérheti adatai törlését",
+        "Hozzájárulás visszavonása – bármikor, a korábbi adatkezelés jogszerűségének érintése nélkül",
+        "Panasztétel joga – a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH)"
+      ],
+      "section8_title": "8. Kapcsolat",
+      "section8_content": "Adatvédelmi kérdéseivel forduljon hozzánk: info@villiotech.hu",
+      "last_updated": "Utolsó frissítés: 2026. február"
+    },
+    "aszf": {
+      "seo_title": "Általános Szerződési Feltételek",
+      "seo_description": "A Villiotech általános szerződési feltételei – szolgáltatások, árazás, garancia, felelősség.",
+      "title": "Általános Szerződési Feltételek",
+      "section1_title": "1. Szolgáltató adatai",
+      "section1_content": "Név:\n- Liktor Tibor E.V. (67824469-1-41)\n- Nanotech Solutions 2005 Kft. (13438917-2-41)\n- Villiotech Kft. (26395674-1-41)\nSzékhely: 1025 Budapest, Verecke út 138/D\nE-mail: info@villiotech.hu",
+      "section2_title": "2. Szolgáltatások",
+      "section2_content": "A Szolgáltató az alábbi szolgáltatásokat nyújtja: villamos biztonsági felülvizsgálat, villanyszerelés, IT hálózat kiépítés, elektromos kéziszerszámok felülvizsgálata. A szolgáltatások részletes leírása a weboldalon található.",
+      "section3_title": "3. Árazás és fizetés",
+      "section3_list": [
+        "Kiszállási díj Buda: 10 000 Ft",
+        "Kiszállási díj Pest (kivételesen): 20 000 Ft",
+        "Minimum munkadíj: 50 000 Ft",
+        "Sürgős kiszállás (4 órán belül): +50% felár",
+        "A végleges árat tételes árajánlat tartalmazza",
+        "Fizetés: készpénz vagy bankkártya, a helyszínen",
+        "Számlázás: magánszemélyeknek ÁFA-mentes, vállalkozásoknak ÁFÁ-s, társasházaknak ÁFA-mentes"
+      ],
+      "section4_title": "4. Megrendelés és időpont",
+      "section4_content": "A megrendelés az ajánlatkérő űrlap kitöltésével vagy telefonos egyeztetéssel indul. A Szolgáltató 1 munkanapon belül visszajelez. Az időpont közös egyeztetés alapján kerül meghatározásra.",
+      "section5_title": "5. Garancia",
+      "section5_content": "A Szolgáltató garanciát vállal minden elvégzett munkára. A garancia feltételeit és időtartamát a tételes árajánlat tartalmazza.",
+      "section6_title": "6. Felelősség",
+      "section6_content": "A Szolgáltató felelősséget vállal a szakszerűen elvégzett munkáért. Bontás szükségessége esetén a Szolgáltató előzetesen tájékoztatja a Megrendelőt. Festési munkákat a Szolgáltató nem vállal, de ajánl szakembert.",
+      "section7_title": "7. Lemondás",
+      "section7_content": "Az egyeztetett időpont lemondása legalább 24 órával előtte szükséges. Későbbi lemondás esetén a kiszállási díj felszámításra kerülhet.",
+      "section8_title": "8. Jogviták",
+      "section8_content": "A felek a vitás kérdéseket elsősorban egyeztetés útján rendezik. Ennek sikertelensége esetén a magyar bíróságok illetékesek.",
+      "effective_date": "Hatályos: 2026. február"
     }
   }
 }

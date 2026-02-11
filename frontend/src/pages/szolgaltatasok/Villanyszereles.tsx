@@ -1,3 +1,6 @@
+import { useTranslation } from 'react-i18next'
+import { useSEO } from '../../hooks/useSEO'
+import { getTranslationArray } from '../../utils/i18n'
 import SEO from '../../components/SEO'
 import Hero from '../../components/Hero'
 import SectionTitle from '../../components/SectionTitle'
@@ -5,45 +8,29 @@ import ThemeCard from '../../components/ThemeCard'
 import PricingTable from '../../components/PricingTable'
 import CTASection from '../../components/CTASection'
 
-const services = [
-  'Kapcsolók, konnektorok cseréje, bővítése',
-  'Világítás szerelés, csillárok felszerelése',
-  'Biztosítéktábla csere, korszerűsítés',
-  'Teljes lakás vagy iroda villanyszerelés',
-  'Villamos hálózat bővítés, átalakítás',
-  'Hibaelhárítás, zárlat keresés',
-  'Kültéri világítás, kerti elektromos hálózat',
-  'Társasházi közös területek villanyszerelése',
-]
-
-const promises = [
-  { title: 'Tételes árajánlat', desc: 'A munka megkezdése előtt, írásban.' },
-  { title: 'Pontos érkezés', desc: 'A megbeszélt időpontban.' },
-  { title: 'Szakszerű kivitelezés', desc: 'Villamosmérnöki tudással.' },
-  { title: 'Tiszta munkavégzés', desc: 'Magam után takarítok.' },
-  { title: 'Garancia', desc: 'Minden elvégzett munkára.' },
-  { title: 'Kártyás fizetés', desc: 'A helyszínen.' },
-]
-
 export default function Villanyszereles() {
+  const { t } = useTranslation()
+  const seo = useSEO('villanyszereles')
+  
   return (
     <>
       <SEO
-        title="Villanyszerelés Budán – mérnöki precizitással"
-        description="Villanyszerelés, javítás, kivitelezés Budán. Kapcsolócsere, biztosítéktábla, teljes lakás villanyszerelés. Tételes árajánlat, garancia."
+        title={seo.title}
+        description={seo.description}
         canonical="/szolgaltatasok/villanyszereles"
+        keywords={seo.keywords}
       />
 
       <Hero
-        subtitle="Kapcsolócsere, biztosítéktábla, teljes lakás villanyszerelés. Tételes árajánlat, tiszta munkavégzés, garancia minden munkára."
-        cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: 'Sürgős? 4 órán belül', href: 'tel:+36302389945' }}
+        subtitle={t('pages.villanyszereles.hero_subtitle')}
+        cta1={{ label: t('pages.villanyszereles.cta1'), to: '/kapcsolat' }}
+        cta2={{ label: t('pages.villanyszereles.cta2'), href: 'tel:+36302389945' }}
       />
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Villanyszerelési szolgáltatásaim" />
+        <SectionTitle title={t('pages.villanyszereles.services_title')} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {services.map((s, i) => (
+          {getTranslationArray(t('pages.villanyszereles.services', { returnObjects: true })).map((s: string, i: number) => (
             <ThemeCard key={i} className="flex items-start gap-3">
               <span className="text-primary">⚡</span>
               <span>{s}</span>
@@ -53,9 +40,9 @@ export default function Villanyszereles() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Amire számíthat" />
+        <SectionTitle title={t('pages.villanyszereles.promises_title')} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {promises.map((p, i) => (
+          {getTranslationArray(t('pages.villanyszereles.promises', { returnObjects: true })).map((p: {title: string, desc: string}, i: number) => (
             <ThemeCard key={i}>
               <h3 className="font-semibold mb-1">{p.title}</h3>
               <p className="text-sm opacity-70">{p.desc}</p>
@@ -63,29 +50,29 @@ export default function Villanyszereles() {
           ))}
         </div>
         <p className="text-center mt-6 text-sm opacity-70">
-          Bontás előfordulhat a munka során. Festést nem vállalok, de ajánlok megbízható festő szakembert.
+          {t('pages.villanyszereles.disclaimer')}
         </p>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Árazás" />
+        <SectionTitle title={t('pages.villanyszereles.pricing_title')} />
         <div className="max-w-lg mx-auto">
           <PricingTable
             rows={[
-              { label: 'Kiszállás – Buda', price: '10 000 Ft' },
-              { label: 'Kiszállás – Pest (kivételesen)', price: '20 000 Ft' },
-              { label: 'Minimum munkadíj', price: '50 000 Ft' },
-              { label: 'Sürgős (4 órán belül)', price: '+50% felár' },
+              { label: t('pages.villanyszereles.pricing.buda'), price: '10 000 Ft' },
+              { label: t('pages.villanyszereles.pricing.pest'), price: '20 000 Ft' },
+              { label: t('pages.villanyszereles.pricing.minimum'), price: '50 000 Ft' },
+              { label: t('pages.villanyszereles.pricing.urgent'), price: '+50% felár' },
             ]}
-            note="A végleges árat a munka jellege és terjedelme határozza meg."
+            note={t('pages.villanyszereles.pricing_note')}
           />
         </div>
       </section>
 
       <CTASection
-        title="Kérjen ajánlatot villanyszerelésre"
-        cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
+        title={t('pages.villanyszereles.cta_title')}
+        cta1={{ label: t('pages.villanyszereles.cta_quote'), to: '/kapcsolat' }}
+        cta2={{ label: t('pages.villanyszereles.cta_call'), href: 'tel:+36302389945' }}
       />
     </>
   )

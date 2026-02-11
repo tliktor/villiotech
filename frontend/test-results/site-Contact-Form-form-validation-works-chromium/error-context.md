@@ -1,0 +1,242 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - link "Skip to main content" [ref=e4] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e5]:
+    - generic [ref=e7]:
+      - link "Villiotech" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img [ref=e9]
+        - text: Villiotech
+      - generic [ref=e11]:
+        - link "Kezdőlap" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - link "Lakosságnak" [ref=e13] [cursor=pointer]:
+          - /url: /lakossagnak
+        - link "Társasházaknak" [ref=e14] [cursor=pointer]:
+          - /url: /tarsashazaknak
+        - link "Munkahelyeknek" [ref=e15] [cursor=pointer]:
+          - /url: /munkahelyeknek
+        - button "Szolgáltatások ▾" [ref=e17] [cursor=pointer]
+        - link "Rólam" [ref=e18] [cursor=pointer]:
+          - /url: /rolam
+        - link "Kapcsolat" [ref=e19] [cursor=pointer]:
+          - /url: /kapcsolat
+      - generic [ref=e20]:
+        - link "Sürgős? 4h" [ref=e21] [cursor=pointer]:
+          - /url: tel:+36302389945
+          - img [ref=e22]
+          - text: Sürgős? 4h
+        - button "Nyelv váltása (English)" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+          - generic [ref=e28]: HU
+        - button "Téma váltása (Sötét mód)" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+  - list [ref=e35]:
+    - listitem [ref=e36]:
+      - link "Főoldal" [ref=e37] [cursor=pointer]:
+        - /url: /
+    - listitem [ref=e38]:
+      - generic [ref=e39] [cursor=pointer]: Kapcsolat
+  - main [active] [ref=e40]:
+    - generic [ref=e42]:
+      - heading "Kérjen ajánlatot – válaszolok 1 munkanapon belül." [level=1] [ref=e43]
+      - paragraph [ref=e44]: Töltse ki az űrlapot, vagy hívjon közvetlenül. Budán dolgozom, kalibrált műszerekkel, garanciával.
+      - generic [ref=e45]:
+        - link "☎ Hívjon most" [ref=e46] [cursor=pointer]:
+          - /url: /kapcsolat#form
+        - link "Sürgős? 4 órán belül" [ref=e47] [cursor=pointer]:
+          - /url: tel:+36302389945
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - img [ref=e51]
+        - generic [ref=e53]:
+          - paragraph [ref=e54]: Telefon
+          - link "+36 30 238 9945" [ref=e55] [cursor=pointer]:
+            - /url: tel:+36302389945
+      - generic [ref=e56]:
+        - img [ref=e57]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: E-mail
+          - link "info@villiotech.hu" [ref=e62] [cursor=pointer]:
+            - /url: mailto:info@villiotech.hu
+      - generic [ref=e63]:
+        - img [ref=e64]
+        - generic [ref=e67]:
+          - paragraph [ref=e68]: Szolgáltatási terület
+          - paragraph [ref=e69]: Budapest – Buda
+    - generic [ref=e70]:
+      - heading "Ajánlatkérés" [level=2] [ref=e72]
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - text: Ne töltse ki
+            - textbox [ref=e76]
+          - group [ref=e77]:
+            - generic [ref=e78]: Név *
+            - textbox "Név *" [ref=e79]
+            - alert [ref=e80]:
+              - img [ref=e81]
+              - text: Kérem, adja meg a nevét
+          - group [ref=e83]:
+            - generic [ref=e84]: Telefonszám *
+            - textbox "Telefonszám *" [ref=e85]:
+              - /placeholder: Pl. +36 30 123 4567
+            - paragraph [ref=e86]: Ezen a számon keresem vissza
+            - alert [ref=e87]:
+              - img [ref=e88]
+              - text: Kérem, adjon meg érvényes telefonszámot
+          - group [ref=e90]:
+            - generic [ref=e91]: E-mail
+            - textbox "E-mail" [ref=e92]
+            - paragraph [ref=e93]: Ide küldöm az árajánlatot
+          - group [ref=e94]:
+            - generic [ref=e95]: Milyen szolgáltatásra van szüksége? *
+            - combobox "Milyen szolgáltatásra van szüksége? *" [ref=e96]:
+              - option "Válasszon…" [selected]
+              - option "Villamos biztonsági felülvizsgálat"
+              - option "Villanyszerelés / javítás"
+              - option "IT hálózat (WiFi / UTP)"
+              - option "Kéziszerszám felülvizsgálat"
+              - option "Egyéb"
+            - alert [ref=e97]:
+              - img [ref=e98]
+              - text: Kérem, válassza ki a kívánt szolgáltatást
+          - group [ref=e100]:
+            - generic [ref=e101]: Ön… *
+            - combobox "Ön… *" [ref=e102]:
+              - option "Válasszon…" [selected]
+              - option "Magánszemély"
+              - option "Társasház"
+              - option "Vállalkozás"
+            - alert [ref=e103]:
+              - img [ref=e104]
+              - text: Kérem, válassza ki, hogy magánszemély, társasház vagy vállalkozás
+          - group [ref=e106]:
+            - generic [ref=e107]: Ingatlan/munkahely címe (kerület) *
+            - textbox "Ingatlan/munkahely címe (kerület) *" [ref=e108]
+            - paragraph [ref=e109]: A pontos cím az egyeztetéskor
+            - alert [ref=e110]:
+              - img [ref=e111]
+              - text: Kérem, adja meg a kerületet vagy címet
+          - group [ref=e113]:
+            - generic [ref=e114]: Rövid leírás
+            - textbox "Rövid leírás" [ref=e115]:
+              - /placeholder: Írja le pár mondatban, mire van szüksége…
+          - group [ref=e116]:
+            - generic [ref=e117]: Mikor lenne jó időpont?
+            - textbox "Mikor lenne jó időpont?" [ref=e118]:
+              - /placeholder: Pl. jövő hét kedd délelőtt
+          - generic [ref=e119] [cursor=pointer]:
+            - checkbox "Sürgős kiszállás kell (4 órán belül, +50% felár)" [ref=e120]
+            - generic [ref=e121]: Sürgős kiszállás kell (4 órán belül, +50% felár)
+          - generic [ref=e122]:
+            - generic [ref=e123] [cursor=pointer]:
+              - checkbox "Elfogadom az adatvédelmi tájékoztatót adatvédelmi tájékoztatót *" [ref=e124]
+              - generic [ref=e125]:
+                - text: Elfogadom az adatvédelmi tájékoztatót
+                - link "adatvédelmi tájékoztatót" [ref=e126]:
+                  - /url: /adatvedelem
+                - text: "*"
+            - alert [ref=e127]:
+              - img [ref=e128]
+              - text: Az ajánlatkéréshez el kell fogadnia az adatvédelmi tájékoztatót
+          - generic [ref=e130]:
+            - button "Ajánlatot kérek" [ref=e131] [cursor=pointer]
+            - link "Sürgős – hívjon vissza 4 órán belül" [ref=e132] [cursor=pointer]:
+              - /url: tel:+36302389945
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - img [ref=e135]
+            - text: Válaszolok 1 munkanapon belül
+          - generic [ref=e138]:
+            - img [ref=e139]
+            - text: Tételes árajánlatot kap
+          - generic [ref=e142]:
+            - img [ref=e143]
+            - text: Adatait bizalmasan kezelem
+          - generic [ref=e146]:
+            - img [ref=e147]
+            - text: Nem küldök hírlevelet
+    - generic [ref=e150]:
+      - heading "Szolgáltatási terület" [level=2] [ref=e152]
+      - button "Térkép betöltése" [ref=e153] [cursor=pointer]:
+        - generic [ref=e155]:
+          - paragraph [ref=e156]: 📍
+          - paragraph [ref=e157]: Budapest – Buda
+          - paragraph [ref=e158]: Kattintson a térkép betöltéséhez
+    - generic [ref=e160]:
+      - heading "Request a quote in English" [level=2] [ref=e161]
+      - paragraph [ref=e162]: Fill out the form above or call me directly. I provide all services in fluent English. Serving the Buda side of Budapest.
+      - button "🇬🇧 Switch to English & Request Quote" [ref=e163] [cursor=pointer]
+  - contentinfo [ref=e164]:
+    - generic [ref=e165]:
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - link "Villiotech" [ref=e168] [cursor=pointer]:
+            - /url: /
+            - img [ref=e169]
+            - text: Villiotech
+          - paragraph [ref=e171]: Villamos biztonság, mérnöki precizitással – Budán.
+          - generic [ref=e172]:
+            - img [ref=e173]
+            - generic [ref=e175]: Kártyás fizetés elfogadva
+        - generic [ref=e176]:
+          - heading "Szolgáltatások" [level=3] [ref=e177]
+          - list [ref=e178]:
+            - listitem [ref=e179]:
+              - link "Villamos felülvizsgálat" [ref=e180] [cursor=pointer]:
+                - /url: /szolgaltatasok/villamos-felulvizsgalat
+            - listitem [ref=e181]:
+              - link "Villanyszerelés" [ref=e182] [cursor=pointer]:
+                - /url: /szolgaltatasok/villanyszereles
+            - listitem [ref=e183]:
+              - link "IT hálózat (WiFi/UTP)" [ref=e184] [cursor=pointer]:
+                - /url: /szolgaltatasok/it-halozat
+            - listitem [ref=e185]:
+              - link "Kéziszerszám felülvizsgálat" [ref=e186] [cursor=pointer]:
+                - /url: /szolgaltatasok/keziszerszam-felulvizsgalat
+        - generic [ref=e187]:
+          - heading "Kinek?" [level=3] [ref=e188]
+          - list [ref=e189]:
+            - listitem [ref=e190]:
+              - link "Lakosságnak" [ref=e191] [cursor=pointer]:
+                - /url: /lakossagnak
+            - listitem [ref=e192]:
+              - link "Társasházaknak" [ref=e193] [cursor=pointer]:
+                - /url: /tarsashazaknak
+            - listitem [ref=e194]:
+              - link "Munkahelyeknek" [ref=e195] [cursor=pointer]:
+                - /url: /munkahelyeknek
+            - listitem [ref=e196]:
+              - link "Rólam" [ref=e197] [cursor=pointer]:
+                - /url: /rolam
+        - generic [ref=e198]:
+          - heading "Kapcsolat" [level=3] [ref=e199]
+          - list [ref=e200]:
+            - listitem [ref=e201]:
+              - img [ref=e202]
+              - link "+36 30 238 9945" [ref=e204] [cursor=pointer]:
+                - /url: tel:+36302389945
+            - listitem [ref=e205]:
+              - img [ref=e206]
+              - link "info@villiotech.hu" [ref=e209] [cursor=pointer]:
+                - /url: mailto:info@villiotech.hu
+            - listitem [ref=e210]:
+              - img [ref=e211]
+              - generic [ref=e214]: Budapest – Buda
+          - paragraph [ref=e215]: 🇬🇧 English service available
+      - generic [ref=e217]:
+        - paragraph [ref=e218]: © 2026 Villiotech. Minden jog fenntartva.
+        - generic [ref=e219]:
+          - link "Adatvédelem" [ref=e220] [cursor=pointer]:
+            - /url: /adatvedelem
+          - link "ÁSZF" [ref=e221] [cursor=pointer]:
+            - /url: /aszf
+        - paragraph [ref=e222]: Kalibrált műszerek · Joghatályos mérések · Garancia
+      - paragraph [ref=e224]:
+        - img "Accessibility" [ref=e225]: ♿
+        - generic [ref=e226]: WCAG 2.1 AA megfelelő • Mindenki számára elérhető
+```

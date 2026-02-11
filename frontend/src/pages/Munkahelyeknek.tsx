@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useSEO } from '../hooks/useSEO'
+import { getTranslationArray } from '../utils/i18n'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
@@ -66,24 +69,28 @@ const faqItems = [
 ]
 
 export default function Munkahelyeknek() {
+  const { t } = useTranslation()
+  const seo = useSEO('munkahelyeknek')
+  
   return (
     <>
       <SEO
-        title="Munkahelyeknek – kötelező villamos felülvizsgálat, kéziszerszám ellenőrzés"
-        description="Munkahelyi villamos felülvizsgálat 3 évente kötelező. Kéziszerszámok éves ellenőrzése helyszínen, kalibrált műszerrel. Budán."
+        title={seo.title}
+        description={seo.description}
         canonical="/munkahelyeknek"
+        keywords={seo.keywords}
       />
 
       <Hero
-        subtitle="Irodája, üzlete vagy vendéglátóhelye van? A villamos biztonsági felülvizsgálat 3 évente kötelező. Az elektromos kéziszerszámok éves ellenőrzését helyszínen végzem."
+        subtitle={t('pages.munkahelyeknek.hero_subtitle')}
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
         cta2={{ label: 'Sürgős? 4 órán belül', href: 'tel:+36302389945' }}
       />
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Önnek szól, ha…" />
+        <SectionTitle title={t('pages.munkahelyeknek.target_section')} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {bullets.map((b, i) => (
+          {getTranslationArray(t('pages.munkahelyeknek.bullets', { returnObjects: true })).map((b, i) => (
             <ThemeCard key={i} className="flex items-start gap-3">
               <span className="text-primary text-lg font-bold">✓</span>
               <span>{b}</span>
@@ -93,10 +100,13 @@ export default function Munkahelyeknek() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Miért engem válasszon?" />
+        <SectionTitle title={t('pages.munkahelyeknek.why_me_section')} />
         <ThemeCard hover={false}>
+          <p className="mb-2 text-lg font-semibold">
+            {t('pages.munkahelyeknek.why_me_intro_bold')}
+          </p>
           <p className="mb-4 opacity-80">
-            Tudom, hogy egy vállalkozásnak a hatósági megfelelés nem opció – kötelesség. Ezért gyorsan, precízen és minimális fennakadással dolgozom.
+            {t('pages.munkahelyeknek.why_me_intro')}
           </p>
           <ul className="space-y-2">
             {whyMe.map((item, i) => (
@@ -110,7 +120,7 @@ export default function Munkahelyeknek() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Szolgáltatásaim munkahelyeknek" />
+        <SectionTitle title={t('pages.munkahelyeknek.services_section')} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((s, i) => (
             <ThemeCard key={i} className="flex flex-col justify-between">
@@ -168,8 +178,8 @@ export default function Munkahelyeknek() {
       </section>
 
       <CTASection
-        title="Ne várja meg a hatósági ellenőrzést"
-        subtitle="A kötelező felülvizsgálat elmulasztása bírságot vonhat maga után. Kérjen ajánlatot, és legyen naprakész."
+        title={t('pages.munkahelyeknek.cta_title')}
+        subtitle={t('pages.munkahelyeknek.cta_subtitle')}
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
         cta2={{ label: '☎ Telefonos egyeztetés', href: 'tel:+36302389945' }}
       />

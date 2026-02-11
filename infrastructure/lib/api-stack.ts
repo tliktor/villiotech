@@ -3,6 +3,8 @@ import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as apigateway from 'aws-cdk-lib/aws-apigatewayv2';
 import * as integrations from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
+import * as cloudwatch from 'aws-cdk-lib/aws-cloudwatch';
 import { Construct } from 'constructs';
 
 export interface ApiStackProps extends cdk.StackProps {
@@ -14,6 +16,15 @@ export interface ApiStackProps extends cdk.StackProps {
 export class ApiStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: ApiStackProps) {
     super(scope, id, props);
+
+    // DynamoDB table for rate limiting
+    const rateLimitTable = new dynamodb.Table(this, 'ContactRateLimit', {
+      tableName: 'ContactRateLimit',
+      partitionKey: { name: 'ip', type: dynamodb.AttributeType.STRING },
+      timeToLiveAttribute: 'ttl',
+      billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+    });
 
     // IAM role for Lambda with SES permissions
     const lambdaRole = new iam.Role(this, 'ContactLambdaRole', {
@@ -28,6 +39,15 @@ export class ApiStack extends cdk.Stack {
               effect: iam.Effect.ALLOW,
               actions: ['ses:SendEmail', 'ses:SendRawEmail'],
               resources: ['*'],
+            }),
+          ],
+        }),
+        DynamoDBPolicy: new iam.PolicyDocument({
+          statements: [
+            new iam.PolicyStatement({
+              effect: iam.Effect.ALLOW,
+              actions: ['dynamodb:GetItem', 'dynamodb:PutItem'],
+              resources: [rateLimitTable.tableArn],
             }),
           ],
         }),
@@ -65,6 +85,25 @@ export class ApiStack extends cdk.Stack {
       path: '/contact',
       methods: [apigateway.HttpMethod.POST],
       integration: lambdaIntegration,
+    });
+
+    // CloudWatch Alarms for Lambda
+    new cloudwatch.Alarm(this, 'ContactLambdaErrorAlarm', {
+      alarmName: 'villiotech-contact-lambda-errors',
+      metric: contactFunction.metricErrors({
+        period: cdk.Duration.minutes(5),
+      }),
+      threshold: 5,
+      evaluationPeriods: 1,
+    });
+
+    new cloudwatch.Alarm(this, 'ContactLambdaDurationAlarm', {
+      alarmName: 'villiotech-contact-lambda-duration',
+      metric: contactFunction.metricDuration({
+        period: cdk.Duration.minutes(5),
+      }),
+      threshold: 3000,
+      evaluationPeriods: 1,
     });
 
     // Add tags

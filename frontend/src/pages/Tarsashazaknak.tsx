@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useSEO } from '../hooks/useSEO'
+import { getTranslationArray } from '../utils/i18n'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
@@ -58,24 +61,28 @@ const faqItems = [
 ]
 
 export default function Tarsashazaknak() {
+  const { t } = useTranslation()
+  const seo = useSEO('tarsashazaknak')
+  
   return (
     <>
       <SEO
-        title="Társasházaknak – villamos felülvizsgálat, közös területek"
-        description="Társasházi villamos felülvizsgálat joghatályos jegyzőkönyvvel, tételes árajánlattal a közgyűléshez. ÁFA-mentes számlázás, Budán."
+        title={seo.title}
+        description={seo.description}
         canonical="/tarsashazaknak"
+        keywords={seo.keywords}
       />
 
       <Hero
-        subtitle="Közös képviselőként Ön felel a lakók biztonságáért. Elvégzem a kötelező villamos biztonsági felülvizsgálatot, joghatályos jegyzőkönyvvel, tételes árajánlattal a közgyűléshez."
+        subtitle={t('pages.tarsashazaknak.hero_subtitle')}
         cta1={{ label: 'Ajánlatot kérek a közgyűléshez', to: '/kapcsolat' }}
         cta2={{ label: 'Visszahívást kérek', to: '/kapcsolat' }}
       />
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Önnek szól, ha…" />
+        <SectionTitle title={t('pages.tarsashazaknak.target_section')} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {bullets.map((b, i) => (
+          {getTranslationArray(t('pages.tarsashazaknak.bullets', { returnObjects: true })).map((b, i) => (
             <ThemeCard key={i} className="flex items-start gap-3">
               <span className="text-primary text-lg font-bold">✓</span>
               <span>{b}</span>
@@ -85,13 +92,16 @@ export default function Tarsashazaknak() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Miért engem válasszon?" />
+        <SectionTitle title={t('pages.tarsashazaknak.why_me_section')} />
         <ThemeCard hover={false}>
+          <p className="mb-2 text-lg font-semibold">
+            {t('pages.tarsashazaknak.why_me_intro_bold')}
+          </p>
           <p className="mb-4 opacity-80">
-            Tudom, hogy közös képviselőként Önnek a közgyűlés felé is el kell számolnia. Ezért adok tételes árajánlatot, amit bemutathat a lakóközösségnek, és joghatályos jegyzőkönyvet, amit a hatóság elfogad.
+            {t('pages.tarsashazaknak.why_me_intro')}
           </p>
           <ul className="space-y-2">
-            {whyMe.map((item, i) => (
+            {getTranslationArray(t('pages.tarsashazaknak.why_me_points', { returnObjects: true })).map((item, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="text-success">✅</span>
                 <span>{item}</span>
@@ -102,12 +112,12 @@ export default function Tarsashazaknak() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Így dolgozunk együtt" />
+        <SectionTitle title={t('pages.tarsashazaknak.process_section')} />
         <ProcessSteps steps={steps} />
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Átlátható árazás" />
+        <SectionTitle title={t('pages.lakossagnak.pricing_section')} />
         <div className="max-w-lg mx-auto">
           <PricingTable
             rows={[
@@ -122,7 +132,7 @@ export default function Tarsashazaknak() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Mit kap kézhez?" />
+        <SectionTitle title={t('pages.lakossagnak.deliverables_section')} />
         <ThemeCard hover={false}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((d, i) => (
@@ -136,16 +146,16 @@ export default function Tarsashazaknak() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Gyakori kérdések" />
+        <SectionTitle title={t('pages.lakossagnak.faq_section')} />
         <div className="max-w-3xl mx-auto">
           <FAQ items={faqItems} />
         </div>
       </section>
 
       <CTASection
-        title="Kérjen árajánlatot a közgyűléshez"
-        subtitle="Tételes árajánlatot küldök, amit bemutathat a lakóközösségnek."
-        cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
+        title={t('pages.tarsashazaknak.cta_title')}
+        subtitle={t('pages.tarsashazaknak.cta_subtitle')}
+        cta1={{ label: t('home.hero.cta1'), to: '/kapcsolat' }}
         cta2={{ label: '☎ Telefonos egyeztetés', href: 'tel:+36302389945' }}
       />
     </>

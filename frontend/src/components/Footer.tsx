@@ -79,6 +79,14 @@ export default function Footer() {
           </div>
           <p>{t('footer.quality')}</p>
         </div>
+
+        {/* Accessibility Statement */}
+        <div className="mt-6 pt-4 border-t border-base-300 text-center">
+          <p className="text-xs opacity-60 flex items-center justify-center gap-2">
+            <span role="img" aria-label="Accessibility">♿</span>
+            <span>{t('footer.accessibility')}</span>
+          </p>
+        </div>
       </div>
     </footer>
   )

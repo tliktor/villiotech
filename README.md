@@ -16,10 +16,24 @@ Serverless React application built on AWS infrastructure.
 ```
 villiotech/
 ├── frontend/          # React application
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── SEO.tsx           # Enhanced SEO component
+│   │   ├── config/
+│   │   │   └── seo.ts            # SEO configuration (HU/EN)
+│   │   ├── hooks/
+│   │   │   └── useSEO.ts         # SEO hook
+│   │   └── pages/                # All pages with SEO
+│   ├── public/
+│   │   ├── robots.txt            # Search engine rules
+│   │   └── sitemap.xml           # Site structure
+│   ├── SEO.md                    # SEO documentation
+│   └── SEO_COMPLETE.md           # Implementation report
 ├── backend/           # Lambda functions
 ├── infrastructure/    # AWS CDK code (planned)
 ├── content/          # Website content (markdown)
-└── memory-bank/      # Project documentation
+├── memory-bank/      # Project documentation
+└── check-seo.sh      # SEO status checker
 ```
 
 ## Getting Started
@@ -73,3 +87,14 @@ Push to `main` branch triggers automatic deployment via GitHub Actions.
 
 - **Production**: https://d1wsqe7tpbsupy.cloudfront.net
 - **API**: https://qqpmxpz0kf.execute-api.eu-central-1.amazonaws.com/contact
+
+## SEO
+
+Full bilingual SEO implementation (Hungarian/English) with:
+- Optimized meta tags, Open Graph, Twitter Cards
+- Structured data (LocalBusiness schema)
+- Sitemap and robots.txt
+- 10/10 pages complete
+
+**Documentation**: See `frontend/SEO.md` for details
+**Status Check**: Run `./check-seo.sh`

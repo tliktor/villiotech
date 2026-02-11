@@ -1,19 +1,21 @@
 import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSEO } from '../hooks/useSEO'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
 import ThemeCard from '../components/ThemeCard'
 import GoogleMap from '../components/GoogleMap'
 import { submitContactForm } from '../services/contact'
+import { SERVICE_TYPES, CLIENT_TYPES } from '../types/contact'
 import { Phone, Mail, MapPin, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 
 interface FormData {
   name: string
   phone: string
   email: string
-  service: string
-  clientType: string
+  service: SERVICE_TYPES | ''
+  clientType: CLIENT_TYPES | ''
   district: string
   description: string
   preferredTime: string
@@ -27,7 +29,8 @@ const initialForm: FormData = {
 }
 
 export default function Kapcsolat() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const seo = useSEO('kapcsolat')
   const [form, setForm] = useState<FormData>(initialForm)
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -37,11 +40,11 @@ export default function Kapcsolat() {
 
   const validate = (): boolean => {
     const e: Partial<Record<keyof FormData, string>> = {}
-    if (!form.name.trim()) e.name = t('contact.validation.required')
+    if (!form.name.trim()) e.name = 'Kérem, adja meg a nevét'
     if (!form.phone.trim()) e.phone = t('contact.validation.phone_required')
     if (!form.service) e.service = t('contact.validation.service_required')
     if (!form.clientType) e.clientType = t('contact.validation.client_type_required')
-    if (!form.district.trim()) e.district = t('contact.validation.required')
+    if (!form.district.trim()) e.district = 'Kérem, adja meg a kerületet vagy címet'
     if (!form.privacy) e.privacy = t('contact.validation.privacy_required')
     if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = t('contact.validation.email_invalid')
     setErrors(e)
@@ -76,7 +79,7 @@ export default function Kapcsolat() {
     }
   }
 
-  const update = (field: keyof FormData, value: string | boolean) => {
+  const update = <K extends keyof FormData>(field: K, value: FormData[K]) => {
     setForm(prev => ({ ...prev, [field]: value }))
     if (errors[field]) setErrors(prev => ({ ...prev, [field]: undefined }))
     if (apiError) setApiError(null)
@@ -98,9 +101,10 @@ export default function Kapcsolat() {
   return (
     <>
       <SEO
-        title="Kapcsolat – ajánlatkérés"
-        description="Kérjen ajánlatot villamos felülvizsgálatra, villanyszerelésre, IT hálózat kiépítésre. Válaszolok 1 munkanapon belül. Budán."
+        title={seo.title}
+        description={seo.description}
         canonical="/kapcsolat"
+        keywords={seo.keywords}
       />
 
       <Hero
@@ -158,30 +162,58 @@ export default function Kapcsolat() {
             {/* Name */}
             <fieldset className="fieldset">
               <label className="fieldset-label" htmlFor="name">{t('contact.form.name')} *</label>
-              <input id="name" type="text" className={`input input-bordered w-full ${errors.name ? 'input-error' : ''}`} value={form.name} onChange={e => update('name', e.target.value)} />
-              {errors.name && <p className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.name}</p>}
+              <input 
+                id="name" 
+                type="text" 
+                className={`input input-bordered w-full ${errors.name ? 'input-error' : ''}`} 
+                value={form.name} 
+                onChange={e => update('name', e.target.value)}
+                aria-describedby={errors.name ? 'name-error' : undefined}
+              />
+              {errors.name && <p id="name-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.name}</p>}
             </fieldset>
 
             {/* Phone */}
             <fieldset className="fieldset">
               <label className="fieldset-label" htmlFor="phone">{t('contact.form.phone')} *</label>
-              <input id="phone" type="tel" placeholder="Pl. +36 30 123 4567" className={`input input-bordered w-full ${errors.phone ? 'input-error' : ''}`} value={form.phone} onChange={e => update('phone', e.target.value)} />
+              <input 
+                id="phone" 
+                type="tel" 
+                placeholder="Pl. +36 30 123 4567" 
+                className={`input input-bordered w-full ${errors.phone ? 'input-error' : ''}`} 
+                value={form.phone} 
+                onChange={e => update('phone', e.target.value)}
+                aria-describedby={errors.phone ? 'phone-error' : undefined}
+              />
               <p className="text-xs opacity-50 mt-1">{t('contact.form.phone_help')}</p>
-              {errors.phone && <p className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.phone}</p>}
+              {errors.phone && <p id="phone-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.phone}</p>}
             </fieldset>
 
             {/* Email */}
             <fieldset className="fieldset">
               <label className="fieldset-label" htmlFor="email">{t('contact.email')}</label>
-              <input id="email" type="email" className={`input input-bordered w-full ${errors.email ? 'input-error' : ''}`} value={form.email} onChange={e => update('email', e.target.value)} />
+              <input 
+                id="email" 
+                type="email" 
+                className={`input input-bordered w-full ${errors.email ? 'input-error' : ''}`} 
+                value={form.email} 
+                onChange={e => update('email', e.target.value)}
+                aria-describedby={errors.email ? 'email-error' : undefined}
+              />
               <p className="text-xs opacity-50 mt-1">{t('contact.form.email_help')}</p>
-              {errors.email && <p className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.email}</p>}
+              {errors.email && <p id="email-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.email}</p>}
             </fieldset>
 
             {/* Service */}
             <fieldset className="fieldset">
               <label className="fieldset-label" htmlFor="service">{t('contact.form.service_question')} *</label>
-              <select id="service" className={`select select-bordered w-full ${errors.service ? 'select-error' : ''}`} value={form.service} onChange={e => update('service', e.target.value)}>
+              <select 
+                id="service" 
+                className={`select select-bordered w-full ${errors.service ? 'select-error' : ''}`} 
+                value={form.service} 
+                onChange={e => update('service', e.target.value as SERVICE_TYPES | '')}
+                aria-describedby={errors.service ? 'service-error' : undefined}
+              >
                 <option value="">{t('contact.form.service_options.choose')}</option>
                 <option value="felulvizsgalat">{t('contact.form.service_options.inspection')}</option>
                 <option value="villanyszereles">{t('contact.form.service_options.electrical')}</option>
@@ -189,27 +221,40 @@ export default function Kapcsolat() {
                 <option value="keziszerszam">{t('contact.form.service_options.tools')}</option>
                 <option value="egyeb">{t('contact.form.service_options.other')}</option>
               </select>
-              {errors.service && <p className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.service}</p>}
+              {errors.service && <p id="service-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.service}</p>}
             </fieldset>
 
             {/* Client type */}
             <fieldset className="fieldset">
               <label className="fieldset-label" htmlFor="clientType">{t('contact.form.client_type')} *</label>
-              <select id="clientType" className={`select select-bordered w-full ${errors.clientType ? 'select-error' : ''}`} value={form.clientType} onChange={e => update('clientType', e.target.value)}>
+              <select 
+                id="clientType" 
+                className={`select select-bordered w-full ${errors.clientType ? 'select-error' : ''}`} 
+                value={form.clientType} 
+                onChange={e => update('clientType', e.target.value as CLIENT_TYPES | '')}
+                aria-describedby={errors.clientType ? 'clientType-error' : undefined}
+              >
                 <option value="">{t('contact.form.service_options.choose')}</option>
                 <option value="maganszemely">{t('contact.form.client_options.individual')}</option>
                 <option value="tarsashaz">{t('contact.form.client_options.condo')}</option>
                 <option value="vallalkozas">{t('contact.form.client_options.business')}</option>
               </select>
-              {errors.clientType && <p className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.clientType}</p>}
+              {errors.clientType && <p id="clientType-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.clientType}</p>}
             </fieldset>
 
             {/* District */}
             <fieldset className="fieldset">
               <label className="fieldset-label" htmlFor="district">{t('contact.form.address')} *</label>
-              <input id="district" type="text" className={`input input-bordered w-full ${errors.district ? 'input-error' : ''}`} value={form.district} onChange={e => update('district', e.target.value)} />
+              <input 
+                id="district" 
+                type="text" 
+                className={`input input-bordered w-full ${errors.district ? 'input-error' : ''}`} 
+                value={form.district} 
+                onChange={e => update('district', e.target.value)}
+                aria-describedby={errors.district ? 'district-error' : undefined}
+              />
               <p className="text-xs opacity-50 mt-1">{t('contact.form.address_help')}</p>
-              {errors.district && <p className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.district}</p>}
+              {errors.district && <p id="district-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.district}</p>}
             </fieldset>
 
             {/* Description */}
@@ -236,7 +281,7 @@ export default function Kapcsolat() {
                 <input type="checkbox" className={`checkbox ${errors.privacy ? 'checkbox-error' : 'checkbox-primary'}`} checked={form.privacy} onChange={e => update('privacy', e.target.checked)} />
                 <span>{t('contact.form.privacy_checkbox')} <a href="/adatvedelem" target="_blank" rel="noopener noreferrer" className="text-primary underline">adatvédelmi tájékoztatót</a> *</span>
               </label>
-              {errors.privacy && <p className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.privacy}</p>}
+              {errors.privacy && <p role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.privacy}</p>}
             </div>
 
             {/* Submit */}
@@ -268,11 +313,23 @@ export default function Kapcsolat() {
 
       {/* English */}
       <section className="max-w-3xl mx-auto px-4 pb-20">
-        <ThemeCard hover={false} className="text-center">
-          <h2 className="text-xl font-bold mb-2">{t('contact.english.title')}</h2>
-          <p className="opacity-80 text-sm">
+        <ThemeCard hover={false} className="text-center bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary/20">
+          <h2 className="text-2xl font-bold mb-3">{t('contact.english.title')}</h2>
+          <p className="opacity-80 mb-6">
             {t('contact.english.description')}
           </p>
+          <button 
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              // Switch to English if not already
+              if (i18n.language !== 'en') {
+                i18n.changeLanguage('en');
+              }
+            }}
+            className="btn btn-primary btn-lg gap-2"
+          >
+            🇬🇧 Switch to English & Request Quote
+          </button>
         </ThemeCard>
       </section>
     </>

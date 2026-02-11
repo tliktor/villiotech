@@ -65,6 +65,112 @@
   --noise: 0;
 }
 
+/* Dark theme glassy gradient background */
+[data-theme="villiotech-night"] {
+  background: linear-gradient(135deg, 
+    oklch(0.20 0.05 260) 0%, 
+    oklch(0.12 0.06 250) 25%,
+    oklch(0.16 0.05 270) 50%,
+    oklch(0.10 0.07 255) 75%,
+    oklch(0.18 0.05 265) 100%
+  );
+  background-attachment: fixed;
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Mobile optimization */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Touch-friendly buttons */
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Prevent horizontal scroll on mobile */
+.max-w-7xl,
+.max-w-4xl,
+.max-w-3xl,
+.max-w-2xl,
+.max-w-xl,
+.max-w-lg {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .max-w-lg { max-width: 32rem; }
+  .max-w-xl { max-width: 36rem; }
+  .max-w-2xl { max-width: 42rem; }
+  .max-w-3xl { max-width: 48rem; }
+  .max-w-4xl { max-width: 56rem; }
+  .max-w-7xl { max-width: 80rem; }
+}
+
+/* Mobile-friendly spacing */
+@media (max-width: 768px) {
+  .pb-20 { padding-bottom: 3rem; }
+  .py-20 { padding-block: 3rem; }
+  .py-16 { padding-block: 2.5rem; }
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-primary-content);
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Focus visible styles */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Ensure sufficient contrast for links */
+a:not(.btn) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ============================================
    NEUMORPHISM UTILITIES (Day theme)
    ============================================ */
@@ -134,22 +240,31 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.bento-grid-home {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 @media (min-width: 1024px) {
   .bento-grid-home {
-    display: grid;
-    gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
 }
 
 .transition-theme {
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+html[data-theme="villiotech-night"] {
+  background: linear-gradient(135deg, oklch(0.15 0.02 260) 0%, oklch(0.18 0.02 250) 50%, oklch(0.16 0.02 270) 100%);
+  background-attachment: fixed;
 }
 
 /* Card hover */

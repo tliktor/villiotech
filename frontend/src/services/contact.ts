@@ -25,15 +25,30 @@ export interface ContactResponse {
 export async function submitContactForm(data: ContactFormPayload): Promise<ContactResponse> {
   if (!API_URL) {
     // Dev mode – nincs backend
-    console.warn('[DEV] Contact form submitted (no API configured):', data)
+    if (import.meta.env.DEV) {
+      console.warn('[DEV] Contact form submitted (no API configured):', data)
+    }
     return { success: true }
   }
 
-  const res = await fetch(API_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), 15000) // 15s timeout
 
-  return res.json()
+  try {
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+      signal: controller.signal,
+    })
+
+    clearTimeout(timeout)
+    return res.json()
+  } catch (error) {
+    clearTimeout(timeout)
+    if (error instanceof Error && error.name === 'AbortError') {
+      return { success: false, error: 'A kérés túl sokáig tartott. Kérjük, hívjon közvetlenül: +36 30 238 9945' }
+    }
+    throw error
+  }
 }

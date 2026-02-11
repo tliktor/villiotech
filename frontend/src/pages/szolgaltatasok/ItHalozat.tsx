@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useSEO } from '../../hooks/useSEO'
+import { getTranslationArray } from '../../utils/i18n'
 import SEO from '../../components/SEO'
 import Hero from '../../components/Hero'
 import SectionTitle from '../../components/SectionTitle'
@@ -6,52 +9,41 @@ import ThemeCard from '../../components/ThemeCard'
 import PricingTable from '../../components/PricingTable'
 import CTASection from '../../components/CTASection'
 
-const services = [
-  'UTP kábelezés – Cat5e / Cat6 hálózati kábel fektetés, csatlakozók szerelése',
-  'WiFi lefedettség – access point-ok telepítése, optimális elhelyezés',
-  'Otthoni iroda (home office) – stabil, megbízható hálózat a távmunkához',
-  'Irodai hálózat – több munkaállomás bekötése, hálózati infrastruktúra',
-  'Hálózati szekrény – patch panel, switch elhelyezés, rendezett kábelezés',
-]
-
-const forWhom = [
-  'Külföldi rezidensek Budán – akik angolul szeretnék intézni a hálózat kiépítést',
-  'Home office dolgozók – akiknek stabil, gyors internet kell a munkához',
-  'Kis irodák – ahol több gép megbízható hálózati kapcsolata szükséges',
-  'Új lakás / felújítás – ahol az alapoktól kell kiépíteni a hálózatot',
-]
-
 export default function ItHalozat() {
+  const { t } = useTranslation()
+  const seo = useSEO('itHalozat')
+  
   return (
     <>
       <SEO
-        title="IT hálózat – WiFi és UTP kiépítés Budán"
-        description="UTP kábelezés, WiFi lefedettség optimalizálás, otthoni iroda hálózat. Angol nyelven is. Budán."
+        title={seo.title}
+        description={seo.description}
         canonical="/szolgaltatasok/it-halozat"
+        keywords={seo.keywords}
       />
 
       <Hero
-        subtitle="UTP kábelezés, WiFi lefedettség optimalizálás, otthoni iroda hálózat kiépítés. Teljes szolgáltatás angol nyelven is."
-        cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: 'Request a quote in English', to: '/kapcsolat' }}
+        subtitle={t('pages.it_halozat.hero_subtitle')}
+        cta1={{ label: t('pages.it_halozat.hero_cta1'), to: '/kapcsolat' }}
+        cta2={{ label: t('pages.it_halozat.hero_cta2'), to: '/kapcsolat' }}
       />
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="IT hálózati szolgáltatásaim" />
+        <SectionTitle title={t('pages.it_halozat.services_title')} />
         <div className="space-y-4">
-          {services.map((s, i) => (
+          {getTranslationArray(t('pages.it_halozat.services', { returnObjects: true })).map((service: string, i: number) => (
             <ThemeCard key={i} className="flex items-start gap-3">
               <span className="text-primary">🔌</span>
-              <span>{s}</span>
+              <span>{service}</span>
             </ThemeCard>
           ))}
         </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Kinek ajánlom?" />
+        <SectionTitle title={t('pages.it_halozat.target_title')} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {forWhom.map((item, i) => (
+          {getTranslationArray(t('pages.it_halozat.target_items', { returnObjects: true })).map((item: string, i: number) => (
             <ThemeCard key={i} className="flex items-start gap-3">
               <span className="text-primary font-bold">✓</span>
               <span>{item}</span>
@@ -63,32 +55,28 @@ export default function ItHalozat() {
       {/* English section */}
       <section className="max-w-7xl mx-auto px-4 pb-20">
         <ThemeCard hover={false} className="text-center">
-          <h2 className="text-2xl font-bold mb-3">IT Network Services in English</h2>
+          <h2 className="text-2xl font-bold mb-3">{t('pages.it_halozat.english_section_title')}</h2>
           <p className="opacity-80 mb-6 max-w-xl mx-auto">
-            Setting up your home office or need reliable WiFi coverage in your Buda apartment? I provide complete IT networking services in fluent English – from UTP cabling to WiFi optimization. Clean installation, tested connections, full documentation.
+            {t('pages.it_halozat.english_section_description')}
           </p>
-          <Link to="/kapcsolat" className="btn btn-primary">Request a quote →</Link>
+          <Link to="/kapcsolat" className="btn btn-primary">{t('pages.it_halozat.english_section_cta')}</Link>
         </ThemeCard>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Árazás" />
+        <SectionTitle title={t('pages.it_halozat.pricing_title')} />
         <div className="max-w-lg mx-auto">
           <PricingTable
-            rows={[
-              { label: 'Kiszállás – Buda', price: '10 000 Ft' },
-              { label: 'Kiszállás – Pest (kivételesen)', price: '20 000 Ft' },
-              { label: 'Minimum munkadíj', price: '50 000 Ft' },
-            ]}
-            note="A végleges árat a hálózat mérete és összetettsége határozza meg."
+            rows={getTranslationArray(t('pages.it_halozat.pricing_rows', { returnObjects: true }))}
+            note={t('pages.it_halozat.pricing_note')}
           />
         </div>
       </section>
 
       <CTASection
-        title="Kérjen ajánlatot hálózat kiépítésre"
-        cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
-        cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
+        title={t('pages.it_halozat.cta_title')}
+        cta1={{ label: t('pages.it_halozat.cta_button1'), to: '/kapcsolat' }}
+        cta2={{ label: t('pages.it_halozat.cta_button2'), href: 'tel:+36302389945' }}
       />
     </>
   )

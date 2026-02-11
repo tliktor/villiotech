@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useSEO } from '../hooks/useSEO'
+import { getTranslationArray } from '../utils/i18n'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
@@ -34,45 +37,40 @@ const values = [
 ]
 
 export default function Rolam() {
+  const { t } = useTranslation()
+  const seo = useSEO('rolam')
+  
   return (
     <>
       <SEO
-        title="Rólam – villamosmérnök, 20 év tapasztalat"
-        description="Vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. 20 év multinacionális tapasztalat. Budán dolgozom, magyarul és angolul."
+        title={seo.title}
+        description={seo.description}
         canonical="/rolam"
+        keywords={seo.keywords}
       />
 
       <Hero
-        title="Villamosmérnök, 20 év tapasztalattal – most Önnek dolgozom."
-        subtitle="Vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. Két évtizednyi multinacionális tapasztalat után a budai otthonok, társasházak és munkahelyek villamos biztonságáért dolgozom."
+        title={t('pages.rolam.hero_title')}
+        subtitle={t('pages.rolam.hero_subtitle')}
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
         cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
       />
 
       {/* Bemutatkozás */}
       <section className="max-w-3xl mx-auto px-4 pb-20">
-        <SectionTitle title="Ki áll a Villiotech mögött?" />
+        <SectionTitle title={t('pages.rolam.intro_section')} />
         <ThemeCard hover={false}>
           <div className="space-y-4 leading-relaxed">
-            <p>
-              Villamosmérnök vagyok, vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. Hamarosan villámvédelmi felülvizsgálóként is rendelkezésre állok.
-            </p>
-            <p>
-              20 évet dolgoztam multinacionális környezetben, ahol megtanultam, hogy a pontosság, a felelősség és a korrekt kommunikáció nem választható extra – hanem alapelvárás. Ezt a szemléletet hoztam magammal a magánszektorba is.
-            </p>
-            <p>
-              Budán élek és dolgozom. Fő területem a II. kerület és egész Buda, de kivételesen Pesten is vállalok munkát.
-            </p>
-            <p>
-              Magyarul és angolul egyaránt dolgozom – külföldi ügyfeleimet ugyanazzal a precizitással szolgálom ki.
-            </p>
+            {getTranslationArray(t('pages.rolam.intro_content', { returnObjects: true })).map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
           </div>
         </ThemeCard>
       </section>
 
       {/* Képesítések */}
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Képesítéseim" />
+        <SectionTitle title={t('pages.rolam.qualifications_section')} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto">
           {qualifications.map((q, i) => (
             <ThemeCard key={i} className="flex items-center gap-3">
@@ -85,7 +83,7 @@ export default function Rolam() {
 
       {/* Értékek */}
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Amiben hiszek" />
+        <SectionTitle title={t('pages.rolam.values_section')} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {values.map((v, i) => (
             <ThemeCard key={i}>
@@ -99,19 +97,16 @@ export default function Rolam() {
       {/* English */}
       <section className="max-w-7xl mx-auto px-4 pb-20">
         <ThemeCard hover={false} className="text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold mb-3">About me – for English-speaking clients</h2>
+          <h2 className="text-2xl font-bold mb-3">{t('pages.rolam.english_title')}</h2>
           <p className="opacity-80 mb-4 leading-relaxed">
-            I'm a qualified electrical engineer and certified electrical safety inspector based in Buda, Budapest. With 20 years of experience in multinational environments, I bring precision, accountability, and clear communication to every project.
-          </p>
-          <p className="opacity-80 leading-relaxed">
-            I provide all services in fluent English – from initial consultation to final documentation. Whether you need an electrical safety inspection, wiring work, or IT network setup, I'm here to help.
+            {t('pages.rolam.english_content')}
           </p>
         </ThemeCard>
       </section>
 
       <CTASection
-        title="Dolgozzunk együtt"
-        subtitle="Ha precíz, megbízható villamos szakembert keres Budán – keressen bizalommal."
+        title={t('pages.rolam.cta_title')}
+        subtitle={t('pages.rolam.cta_subtitle')}
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
         cta2={{ label: '☎ Hívjon most', href: 'tel:+36302389945' }}
       />

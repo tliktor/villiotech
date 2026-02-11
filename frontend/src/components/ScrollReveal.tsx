@@ -1,16 +1,17 @@
 import { motion, useInView } from 'framer-motion'
-import { useRef, ReactNode } from 'react'
+import { useRef, type ReactNode } from 'react'
 
 interface ScrollRevealProps {
   children: ReactNode
   delay?: number
   stagger?: number
   className?: string
+  fallback?: ReactNode
 }
 
-export default function ScrollReveal({ children, delay = 0, stagger = 0, className }: ScrollRevealProps) {
+export default function ScrollReveal({ children, delay = 0, stagger = 0, className, fallback }: ScrollRevealProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
   
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -26,7 +27,7 @@ export default function ScrollReveal({ children, delay = 0, stagger = 0, classNa
       transition={{ duration: 0.6, delay, ease: 'easeOut' }}
       className={className}
     >
-      {children}
+      {isInView || !fallback ? children : fallback}
     </motion.div>
   )
 }
