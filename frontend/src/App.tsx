@@ -62,6 +62,7 @@ export default function App() {
                   <Route path="/adatvedelem" element={<Adatvedelem />} />
                   <Route path="/en/adatvedelem" element={<Adatvedelem />} />
                   <Route path="/aszf" element={<ASZF />} />
+                  <Route path="/en/aszf" element={<ASZF />} />
                 </Route>
               </Routes>
             </Suspense>

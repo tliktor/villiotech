@@ -2,9 +2,21 @@ import SEO from '../components/SEO'
 import ThemeCard from '../components/ThemeCard'
 import { useTranslation } from 'react-i18next'
 import { getTranslationArray } from '../utils/i18n'
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export default function Adatvedelem() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const { pathname } = useLocation()
+  const isEnglish = pathname.startsWith('/en/')
+
+  useEffect(() => {
+    if (isEnglish && i18n.language !== 'en') {
+      i18n.changeLanguage('en')
+    } else if (!isEnglish && i18n.language !== 'hu') {
+      i18n.changeLanguage('hu')
+    }
+  }, [isEnglish, i18n])
 
   return (
     <>

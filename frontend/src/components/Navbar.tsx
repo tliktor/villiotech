@@ -71,8 +71,8 @@ export default function Navbar() {
             </a>
 
             {/* English Service */}
-            <Link to="/en/english-speaking" className="hidden lg:flex btn btn-ghost btn-circle btn-sm" aria-label="English Service" title="English Service">
-              <span className="text-2xl leading-none">🇬🇧</span>
+            <Link to="/en/english-speaking" className="hidden lg:flex btn btn-ghost btn-circle" aria-label="English Service" title="English Service">
+              <span className="text-4xl leading-none">🇬🇧</span>
             </Link>
 
             {/* Theme toggle */}

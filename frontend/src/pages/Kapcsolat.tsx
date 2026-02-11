@@ -185,88 +185,92 @@ export default function Kapcsolat() {
               {errors.name && <p id="name-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.name}</p>}
             </fieldset>
 
-            {/* Phone */}
-            <fieldset className="fieldset">
-              <label className="fieldset-label" htmlFor="phone">{t('contact.form.phone')} *</label>
-              <input 
-                id="phone" 
-                type="tel" 
-                placeholder="Pl. +36 30 123 4567" 
-                className={`input input-bordered w-full ${errors.phone ? 'input-error' : ''}`} 
-                value={form.phone} 
-                onChange={e => update('phone', e.target.value)}
-                aria-describedby={errors.phone ? 'phone-error' : undefined}
-              />
-              <p className="text-xs opacity-50 mt-1">{t('contact.form.phone_help')}</p>
-              {errors.phone && <p id="phone-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.phone}</p>}
-            </fieldset>
+            {/* Phone, Email, Client Type - in one row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Phone */}
+              <fieldset className="fieldset">
+                <label className="fieldset-label" htmlFor="phone">{t('contact.form.phone')} *</label>
+                <input 
+                  id="phone" 
+                  type="tel" 
+                  placeholder="+36 30..." 
+                  className={`input input-bordered w-full ${errors.phone ? 'input-error' : ''}`} 
+                  value={form.phone} 
+                  onChange={e => update('phone', e.target.value)}
+                  aria-describedby={errors.phone ? 'phone-error' : undefined}
+                />
+                {errors.phone && <p id="phone-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.phone}</p>}
+              </fieldset>
 
-            {/* Email */}
-            <fieldset className="fieldset">
-              <label className="fieldset-label" htmlFor="email">{t('contact.email')}</label>
-              <input 
-                id="email" 
-                type="email" 
-                className={`input input-bordered w-full ${errors.email ? 'input-error' : ''}`} 
-                value={form.email} 
-                onChange={e => update('email', e.target.value)}
-                aria-describedby={errors.email ? 'email-error' : undefined}
-              />
-              <p className="text-xs opacity-50 mt-1">{t('contact.form.email_help')}</p>
-              {errors.email && <p id="email-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.email}</p>}
-            </fieldset>
+              {/* Email */}
+              <fieldset className="fieldset">
+                <label className="fieldset-label" htmlFor="email">{t('contact.email')}</label>
+                <input 
+                  id="email" 
+                  type="email" 
+                  className={`input input-bordered w-full ${errors.email ? 'input-error' : ''}`} 
+                  value={form.email} 
+                  onChange={e => update('email', e.target.value)}
+                  aria-describedby={errors.email ? 'email-error' : undefined}
+                />
+                {errors.email && <p id="email-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.email}</p>}
+              </fieldset>
 
-            {/* Service */}
-            <fieldset className="fieldset">
-              <label className="fieldset-label" htmlFor="service">{t('contact.form.service_question')} *</label>
-              <select 
-                id="service" 
-                className={`select select-bordered w-full ${errors.service ? 'select-error' : ''}`} 
-                value={form.service} 
-                onChange={e => update('service', e.target.value as SERVICE_TYPES | '')}
-                aria-describedby={errors.service ? 'service-error' : undefined}
-              >
-                <option value="">{t('contact.form.service_options.choose')}</option>
-                <option value="felulvizsgalat">{t('contact.form.service_options.inspection')}</option>
-                <option value="villanyszereles">{t('contact.form.service_options.electrical')}</option>
-                <option value="it-halozat">{t('contact.form.service_options.it')}</option>
-                <option value="keziszerszam">{t('contact.form.service_options.tools')}</option>
-                <option value="egyeb">{t('contact.form.service_options.other')}</option>
-              </select>
-              {errors.service && <p id="service-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.service}</p>}
-            </fieldset>
+              {/* Client type */}
+              <fieldset className="fieldset">
+                <label className="fieldset-label" htmlFor="clientType">{t('contact.form.client_type')} *</label>
+                <select 
+                  id="clientType" 
+                  className={`select select-bordered w-full ${errors.clientType ? 'select-error' : ''}`} 
+                  value={form.clientType} 
+                  onChange={e => update('clientType', e.target.value as CLIENT_TYPES | '')}
+                  aria-describedby={errors.clientType ? 'clientType-error' : undefined}
+                >
+                  <option value="">{t('contact.form.service_options.choose')}</option>
+                  <option value="maganszemely">{t('contact.form.client_options.individual')}</option>
+                  <option value="tarsashaz">{t('contact.form.client_options.condo')}</option>
+                  <option value="vallalkozas">{t('contact.form.client_options.business')}</option>
+                </select>
+                {errors.clientType && <p id="clientType-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.clientType}</p>}
+              </fieldset>
+            </div>
 
-            {/* Client type */}
-            <fieldset className="fieldset">
-              <label className="fieldset-label" htmlFor="clientType">{t('contact.form.client_type')} *</label>
-              <select 
-                id="clientType" 
-                className={`select select-bordered w-full ${errors.clientType ? 'select-error' : ''}`} 
-                value={form.clientType} 
-                onChange={e => update('clientType', e.target.value as CLIENT_TYPES | '')}
-                aria-describedby={errors.clientType ? 'clientType-error' : undefined}
-              >
-                <option value="">{t('contact.form.service_options.choose')}</option>
-                <option value="maganszemely">{t('contact.form.client_options.individual')}</option>
-                <option value="tarsashaz">{t('contact.form.client_options.condo')}</option>
-                <option value="vallalkozas">{t('contact.form.client_options.business')}</option>
-              </select>
-              {errors.clientType && <p id="clientType-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.clientType}</p>}
-            </fieldset>
+            {/* Service and Language - in one row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Service */}
+              <fieldset className="fieldset">
+                <label className="fieldset-label" htmlFor="service">{t('contact.form.service_question')} *</label>
+                <select 
+                  id="service" 
+                  className={`select select-bordered w-full ${errors.service ? 'select-error' : ''}`} 
+                  value={form.service} 
+                  onChange={e => update('service', e.target.value as SERVICE_TYPES | '')}
+                  aria-describedby={errors.service ? 'service-error' : undefined}
+                >
+                  <option value="">{t('contact.form.service_options.choose')}</option>
+                  <option value="felulvizsgalat">{t('contact.form.service_options.inspection')}</option>
+                  <option value="villanyszereles">{t('contact.form.service_options.electrical')}</option>
+                  <option value="it-halozat">{t('contact.form.service_options.it')}</option>
+                  <option value="keziszerszam">{t('contact.form.service_options.tools')}</option>
+                  <option value="egyeb">{t('contact.form.service_options.other')}</option>
+                </select>
+                {errors.service && <p id="service-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.service}</p>}
+              </fieldset>
 
-            {/* Language preference */}
-            <fieldset className="fieldset">
-              <label className="fieldset-label" htmlFor="preferredLanguage">Preferred language / Előnyben részesített nyelv</label>
-              <select 
-                id="preferredLanguage" 
-                className="select select-bordered w-full" 
-                value={form.preferredLanguage} 
-                onChange={e => update('preferredLanguage', e.target.value as 'hu' | 'en')}
-              >
-                <option value="hu">🇭🇺 Magyar</option>
-                <option value="en">🇬🇧 English</option>
-              </select>
-            </fieldset>
+              {/* Language preference */}
+              <fieldset className="fieldset">
+                <label className="fieldset-label" htmlFor="preferredLanguage">Preferred language</label>
+                <select 
+                  id="preferredLanguage" 
+                  className="select select-bordered w-full" 
+                  value={form.preferredLanguage} 
+                  onChange={e => update('preferredLanguage', e.target.value as 'hu' | 'en')}
+                >
+                  <option value="hu">🇭🇺 Magyar</option>
+                  <option value="en">🇬🇧 English</option>
+                </select>
+              </fieldset>
+            </div>
 
             {/* District */}
             <fieldset className="fieldset">
