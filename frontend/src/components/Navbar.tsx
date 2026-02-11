@@ -70,7 +70,10 @@ export default function Navbar() {
               {t('nav.urgent')}
             </a>
 
-            {/* English Service */}
+            {/* Language switcher */}
+            <Link to="/" className="hidden lg:flex btn btn-ghost btn-circle" aria-label="Magyar" title="Magyar">
+              <span className="text-4xl leading-none">🇭🇺</span>
+            </Link>
             <Link to="/en/english-speaking" className="hidden lg:flex btn btn-ghost btn-circle" aria-label="English Service" title="English Service">
               <span className="text-4xl leading-none">🇬🇧</span>
             </Link>
@@ -120,6 +123,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link to="/" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>🇭🇺 Magyar</Link>
             <Link to="/en/english-speaking" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/en/english-speaking') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>🇬🇧 English Service</Link>
             <Link to="/rolam" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/rolam') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>{t('nav.about')}</Link>
             <Link to="/kapcsolat" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/kapcsolat') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>{t('nav.contact')}</Link>
