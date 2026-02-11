@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Sun, Moon, Menu, Phone, Zap } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
 import { useState } from 'react'
@@ -8,6 +8,7 @@ export default function Navbar() {
   const { isDark, toggleTheme } = useTheme()
   const [mobileOpen, setMobileOpen] = useState(false)
   const { t } = useTranslation()
+  const { pathname } = useLocation()
 
   const navLinks = [
     { to: '/lakossagnak', label: t('nav.residents') },
@@ -22,6 +23,9 @@ export default function Navbar() {
     { to: '/szolgaltatasok/keziszerszam-felulvizsgalat', label: t('services.tool_inspection') },
   ]
 
+  const isActive = (to: string) => pathname === to || pathname.startsWith(to + '/')
+  const linkClass = (to: string) => `btn btn-ghost text-[15px] ${isActive(to) ? 'btn-active' : ''}`
+
   return (
     <nav className={`sticky top-0 z-50 transition-theme ${isDark ? 'glass-card-strong' : 'neu-flat'}`}>
       <div className="max-w-7xl mx-auto px-4">
@@ -35,31 +39,27 @@ export default function Navbar() {
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map(link => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="btn btn-ghost btn-sm"
-              >
+              <Link key={link.to} to={link.to} className={linkClass(link.to)}>
                 {link.label}
               </Link>
             ))}
 
             {/* Services dropdown */}
             <div className="dropdown dropdown-hover">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-sm">
+              <div tabIndex={0} role="button" className={`btn btn-ghost text-[15px] ${pathname.startsWith('/szolgaltatasok') ? 'btn-active' : ''}`}>
                 {t('nav.services')} ▾
               </div>
               <ul tabIndex={0} className={`dropdown-content menu rounded-box z-50 w-64 p-2 shadow-lg ${isDark ? 'bg-neutral text-neutral-content' : 'neu-flat bg-base-100'}`}>
                 {serviceLinks.map(link => (
                   <li key={link.to}>
-                    <Link to={link.to}>{link.label}</Link>
+                    <Link to={link.to} className={isActive(link.to) ? 'active' : ''}>{link.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <Link to="/rolam" className="btn btn-ghost btn-sm">{t('nav.about')}</Link>
-            <Link to="/kapcsolat" className="btn btn-ghost btn-sm">{t('nav.contact')}</Link>
+            <Link to="/rolam" className={linkClass('/rolam')}>{t('nav.about')}</Link>
+            <Link to="/kapcsolat" className={linkClass('/kapcsolat')}>{t('nav.contact')}</Link>
           </div>
 
           {/* Right side */}
@@ -70,9 +70,9 @@ export default function Navbar() {
               {t('nav.urgent')}
             </a>
 
-            {/* English Service button (moved from desktop nav) */}
-            <Link to="/en/english-speaking" className="hidden lg:flex btn btn-ghost btn-sm gap-1">
-              🇬🇧 English
+            {/* English Service */}
+            <Link to="/en/english-speaking" className="hidden lg:flex btn btn-ghost btn-circle btn-sm" aria-label="English Service" title="English Service">
+              <span className="text-2xl leading-none">🇬🇧</span>
             </Link>
 
             {/* Theme toggle */}
@@ -103,7 +103,7 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="block btn btn-ghost btn-sm justify-start w-full"
+                className={`block btn btn-ghost btn-sm justify-start w-full ${isActive(link.to) ? 'btn-active' : ''}`}
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -114,15 +114,15 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="block btn btn-ghost btn-sm justify-start w-full pl-6"
+                className={`block btn btn-ghost btn-sm justify-start w-full pl-6 ${isActive(link.to) ? 'btn-active' : ''}`}
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Link to="/en/english-speaking" className="block btn btn-ghost btn-sm justify-start w-full" onClick={() => setMobileOpen(false)}>🇬🇧 English Service</Link>
-            <Link to="/rolam" className="block btn btn-ghost btn-sm justify-start w-full" onClick={() => setMobileOpen(false)}>{t('nav.about')}</Link>
-            <Link to="/kapcsolat" className="block btn btn-ghost btn-sm justify-start w-full" onClick={() => setMobileOpen(false)}>{t('nav.contact')}</Link>
+            <Link to="/en/english-speaking" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/en/english-speaking') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>🇬🇧 English Service</Link>
+            <Link to="/rolam" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/rolam') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>{t('nav.about')}</Link>
+            <Link to="/kapcsolat" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/kapcsolat') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>{t('nav.contact')}</Link>
           </div>
         )}
       </div>
