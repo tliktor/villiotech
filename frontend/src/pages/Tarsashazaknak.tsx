@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useSEO } from '../hooks/useSEO'
 import { getTranslationArray } from '../utils/i18n'
@@ -10,26 +9,11 @@ import ProcessSteps from '../components/ProcessSteps'
 import PricingTable from '../components/PricingTable'
 import FAQ from '../components/FAQ'
 import CTASection from '../components/CTASection'
-import { ArrowRight, ClipboardList, BarChart3, AlertTriangle, FileText, Receipt, Shield } from 'lucide-react'
+import { ClipboardList, BarChart3, AlertTriangle, FileText, Receipt, Shield } from 'lucide-react'
 
-const bullets = [
-  'Közös képviselő és a társasház villamos felülvizsgálata esedékes',
-  'Társasházi döntéshozó és a közgyűlés elé kell vinni az árajánlatot',
-  'Hatósági felszólítást kapott a társasház villamos hálózatának ellenőrzésére',
-  'Közös területek villanyszerelése szükséges (lépcsőház, pince, garázs)',
-  'Biztosítási esemény miatt kell dokumentáció',
-  'Felújítás előtt áll a társasház és felmérés kell',
-]
 
-const whyMe = [
-  'Vizsgázott villamos biztonsági felülvizsgáló – villamosmérnöki végzettséggel',
-  'Kalibrált műszerek – joghatályos mérési eredmények',
-  'Tételes árajánlat – bemutatható a közgyűlésen',
-  'Joghatályos jegyzőkönyv – hatóság előtt elfogadott',
-  'ÁFA-mentes számlázás társasházaknak',
-  '20 év multinacionális tapasztalat – pontosság, korrekt kommunikáció',
-  'Garancia a munkára, magam után takarítok',
-]
+
+
 
 const steps = [
   { number: 1, title: 'Ajánlatkérés', description: 'Írja le a társasház adatait – lakásszám, hálózat kora, ismert problémák.' },
@@ -45,7 +29,7 @@ const deliverables = [
   { icon: BarChart3, text: 'Részletes mérési eredmények' },
   { icon: AlertTriangle, text: 'Hibajegyzék és javítási javaslat' },
   { icon: FileText, text: 'Tételes árajánlat a közgyűléshez' },
-  { icon: Receipt, text: 'ÁFA-mentes számla' },
+  { icon: Receipt, text: 'ÁFA-mentes e-számla' },
   { icon: Shield, text: 'Garancia a munkára' },
 ]
 
@@ -64,6 +48,12 @@ export default function Tarsashazaknak() {
   const { t } = useTranslation()
   const seo = useSEO('tarsashazaknak')
   
+  const pricingRows = [
+    { label: t('common.pricing.callout_buda'), price: '10 000 Ft' },
+    { label: t('common.pricing.callout_pest'), price: '20 000 Ft' },
+    { label: t('common.pricing.urgent'), price: t('common.pricing.urgent_surcharge') },
+  ]
+  
   return (
     <>
       <SEO
@@ -74,6 +64,7 @@ export default function Tarsashazaknak() {
       />
 
       <Hero
+        title={t('pages.tarsashazaknak.hero_title')}
         subtitle={t('pages.tarsashazaknak.hero_subtitle')}
         cta1={{ label: 'Ajánlatot kérek a közgyűléshez', to: '/kapcsolat' }}
         cta2={{ label: 'Visszahívást kérek', to: '/kapcsolat' }}
@@ -120,13 +111,8 @@ export default function Tarsashazaknak() {
         <SectionTitle title={t('pages.lakossagnak.pricing_section')} />
         <div className="max-w-lg mx-auto">
           <PricingTable
-            rows={[
-              { label: 'Kiszállás – Buda', price: '10 000 Ft' },
-              { label: 'Kiszállás – Pest (kivételesen)', price: '20 000 Ft' },
-              { label: 'Minimum munkadíj', price: '50 000 Ft' },
-              { label: 'Sürgős (4 órán belül)', price: '+50% felár' },
-            ]}
-            note="Társasházaknak ÁFA-mentes számlát állítok ki."
+            rows={pricingRows}
+            note={t('common.invoicing.vat_free_condos')}
           />
         </div>
       </section>

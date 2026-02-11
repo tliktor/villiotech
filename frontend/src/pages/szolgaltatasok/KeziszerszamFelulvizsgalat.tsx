@@ -8,10 +8,17 @@ import ThemeCard from '../../components/ThemeCard'
 import ProcessSteps from '../../components/ProcessSteps'
 import PricingTable from '../../components/PricingTable'
 import CTASection from '../../components/CTASection'
+import { CheckCircle, Zap, FileCheck, Shield } from 'lucide-react'
 
 export default function KeziszerszamFelulvizsgalat() {
   const seo = useSEO('keziszerszamFelulvizsgalat')
   const { t } = useTranslation()
+  
+  const processStepsWithIcons = getTranslationArray<{title: string, description: string}>(t('pages.keziszerszam_felulvizsgalat.process_steps', { returnObjects: true })).map((step, i) => ({
+    number: i + 1,
+    ...step,
+    icon: [CheckCircle, Zap, FileCheck, Shield][i] || CheckCircle
+  }))
   
   return (
     <>
@@ -23,6 +30,7 @@ export default function KeziszerszamFelulvizsgalat() {
       />
 
       <Hero
+        title={t('pages.keziszerszam_felulvizsgalat.hero_title')}
         subtitle={t('pages.keziszerszam_felulvizsgalat.hero_subtitle')}
         cta1={{ label: t('pages.keziszerszam_felulvizsgalat.cta1'), to: '/kapcsolat' }}
         cta2={{ label: t('pages.keziszerszam_felulvizsgalat.cta2'), to: '/kapcsolat' }}
@@ -43,7 +51,7 @@ export default function KeziszerszamFelulvizsgalat() {
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
         <SectionTitle title={t('pages.keziszerszam_felulvizsgalat.process_title')} />
-        <ProcessSteps steps={getTranslationArray(t('pages.keziszerszam_felulvizsgalat.process_steps', { returnObjects: true }))} />
+        <ProcessSteps steps={processStepsWithIcons} />
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">

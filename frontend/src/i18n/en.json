@@ -32,6 +32,57 @@
     "quality": "Calibrated instruments · Legal measurements · Warranty",
     "accessibility": "WCAG 2.1 AA Compliant • Accessible to all users"
   },
+  "common": {
+    "pricing": {
+      "callout_buda": "Call-out – Buda",
+      "callout_pest": "Call-out – Pest (exceptionally)",
+      "urgent": "Urgent (within 4 hours)",
+      "urgent_surcharge": "+50% surcharge"
+    },
+    "features": {
+      "itemized_quote": "Itemized quote",
+      "itemized_quote_before": "Itemized quote before work",
+      "einvoice_onsite": "E-invoice on site",
+      "warranty": "Warranty on work",
+      "warranty_all": "Warranty on all work",
+      "card_payment": "Card payment",
+      "card_payment_onsite": "You can also pay by bank card on site",
+      "no_hidden_costs": "No hidden costs",
+      "warranty_guarantee": "I guarantee all work performed",
+      "location": "Budapest – Buda"
+    },
+    "invoicing": {
+      "vat_free_individuals": "I issue VAT-free invoices to individuals",
+      "vat_businesses": "I issue VAT invoices to businesses",
+      "vat_free_condos": "I issue VAT-free invoices to condominiums",
+      "mixed_note": "I issue VAT-free invoices to individuals, VAT invoices to businesses. VAT-free invoicing for condominiums."
+    },
+    "faq": {
+      "q_cost": "How much does an inspection cost?",
+      "a_cost": "The minimum fee is 50,000 HUF + travel costs (Buda: 10,000 HUF). The exact price is determined by the size of the property and the complexity of the network.",
+      "q_card": "Can I pay by card?",
+      "a_card": "Yes, card payment is available on-site.",
+      "q_invoice": "Will I receive an invoice?",
+      "a_invoice_individual": "Yes, I issue VAT-free invoices to private individuals on-site.",
+      "q_pest": "Do you also work in Pest?",
+      "a_pest": "Exceptionally yes, with a 20,000 HUF travel fee. My main service area is the Buda side of Budapest.",
+      "q_assembly": "Does the general assembly need to decide on the inspection?",
+      "a_assembly": "Usually yes. That's why I provide a detailed quote that can be presented at the general assembly for decision-making.",
+      "q_error": "What happens if you find an error?",
+      "a_error": "I document it in the report and make suggestions for repair. I can also perform the repair based on a separate quote.",
+      "q_invoice_condo": "How do you invoice condominiums?",
+      "a_invoice_condo": "I issue VAT-free invoices to condominiums.",
+      "q_outside_buda": "Do you also take on condominium work outside of Buda?",
+      "a_outside_buda": "My main area is Buda. I exceptionally take on work in Pest with a 20,000 HUF travel fee.",
+      "q_vat_invoice": "Will I receive a VAT invoice?",
+      "a_vat_invoice": "Yes, I issue VAT invoices to businesses."
+    }
+  },
+  "map": {
+    "load_label": "Load map",
+    "click_to_load": "Click to load map",
+    "title": "Villiotech service area – Budapest Buda"
+  },
   "home": {
     "hero": {
       "title": "Electrical safety with engineering precision – in Buda.",
@@ -125,7 +176,9 @@
       "preferred_time": "When would be a good time?",
       "preferred_time_placeholder": "E.g. next week Tuesday morning",
       "urgent_checkbox": "Urgent call-out needed (within 4 hours, +50% surcharge)",
-      "privacy_checkbox": "I accept the privacy policy",
+      "privacy_checkbox": "I accept the",
+      "privacy_link": "privacy policy",
+      "privacy_suffix": "and consent to the processing of my personal data",
       "submit": "Request quote",
       "submit_loading": "Sending…",
       "urgent_call": "Urgent – call back within 4 hours"
@@ -151,7 +204,8 @@
   },
   "pages": {
     "lakossagnak": {
-      "hero_subtitle": "Are you selling, renting or renovating? Electrical safety inspection with legal report, electrical installation with guarantee, IT network installation - from a reliable engineer.",
+      "hero_title": "Are you selling, renting or renovating?",
+      "hero_subtitle": "Electrical safety inspection with legal report, electrical installation with guarantee, IT network installation - from a reliable engineer.",
       "target_section": "It's for you if you...",
       "bullets": [
         "Selling your property - the buyer or the notary requests an electrical safety review",
@@ -171,7 +225,7 @@
         "I guarantee all work carried out",
         "I clean up after myself - I leave the work area clean",
         "Payment by card on the spot",
-        "VAT-free invoice for private persons"
+        "E-invoice on site"
       ],
       "services_section": "Services for the population",
       "services": [
@@ -208,7 +262,7 @@
         },
         {
           "title": "Payment",
-          "description": "Cash or credit card, on the spot. Invoice will be issued immediately."
+          "description": "Cash or credit card, on the spot. E-invoice issued immediately."
         }
       ],
       "pricing_section": "Transparent pricing",
@@ -219,7 +273,8 @@
       "cta_subtitle": "I will reply within 1 working day. I work in Buda, with calibrated instruments, guarantee."
     },
     "tarsashazaknak": {
-      "hero_subtitle": "As a joint representative, you are responsible for the safety of your residents. I will carry out the mandatory electrical safety inspection, with a legally binding report and itemised quotation for the general assembly.",
+      "hero_title": "As a joint representative, you are responsible for the safety of your residents.",
+      "hero_subtitle": "I will carry out the mandatory electrical safety inspection, with a legally binding report and itemised quotation for the general assembly.",
       "target_section": "It's for you if you...",
       "bullets": [
         "Joint representative and condominium electrical review due",
@@ -238,6 +293,7 @@
         "Batch bid - to be presented at the General Assembly",
         "Authentic record - accepted before public authority",
         "VAT-free invoicing for condominiums",
+        "Availability agreement option",
         "20 years multinational experience - punctuality, correct communication",
         "Guarantee on the work, I clean up after myself"
       ],
@@ -246,7 +302,8 @@
       "cta_subtitle": "I'll send you an itemised quote, which you can present to the residents' association."
     },
     "munkahelyeknek": {
-      "hero_subtitle": "Do you have an office, shop or restaurant? An electrical safety inspection is mandatory every 3 years. Annual inspection of power tools is carried out on site.",
+      "hero_title": "Do you have an office, shop or restaurant?",
+      "hero_subtitle": "An electrical safety inspection is mandatory every 3 years. Annual inspection of power tools is carried out on site.",
       "target_section": "It's for you if you...",
       "bullets": [
         "Operates an office and is due for an electrical inspection every 3 years",
@@ -268,12 +325,12 @@
       "hero_subtitle": "Certified electrical safety inspector with fire safety qualifications. After two decades of multinational experience, I am working for the electrical safety of homes, condominiums and workplaces in Buda.",
       "intro_section": "Who is behind Villiotech?",
       "intro_content": [
-        "I am an electrical engineer, qualified as an electrical safety inspector, with fire safety qualifications. I will soon also be available as a lightning safety inspector.",
+        "I'm Tibor Liktor, an electrical engineer, qualified as an electrical safety inspector, with fire safety qualifications. I will soon also be available as a lightning safety inspector.",
         "I spent 20 years working in a multinational environment, where I learned that punctuality, responsibility and fair communication are not optional extras - they are standard. I brought this approach with me to the private sector.",
         "I live and work in Buda. My main area is the 2nd district and the whole of Buda, but I also work in Pest.",
         "I work in both English and Hungarian - I serve my foreign clients with the same precision."
       ],
-      "qualifications_section": "My photos",
+      "qualifications_section": "My Qualifications",
       "values_section": "What I believe in",
       "english_title": "🇬🇧 About me - for English-speaking clients",
       "english_content": "I'm a qualified electrical engineer and certified electrical safety inspector based in Buda, Budapest. With 20 years of experience in multinational environments, I bring precision, accountability, and clear communication to every project.",
@@ -281,6 +338,7 @@
       "cta_subtitle": "If you are looking for a precise, reliable electrician in Buda - contact us."
     },
     "villamos_felulvizsgalat": {
+      "hero_title": "Electrical safety inspection",
       "hero_subtitle": "Measurements with calibrated instruments, documentation accepted by the authorities. For homes, condominiums and workplaces.",
       "cta1": "Request quote",
       "cta2": "Request callback",
@@ -315,7 +373,6 @@
       "pricing_rows": [
         { "label": "Call-out - Buda", "price": "10,000 HUF" },
         { "label": "Call-out - Pest (exceptionally)", "price": "20,000 HUF" },
-        { "label": "Minimum fee", "price": "50,000 HUF" },
         { "label": "Urgent (within 4 hours)", "price": "+50% surcharge" }
       ],
       "pricing_note": "The final price depends on the size of the property and the complexity of the network.",
@@ -323,6 +380,7 @@
       "cta_phone": "☎ Call now"
     },
     "villanyszereles": {
+      "hero_title": "Electrical installation, repair, construction",
       "hero_subtitle": "Switch replacement, fuse board, complete apartment electrical installation. Itemised quotation, clean workmanship, guarantee on all work.",
       "cta1": "Request quote",
       "cta2": "Urgent? Within 4 hours",
@@ -351,7 +409,6 @@
       "pricing_rows": [
         { "label": "Call-out - Buda", "price": "10,000 HUF" },
         { "label": "Call-out - Pest (exceptionally)", "price": "20,000 HUF" },
-        { "label": "Minimum fee", "price": "50,000 HUF" },
         { "label": "Urgent (within 4 hours)", "price": "+50% surcharge" }
       ],
       "pricing_note": "The final price is determined by the nature and scope of the work.",
@@ -359,6 +416,7 @@
       "cta_phone": "☎ Call now"
     },
     "it_halozat": {
+      "hero_title": "IT network – WiFi / UTP",
       "hero_subtitle": "UTP cabling, WiFi coverage optimization, home office network installation. Full service in English as well.",
       "hero_cta1": "Request quote",
       "hero_cta2": "Request a quote in English",
@@ -368,7 +426,8 @@
         "WiFi coverage - installation of access points, optimal placement",
         "Home office - a stable, reliable network for teleworking",
         "Office network - connecting multiple workstations, network infrastructure",
-        "Network cabinet - patch panel, switch placement, tidy cabling"
+        "Network cabinet - patch panel, switch placement, tidy cabling",
+        "Outdoor WiFi/UTP network design"
       ],
       "target_title": "Who do I recommend?",
       "target_items": [
@@ -389,10 +448,6 @@
         {
           "label": "Call-out – Pest (exceptionally)",
           "price": "20,000 HUF"
-        },
-        {
-          "label": "Minimum work fee",
-          "price": "50,000 HUF"
         }
       ],
       "pricing_note": "The final price is determined by the size and complexity of the network.",
@@ -401,7 +456,8 @@
       "cta_button2": "☎ Call now"
     },
     "keziszerszam_felulvizsgalat": {
-      "hero_subtitle": "Annual inspection of power tools is mandatory. I do it on site, no need to transport the tools anywhere.",
+      "hero_title": "Annual inspection of power tools is mandatory.",
+      "hero_subtitle": "10/2016. (IV. 5.) NGM regulation, Article 19, paragraph (6), point a)\nI do it on site, no need to transport the tools anywhere.",
       "cta1": "Request quote",
       "cta2": "Request callback",
       "who_mandatory_title": "Who is it mandatory for?",
@@ -449,10 +505,6 @@
         {
           "label": "Call-out – Pest (exceptionally)",
           "price": "20,000 HUF"
-        },
-        {
-          "label": "Minimum work fee",
-          "price": "50,000 HUF"
         }
       ],
       "pricing_note": "Price depends on the number of tools. Lower unit price for larger quantities.",
@@ -465,7 +517,7 @@
       "seo_description": "Villiotech Privacy Notice - personal data processing, rights, contact.",
       "title": "Data protection information",
       "section1_title": "1. Data Controller",
-      "section1_content": "Name: [Name of data controller]\nHeadquarters.\nE-mail: info@villiotech.hu\nPhone: [phone number]",
+      "section1_content": "Name: Liktor Tibor E.V.\nTax number: 67824469-1-41\nHeadquarters: 1025 Budapest, Verecke út 138/D\nE-mail: info@villiotech.hu\nPhone: +36 30 238 9945",
       "section2_title": "2. Personal data processed",
       "section2_intro": "When you fill in the application form, the following data will be processed:",
       "section2_list": [
@@ -478,22 +530,22 @@
       "section3_title": "3. Purpose and legal basis for processing",
       "section3_content": "The purpose of data processing is to process the request for a quote and to contact you. Legal basis: consent of the data subject (Article 6(1)(a) GDPR).",
       "section4_title": "4. Duration of data processing",
-      "section4_content": "Personal data will be stored until the request is processed, but for a maximum of 1 year. The data subject may request the deletion of his/her data at any time.",
+      "section4_content": "Personal data will be stored for 1 year from the completion of the work for warranty administration and maintenance purposes. The data subject may request immediate deletion of his/her data at info@villiotech.hu at any time, unless otherwise required by law or contractual obligation (e.g. warranty).",
       "section5_title": "5. Data transmission",
-      "section5_content": "We will not pass on your personal data to third parties. The data is stored and processed on Amazon Web Services (AWS) servers in the EU.",
-      "section6_title": "6. Cookies (cookies)",
-      "section6_content": "The website uses technical cookies to function (theme selection). Analytical cookies (Google Analytics) are only used with your consent.",
+      "section5_content": "We will not pass on your personal data to third parties. The data is stored and processed on Amazon Web Services (AWS) servers in the EU (Frankfurt, Germany).",
+      "section6_title": "6. Cookies",
+      "section6_content": "The website does NOT use cookies. Theme and language settings are stored in the browser's local storage (localStorage), which does not qualify as cookie usage and does not require consent.",
       "section7_title": "7. Rights of the data subject",
       "section7_list": [
-        "Right of access - you can request information about your data",
-        "Right to rectification - you can ask for your data to be corrected",
-        "Right to erasure - you can request the erasure of your data",
+        "Right of access - you can request information about your data (info@villiotech.hu)",
+        "Right to rectification - you can ask for your data to be corrected (info@villiotech.hu)",
+        "Right to erasure - you can request immediate deletion of your data (info@villiotech.hu)",
         "Withdraw consent - at any time, without affecting the lawfulness of the previous processing",
-        "Right to complain - to the National Authority for Data Protection and Freedom of Information (NAIH)"
+        "Right to complain - National Authority for Data Protection and Freedom of Information (NAIH)\n  Address: 1055 Budapest, Falk Miksa utca 9-11.\n  E-mail: ugyfelszolgalat@naih.hu\n  Web: https://naih.hu"
       ],
       "section8_title": "8. Contact us",
       "section8_content": "If you have any privacy questions, please contact us at info@villiotech.hu",
-      "last_updated": "Last update: February 2026"
+      "last_updated": "Last update: February 11, 2026"
     },
     "aszf": {
       "seo_title": "General Terms and Conditions",
@@ -507,7 +559,6 @@
       "section3_list": [
         "Exit fee Buda: 10 000 HUF",
         "Exit fee Pest (exceptionally): 20 000 HUF",
-        "Minimum fee: 50 000 Ft",
         "Rush delivery (within 4 hours): +50% surcharge",
         "The final price is included in the itemised quotation",
         "Payment: cash or credit card, on the spot",

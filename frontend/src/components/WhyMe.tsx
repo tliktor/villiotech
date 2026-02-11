@@ -16,7 +16,7 @@ export default function WhyMe() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {items.map((item, i) => (
-        <ThemeCard key={i} className="text-center">
+        <ThemeCard key={i} className="text-center" delay={i * 0.05}>
           <item.icon className="w-8 h-8 text-primary mx-auto mb-3" />
           <h3 className="font-semibold mb-1">{item.title}</h3>
           <p className="text-sm opacity-70">{item.desc}</p>

@@ -23,6 +23,7 @@ export default function ItHalozat() {
       />
 
       <Hero
+        title={t('pages.it_halozat.hero_title')}
         subtitle={t('pages.it_halozat.hero_subtitle')}
         cta1={{ label: t('pages.it_halozat.hero_cta1'), to: '/kapcsolat' }}
         cta2={{ label: t('pages.it_halozat.hero_cta2'), to: '/kapcsolat' }}
@@ -59,7 +60,7 @@ export default function ItHalozat() {
           <p className="opacity-80 mb-6 max-w-xl mx-auto">
             {t('pages.it_halozat.english_section_description')}
           </p>
-          <Link to="/kapcsolat" className="btn btn-primary">{t('pages.it_halozat.english_section_cta')}</Link>
+          <Link to="/en/contact" className="btn btn-primary">{t('pages.it_halozat.english_section_cta')}</Link>
         </ThemeCard>
       </section>
 

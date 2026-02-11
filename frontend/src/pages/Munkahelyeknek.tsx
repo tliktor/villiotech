@@ -12,14 +12,7 @@ import FAQ from '../components/FAQ'
 import CTASection from '../components/CTASection'
 import { ArrowRight, ClipboardList, Wrench, FileText, Receipt, Shield } from 'lucide-react'
 
-const bullets = [
-  'Irodát üzemeltet és esedékes a 3 évenkénti villamos felülvizsgálat',
-  'Üzletet vagy boltot vezet és szüksége van az érvényes jegyzőkönyvre',
-  'Vendéglátóhelye van és a hatóság kéri a dokumentációt',
-  'Fodrászatot, szépségszalont működtet és az eszközök éves felülvizsgálata esedékes',
-  'Rendelőt, orvosi praxist vezet és a villamos biztonság dokumentálása szükséges',
-  'Kéziszerszámokat használ és az éves felülvizsgálat esedékes',
-]
+
 
 const whyMe = [
   'Vizsgázott villamos biztonsági felülvizsgáló – villamosmérnöki végzettséggel',
@@ -45,14 +38,14 @@ const steps = [
   { number: 3, title: 'Időpont-egyeztetés', description: 'Alkalmazkodok a nyitvatartáshoz – nyitás előtt, zárás után, hétvégén is.' },
   { number: 4, title: 'Helyszíni munka', description: 'Gyorsan és minimális fennakadással dolgozom.' },
   { number: 5, title: 'Dokumentáció', description: 'Joghatályos jegyzőkönyv, amit hatósági ellenőrzésnél azonnal bemutathat.' },
-  { number: 6, title: 'Fizetés', description: 'Készpénz vagy bankkártya, ÁFÁ-s számla a helyszínen.' },
+  { number: 6, title: 'Fizetés', description: 'Készpénz vagy bankkártya, ÁFÁ-s e-számla a helyszínen.' },
 ]
 
 const deliverables = [
   { icon: ClipboardList, text: 'Joghatályos felülvizsgálati jegyzőkönyv' },
   { icon: Wrench, text: 'Kéziszerszám felülvizsgálati jegyzőkönyv' },
   { icon: FileText, text: 'Tételes árajánlat és elszámolás' },
-  { icon: Receipt, text: 'ÁFÁ-s számla' },
+  { icon: Receipt, text: 'ÁFÁ-s e-számla' },
   { icon: Shield, text: 'Garancia a munkára' },
 ]
 
@@ -72,6 +65,12 @@ export default function Munkahelyeknek() {
   const { t } = useTranslation()
   const seo = useSEO('munkahelyeknek')
   
+  const pricingRows = [
+    { label: t('common.pricing.callout_buda'), price: '10 000 Ft' },
+    { label: t('common.pricing.callout_pest'), price: '20 000 Ft' },
+    { label: t('common.pricing.urgent'), price: t('common.pricing.urgent_surcharge') },
+  ]
+  
   return (
     <>
       <SEO
@@ -82,6 +81,7 @@ export default function Munkahelyeknek() {
       />
 
       <Hero
+        title={t('pages.munkahelyeknek.hero_title')}
         subtitle={t('pages.munkahelyeknek.hero_subtitle')}
         cta1={{ label: 'Ajánlatot kérek', to: '/kapcsolat' }}
         cta2={{ label: 'Sürgős? 4 órán belül', href: 'tel:+36302389945' }}
@@ -145,13 +145,8 @@ export default function Munkahelyeknek() {
         <SectionTitle title="Átlátható árazás" />
         <div className="max-w-lg mx-auto">
           <PricingTable
-            rows={[
-              { label: 'Kiszállás – Buda', price: '10 000 Ft' },
-              { label: 'Kiszállás – Pest (kivételesen)', price: '20 000 Ft' },
-              { label: 'Minimum munkadíj', price: '50 000 Ft' },
-              { label: 'Sürgős (4 órán belül)', price: '+50% felár' },
-            ]}
-            note="Vállalkozásoknak ÁFÁ-s számlát állítok ki."
+            rows={pricingRows}
+            note={t('common.invoicing.vat_businesses')}
           />
         </div>
       </section>

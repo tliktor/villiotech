@@ -1,0 +1,235 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - link "Skip to main content" [ref=e4] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e5]:
+    - generic [ref=e7]:
+      - link "Villiotech" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img [ref=e9]
+        - text: Villiotech
+      - generic [ref=e11]:
+        - link "Kezdőlap" [ref=e12] [cursor=pointer]:
+          - /url: /
+        - link "Lakosságnak" [ref=e13] [cursor=pointer]:
+          - /url: /lakossagnak
+        - link "Társasházaknak" [ref=e14] [cursor=pointer]:
+          - /url: /tarsashazaknak
+        - link "Munkahelyeknek" [ref=e15] [cursor=pointer]:
+          - /url: /munkahelyeknek
+        - button "Szolgáltatások ▾" [ref=e17] [cursor=pointer]
+        - link "Rólam" [ref=e18] [cursor=pointer]:
+          - /url: /rolam
+        - link "Kapcsolat" [ref=e19] [cursor=pointer]:
+          - /url: /kapcsolat
+      - generic [ref=e20]:
+        - link "Sürgős? 4h" [ref=e21] [cursor=pointer]:
+          - /url: tel:+36302389945
+          - img [ref=e22]
+          - text: Sürgős? 4h
+        - button "Nyelv váltása (English)" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+          - generic [ref=e28]: HU
+        - button "Téma váltása (Sötét mód)" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+  - main [ref=e32]:
+    - generic [ref=e34]:
+      - heading "Villamos biztonság, mérnöki precizitással – Budán." [level=1] [ref=e35]
+      - paragraph [ref=e36]: Joghatályos felülvizsgálat, szakszerű villanyszerelés és IT hálózat kiépítés. Kalibrált műszerek, tételes árajánlat, garancia minden munkára.
+      - generic [ref=e37]:
+        - link "Ajánlatot kérek" [ref=e38] [cursor=pointer]:
+          - /url: /kapcsolat
+        - link "Sürgős? Hívjon most" [ref=e39] [cursor=pointer]:
+          - /url: tel:+36302389945
+    - heading "Válassza ki, miben segíthetek" [level=2] [ref=e43]
+    - generic [ref=e78]:
+      - heading "Miért engem válasszon?" [level=2] [ref=e81]
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - img [ref=e85]
+          - heading "Képzett villamosmérnök" [level=3] [ref=e88]
+          - paragraph [ref=e89]: Vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel.
+        - generic [ref=e90]:
+          - img [ref=e91]
+          - heading "Kalibrált műszerek" [level=3] [ref=e97]
+          - paragraph [ref=e98]: Minden mérés kalibrált, hitelesített műszerekkel történik – joghatályos eredmények.
+        - generic [ref=e99]:
+          - img [ref=e100]
+          - heading "Joghatályos jegyzőkönyv" [level=3] [ref=e103]
+          - paragraph [ref=e104]: Hatóság előtt elfogadott dokumentáció, amit azonnal felhasználhat.
+        - generic [ref=e105]:
+          - img [ref=e106]
+          - heading "20 év tapasztalat" [level=3] [ref=e109]
+          - paragraph [ref=e110]: Multinacionális környezetben szerzett precizitás és felelősségtudat.
+        - generic [ref=e111]:
+          - img [ref=e112]
+          - heading "Magam után takarítok" [level=3] [ref=e115]
+          - paragraph [ref=e116]: A munkaterületet tisztán hagyom – ez nálam alapelvárás.
+        - generic [ref=e117]:
+          - img [ref=e118]
+          - heading "Kártyás fizetés" [level=3] [ref=e120]
+          - paragraph [ref=e121]: Bankkártyával is fizethet a helyszínen.
+        - generic [ref=e122]:
+          - img [ref=e123]
+          - heading "Tételes árajánlat" [level=3] [ref=e126]
+          - paragraph [ref=e127]: Előre tudja, mire számítson – nincsenek rejtett költségek.
+        - generic [ref=e128]:
+          - img [ref=e129]
+          - heading "Garancia" [level=3] [ref=e131]
+          - paragraph [ref=e132]: Minden elvégzett munkára garanciát vállalok.
+    - generic [ref=e133]:
+      - heading "Így dolgozunk együtt" [level=2] [ref=e136]
+      - generic [ref=e138]:
+        - generic [ref=e140]:
+          - generic [ref=e141]: "1."
+          - heading "Ajánlatkérés" [level=3] [ref=e142]
+          - paragraph [ref=e143]: Töltse ki az űrlapot vagy hívjon telefonon. Írja le röviden, mire van szüksége.
+        - generic [ref=e145]:
+          - generic [ref=e146]: "2."
+          - heading "Egyeztetés" [level=3] [ref=e147]
+          - paragraph [ref=e148]: Visszajelzek és egyeztetjük az időpontot, a munka részleteit és a várható költséget.
+        - generic [ref=e150]:
+          - generic [ref=e151]: "3."
+          - heading "Helyszíni munka" [level=3] [ref=e152]
+          - paragraph [ref=e153]: Megérkezem a megbeszélt időpontban, elvégzem a méréseket vagy szerelési munkát.
+        - generic [ref=e155]:
+          - generic [ref=e156]: "4."
+          - heading "Dokumentáció" [level=3] [ref=e157]
+          - paragraph [ref=e158]: Felülvizsgálatnál joghatályos jegyzőkönyvet kap. Szerelésnél tételes elszámolást.
+        - generic [ref=e160]:
+          - generic [ref=e161]: "5."
+          - heading "Fizetés" [level=3] [ref=e162]
+          - paragraph [ref=e163]: Készpénzzel vagy bankkártyával, a helyszínen. Számlát azonnal kiállítom.
+    - generic [ref=e164]:
+      - heading "Átlátható árazás, meglepetések nélkül" [level=2] [ref=e167]
+      - generic [ref=e170]:
+        - table [ref=e171]:
+          - rowgroup [ref=e172]:
+            - row "Kiszállás – Buda 10 000 Ft" [ref=e173]:
+              - cell "Kiszállás – Buda" [ref=e174]
+              - cell "10 000 Ft" [ref=e175]
+            - row "Kiszállás – Pest (kivételesen) 20 000 Ft" [ref=e176]:
+              - cell "Kiszállás – Pest (kivételesen)" [ref=e177]
+              - cell "20 000 Ft" [ref=e178]
+            - row "Minimum munkadíj 50 000 Ft" [ref=e179]:
+              - cell "Minimum munkadíj" [ref=e180]
+              - cell "50 000 Ft" [ref=e181]
+            - row "Sürgős (4 órán belül) +50% felár" [ref=e182]:
+              - cell "Sürgős (4 órán belül)" [ref=e183]
+              - cell "+50% felár" [ref=e184]
+        - generic [ref=e185]: Magánszemélyeknek ÁFA-mentes, vállalkozásoknak ÁFÁ-s számlát állítok ki. Társasházaknak ÁFA-mentes számlázás.
+    - generic [ref=e186]:
+      - heading "Mit kap kézhez?" [level=2] [ref=e189]
+      - generic [ref=e190]:
+        - generic [ref=e192]:
+          - generic [ref=e193]:
+            - img [ref=e194]
+            - generic [ref=e197]: Joghatályos mérési jegyzőkönyv
+          - generic [ref=e198]:
+            - img [ref=e199]
+            - generic [ref=e202]: Tételes árajánlat a munka előtt
+          - generic [ref=e203]:
+            - img [ref=e204]
+            - generic [ref=e207]: Tételes elszámolás a munka után
+          - generic [ref=e208]:
+            - img [ref=e209]
+            - generic [ref=e213]: Számla a helyszínen
+          - generic [ref=e214]:
+            - img [ref=e215]
+            - generic [ref=e217]: Garancia minden munkára
+        - paragraph [ref=e218]: "\"Nem ígérek olyat, amit nem tudok tartani. Amit vállalok, azt pontosan és precízen teljesítem.\""
+    - generic [ref=e221]:
+      - heading "🇬🇧 English-speaking clients welcome" [level=2] [ref=e222]
+      - paragraph [ref=e223]: I provide all electrical services in fluent English – inspections, installations, IT networking. Full documentation in English available upon request. Serving the Buda side of Budapest.
+      - link "🇬🇧 Request a quote in English →" [ref=e224] [cursor=pointer]:
+        - /url: /kapcsolat
+    - generic [ref=e227]:
+      - heading "Kérjen ajánlatot most" [level=2] [ref=e228]
+      - paragraph [ref=e229]: Válaszolok 1 munkanapon belül. Budán dolgozom, kalibrált műszerekkel, garanciával.
+      - generic [ref=e230]:
+        - link "Ajánlatot kérek" [ref=e231] [cursor=pointer]:
+          - /url: /kapcsolat
+        - link "☎ Telefonos egyeztetés" [ref=e232] [cursor=pointer]:
+          - /url: tel:+36302389945
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - img [ref=e235]
+          - text: Budapest – Buda
+        - generic [ref=e238]: 🇬🇧 English service
+        - generic [ref=e239]:
+          - img [ref=e240]
+          - text: Kártyás fizetés
+        - generic [ref=e242]:
+          - img [ref=e243]
+          - text: Számlát adok
+  - contentinfo [ref=e247]:
+    - generic [ref=e248]:
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - link "Villiotech" [ref=e251] [cursor=pointer]:
+            - /url: /
+            - img [ref=e252]
+            - text: Villiotech
+          - paragraph [ref=e254]: Villamos biztonság, mérnöki precizitással – Budán.
+          - generic [ref=e255]:
+            - img [ref=e256]
+            - generic [ref=e258]: Kártyás fizetés elfogadva
+        - generic [ref=e259]:
+          - heading "Szolgáltatások" [level=3] [ref=e260]
+          - list [ref=e261]:
+            - listitem [ref=e262]:
+              - link "Villamos felülvizsgálat" [ref=e263] [cursor=pointer]:
+                - /url: /szolgaltatasok/villamos-felulvizsgalat
+            - listitem [ref=e264]:
+              - link "Villanyszerelés" [ref=e265] [cursor=pointer]:
+                - /url: /szolgaltatasok/villanyszereles
+            - listitem [ref=e266]:
+              - link "IT hálózat (WiFi/UTP)" [ref=e267] [cursor=pointer]:
+                - /url: /szolgaltatasok/it-halozat
+            - listitem [ref=e268]:
+              - link "Kéziszerszám felülvizsgálat" [ref=e269] [cursor=pointer]:
+                - /url: /szolgaltatasok/keziszerszam-felulvizsgalat
+        - generic [ref=e270]:
+          - heading "Kinek?" [level=3] [ref=e271]
+          - list [ref=e272]:
+            - listitem [ref=e273]:
+              - link "Lakosságnak" [ref=e274] [cursor=pointer]:
+                - /url: /lakossagnak
+            - listitem [ref=e275]:
+              - link "Társasházaknak" [ref=e276] [cursor=pointer]:
+                - /url: /tarsashazaknak
+            - listitem [ref=e277]:
+              - link "Munkahelyeknek" [ref=e278] [cursor=pointer]:
+                - /url: /munkahelyeknek
+            - listitem [ref=e279]:
+              - link "Rólam" [ref=e280] [cursor=pointer]:
+                - /url: /rolam
+        - generic [ref=e281]:
+          - heading "Kapcsolat" [level=3] [ref=e282]
+          - list [ref=e283]:
+            - listitem [ref=e284]:
+              - img [ref=e285]
+              - link "+36 30 238 9945" [ref=e287] [cursor=pointer]:
+                - /url: tel:+36302389945
+            - listitem [ref=e288]:
+              - img [ref=e289]
+              - link "info@villiotech.hu" [ref=e292] [cursor=pointer]:
+                - /url: mailto:info@villiotech.hu
+            - listitem [ref=e293]:
+              - img [ref=e294]
+              - generic [ref=e297]: Budapest – Buda
+          - paragraph [ref=e298]: 🇬🇧 English service available
+      - generic [ref=e300]:
+        - paragraph [ref=e301]: © 2026 Villiotech. Minden jog fenntartva.
+        - generic [ref=e302]:
+          - link "Adatvédelem" [ref=e303] [cursor=pointer]:
+            - /url: /adatvedelem
+          - link "ÁSZF" [ref=e304] [cursor=pointer]:
+            - /url: /aszf
+        - paragraph [ref=e305]: Kalibrált műszerek · Joghatályos mérések · Garancia
+      - paragraph [ref=e307]:
+        - img "Accessibility" [ref=e308]: ♿
+        - generic [ref=e309]: WCAG 2.1 AA megfelelő • Mindenki számára elérhető
+```

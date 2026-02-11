@@ -25,7 +25,7 @@
   },
   "footer": {
     "tagline": "Villamos biztonság, mérnöki precizitással – Budán.",
-    "card_payment": "Kártyás fizetés elfogadva",
+    "card_payment": "Kártyás fizetés biztosítva",
     "services_title": "Szolgáltatások",
     "it_network_full": "IT hálózat (WiFi/UTP)",
     "target_title": "Kinek?",
@@ -37,6 +37,57 @@
     "terms": "ÁSZF",
     "quality": "Kalibrált műszerek · Joghatályos mérések · Garancia",
     "accessibility": "WCAG 2.1 AA megfelelő • Mindenki számára elérhető"
+  },
+  "common": {
+    "pricing": {
+      "callout_buda": "Kiszállás – Buda",
+      "callout_pest": "Kiszállás – Pest (kivételesen)",
+      "urgent": "Sürgős (4 órán belül)",
+      "urgent_surcharge": "+50% felár"
+    },
+    "features": {
+      "itemized_quote": "Tételes árajánlat",
+      "itemized_quote_before": "Tételes árajánlat a munka előtt",
+      "einvoice_onsite": "E-számla a helyszínen",
+      "warranty": "Garancia a munkára",
+      "warranty_all": "Garancia minden munkára",
+      "card_payment": "Kártyás fizetés",
+      "card_payment_onsite": "Bankkártyával is fizethet a helyszínen",
+      "no_hidden_costs": "Nincsenek rejtett költségek",
+      "warranty_guarantee": "Minden elvégzett munkára garanciát vállalok",
+      "location": "Budapest – Buda"
+    },
+    "invoicing": {
+      "vat_free_individuals": "Magánszemélyeknek ÁFA-mentes számlát állítok ki",
+      "vat_businesses": "Vállalkozásoknak ÁFÁ-s számlát állítok ki",
+      "vat_free_condos": "Társasházaknak ÁFA-mentes számlát állítok ki",
+      "mixed_note": "Magánszemélyeknek ÁFA-mentes, vállalkozásoknak ÁFÁ-s számlát állítok ki. Társasházaknak ÁFA-mentes számlázás."
+    },
+    "faq": {
+      "q_cost": "Mennyibe kerül egy felülvizsgálat?",
+      "a_cost": "A minimum munkadíj 50 000 Ft + kiszállás (Buda: 10 000 Ft). A pontos árat az ingatlan mérete és a hálózat összetettsége határozza meg.",
+      "q_card": "Kártyával is fizethetek?",
+      "a_card": "Igen, bankkártyás fizetés elérhető a helyszínen.",
+      "q_invoice": "Kapok számlát?",
+      "a_invoice_individual": "Igen, magánszemélyeknek ÁFA-mentes számlát állítok ki a helyszínen.",
+      "q_pest": "Pesten is vállal munkát?",
+      "a_pest": "Kivételesen igen, 20 000 Ft kiszállási díjjal. Fő szolgáltatási területem Budapest Buda oldala.",
+      "q_assembly": "A közgyűlésnek kell döntenie a felülvizsgálatról?",
+      "a_assembly": "Általában igen. Ezért adok tételes árajánlatot, amit bemutathat a közgyűlésen a döntéshozatalhoz.",
+      "q_error": "Mi történik, ha hibát talál?",
+      "a_error": "Dokumentálom a jegyzőkönyvben, és javaslatot teszek a javításra. A javítást is el tudom végezni, külön árajánlat alapján.",
+      "q_invoice_condo": "Hogyan számláznak társasházaknak?",
+      "a_invoice_condo": "Társasházaknak ÁFA-mentes számlát állítok ki.",
+      "q_outside_buda": "Budán kívül is vállal társasházi munkát?",
+      "a_outside_buda": "Fő területem Buda. Pesten kivételesen vállalok munkát, 20 000 Ft kiszállási díjjal.",
+      "q_vat_invoice": "Kapok ÁFÁ-s számlát?",
+      "a_vat_invoice": "Igen, vállalkozásoknak ÁFÁ-s számlát állítok ki."
+    }
+  },
+  "map": {
+    "load_label": "Térkép betöltése",
+    "click_to_load": "Kattintson a térkép betöltéséhez",
+    "title": "Villiotech szolgáltatási terület – Budapest Buda"
   },
   "home": {
     "hero": {
@@ -131,7 +182,9 @@
       "preferred_time": "Mikor lenne jó időpont?",
       "preferred_time_placeholder": "Pl. jövő hét kedd délelőtt",
       "urgent_checkbox": "Sürgős kiszállás kell (4 órán belül, +50% felár)",
-      "privacy_checkbox": "Elfogadom az adatvédelmi tájékoztatót",
+      "privacy_checkbox": "Elfogadom az",
+      "privacy_link": "adatvédelmi tájékoztatót",
+      "privacy_suffix": "és hozzájárulok személyes adataim kezeléséhez",
       "submit": "Ajánlatot kérek",
       "submit_loading": "Küldés…",
       "urgent_call": "Sürgős – hívjon vissza 4 órán belül"
@@ -157,7 +210,8 @@
   },
   "pages": {
     "lakossagnak": {
-      "hero_subtitle": "Eladás, bérbeadás vagy felújítás előtt áll? Villamos biztonsági felülvizsgálat joghatályos jegyzőkönyvvel, villanyszerelés garanciával, IT hálózat kiépítés – egy megbízható mérnöktől.",
+      "hero_title": "Eladás, bérbeadás vagy felújítás előtt áll?",
+      "hero_subtitle": "Villamos biztonsági felülvizsgálat joghatályos jegyzőkönyvvel, villanyszerelés garanciával, IT hálózat kiépítés – egy megbízható mérnöktől.",
       "target_section": "Önnek szól, ha…",
       "bullets": [
         "Eladja az ingatlanát – a vevő vagy a közjegyző kéri a villamos biztonsági felülvizsgálatot",
@@ -177,7 +231,7 @@
         "Garanciát vállalok minden elvégzett munkára",
         "Magam után takarítok – a munkaterületet tisztán hagyom",
         "Kártyás fizetés a helyszínen",
-        "Magánszemélyeknek ÁFA-mentes számla"
+        "E-számla a helyszínen"
       ],
       "services_section": "Szolgáltatásaim lakosságnak",
       "services": [
@@ -214,7 +268,7 @@
         },
         {
           "title": "Fizetés",
-          "description": "Készpénzzel vagy bankkártyával, a helyszínen. Számlát azonnal kiállítom."
+          "description": "Készpénzzel vagy bankkártyával, a helyszínen. E-számlát azonnal kiállítom."
         }
       ],
       "pricing_section": "Átlátható árazás",
@@ -225,7 +279,8 @@
       "cta_subtitle": "Válaszolok 1 munkanapon belül. Budán dolgozom, kalibrált műszerekkel, garanciával."
     },
     "tarsashazaknak": {
-      "hero_subtitle": "Közös képviselőként Ön felel a lakók biztonságáért. Elvégzem a kötelező villamos biztonsági felülvizsgálatot, joghatályos jegyzőkönyvvel, tételes árajánlattal a közgyűléshez.",
+      "hero_title": "Közös képviselőként Ön felel a lakók biztonságáért.",
+      "hero_subtitle": "Elvégzem a kötelező villamos biztonsági felülvizsgálatot, joghatályos jegyzőkönyvvel, tételes árajánlattal a közgyűléshez.",
       "target_section": "Önnek szól, ha…",
       "bullets": [
         "Közös képviselő és a társasház villamos felülvizsgálása esedékes",
@@ -244,6 +299,7 @@
         "Tételes árajánlat – bemutatható a közgyűlésen",
         "Joghatályos jegyzőkönyv – hatóság előtt elfogadott",
         "ÁFA-mentes számlázás társasházaknak",
+        "Megállapodási lehetőség rendelkezésre állásra",
         "20 év multinacionális tapasztalat – pontosság, korrekt kommunikáció",
         "Garancia a munkára, magam után takarítok"
       ],
@@ -252,7 +308,8 @@
       "cta_subtitle": "Tételes árajánlatot küldök, amit bemutathat a lakóközösségnek."
     },
     "munkahelyeknek": {
-      "hero_subtitle": "Irodája, üzlete vagy vendéglátóhelye van? A villamos biztonsági felülvizsgálat 3 évente kötelező. Az elektromos kéziszerszámok éves ellenőrzését helyszínen végzem.",
+      "hero_title": "Irodája, üzlete vagy vendéglátóhelye van?",
+      "hero_subtitle": "A villamos biztonsági felülvizsgálat 3 évente kötelező. Az elektromos kéziszerszámok éves ellenőrzését helyszínen végzem.",
       "target_section": "Önnek szól, ha…",
       "bullets": [
         "Irodát üzemeltet és esedékes a 3 évenkénti villamos felülvizsgálat",
@@ -274,7 +331,7 @@
       "hero_subtitle": "Vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. Két évtizednyi multinacionális tapasztalat után a budai otthonok, társasházak és munkahelyek villamos biztonságáért dolgozom.",
       "intro_section": "Ki áll a Villiotech mögött?",
       "intro_content": [
-        "Villamosmérnök vagyok, vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. Hamarosan villámvédelmi felülvizsgálóként is rendelkezésre állok.",
+        "Liktor Tibor, villamosmérnök vagyok, vizsgázott villamos biztonsági felülvizsgáló, tűzvédelmi képesítésekkel. Hamarosan villámvédelmi felülvizsgálóként is rendelkezésre állok.",
         "20 évet dolgoztam multinacionális környezetben, ahol megtanultam, hogy a pontosság, a felelősség és a korrekt kommunikáció nem választható extra – hanem alapelvárás. Ezt a szemléletet hoztam magammal a magánszektorba is.",
         "Budán élek és dolgozom. Fő területem a II. kerület és egész Buda, de kivételesen Pesten is vállalok munkát.",
         "Magyarul és angolul egyaránt dolgozom – külföldi ügyfeleimet ugyanazzal a precizitással szolgálom ki."
@@ -287,6 +344,7 @@
       "cta_subtitle": "Ha precíz, megbízható villamos szakembert keres Budán – keressen bizalommal."
     },
     "villamos_felulvizsgalat": {
+      "hero_title": "Villamos biztonsági felülvizsgálat",
       "hero_subtitle": "Kalibrált műszerekkel végzett mérések, hatóság előtt elfogadott dokumentáció. Lakásoknak, társasházaknak és munkahelyeknek egyaránt.",
       "cta1": "Ajánlatot kérek",
       "cta2": "Visszahívást kérek",
@@ -321,7 +379,6 @@
       "pricing_rows": [
         { "label": "Kiszállás – Buda", "price": "10 000 Ft" },
         { "label": "Kiszállás – Pest (kivételesen)", "price": "20 000 Ft" },
-        { "label": "Minimum munkadíj", "price": "50 000 Ft" },
         { "label": "Sürgős (4 órán belül)", "price": "+50% felár" }
       ],
       "pricing_note": "A végleges ár az ingatlan méretétől és a hálózat összetettségétől függ.",
@@ -329,6 +386,7 @@
       "cta_phone": "☎ Hívjon most"
     },
     "villanyszereles": {
+      "hero_title": "Villanyszerelés, javítás, kivitelezés",
       "hero_subtitle": "Kapcsolócsere, biztosítéktábla, teljes lakás villanyszerelés. Tételes árajánlat, tiszta munkavégzés, garancia minden munkára.",
       "cta1": "Ajánlatot kérek",
       "cta2": "Sürgős? 4 órán belül",
@@ -357,7 +415,6 @@
       "pricing_rows": [
         { "label": "Kiszállás – Buda", "price": "10 000 Ft" },
         { "label": "Kiszállás – Pest (kivételesen)", "price": "20 000 Ft" },
-        { "label": "Minimum munkadíj", "price": "50 000 Ft" },
         { "label": "Sürgős (4 órán belül)", "price": "+50% felár" }
       ],
       "pricing_note": "A végleges árat a munka jellege és terjedelme határozza meg.",
@@ -365,6 +422,7 @@
       "cta_phone": "☎ Hívjon most"
     },
     "it_halozat": {
+      "hero_title": "IT hálózat – WiFi / UTP",
       "hero_subtitle": "UTP kábelezés, WiFi lefedettség optimalizálás, otthoni iroda hálózat kiépítés. Teljes szolgáltatás angol nyelven is.",
       "hero_cta1": "Ajánlatot kérek",
       "hero_cta2": "Request a quote in English",
@@ -374,7 +432,8 @@
         "WiFi lefedettség – access point-ok telepítése, optimális elhelyezés",
         "Otthoni iroda (home office) – stabil, megbízható hálózat a távmunkához",
         "Irodai hálózat – több munkaállomás bekötése, hálózati infrastruktúra",
-        "Hálózati szekrény – patch panel, switch elhelyezés, rendezett kábelezés"
+        "Hálózati szekrény – patch panel, switch elhelyezés, rendezett kábelezés",
+        "Kültéri WIFI/UTP hálózatok tervezése"
       ],
       "target_title": "Kinek ajánlom?",
       "target_items": [
@@ -395,10 +454,6 @@
         {
           "label": "Kiszállás – Pest (kivételesen)",
           "price": "20 000 Ft"
-        },
-        {
-          "label": "Minimum munkadíj",
-          "price": "50 000 Ft"
         }
       ],
       "pricing_note": "A végleges árat a hálózat mérete és összetettsége határozza meg.",
@@ -407,7 +462,8 @@
       "cta_button2": "☎ Hívjon most"
     },
     "keziszerszam_felulvizsgalat": {
-      "hero_subtitle": "Az elektromos kéziszerszámok éves felülvizsgálata kötelező. Helyszínen végzem, nem kell sehová szállítani az eszközöket.",
+      "hero_title": "Az elektromos kéziszerszámok éves felülvizsgálata kötelező.",
+      "hero_subtitle": "10/2016. (IV. 5.) NGM rendelet, 19. § (6) bekezdés a) pontja\nHelyszínen végzem, nem kell sehová szállítani az eszközöket.",
       "cta1": "Ajánlatot kérek",
       "cta2": "Visszahívást kérek",
       "who_mandatory_title": "Kinek kötelező?",
@@ -455,10 +511,6 @@
         {
           "label": "Kiszállás – Pest (kivételesen)",
           "price": "20 000 Ft"
-        },
-        {
-          "label": "Minimum munkadíj",
-          "price": "50 000 Ft"
         }
       ],
       "pricing_note": "Az ár az eszközök számától függ. Nagyobb mennyiségnél kedvezőbb egységár.",
@@ -471,7 +523,7 @@
       "seo_description": "A Villiotech adatvédelmi tájékoztatója – személyes adatok kezelése, jogok, kapcsolat.",
       "title": "Adatvédelmi tájékoztató",
       "section1_title": "1. Adatkezelő",
-      "section1_content": "Név: [Adatkezelő neve]\nSzékhely: Budapest, [cím]\nE-mail: info@villiotech.hu\nTelefon: [telefonszám]",
+      "section1_content": "Név: Liktor Tibor E.V.\nAdószám: 67824469-1-41\nSzékhely: 1025 Budapest, Verecke út 138/D\nE-mail: info@villiotech.hu\nTelefon: +36 30 238 9945",
       "section2_title": "2. Kezelt személyes adatok",
       "section2_intro": "Az ajánlatkérő űrlap kitöltésekor az alábbi adatokat kezeljük:",
       "section2_list": [
@@ -484,22 +536,22 @@
       "section3_title": "3. Adatkezelés célja és jogalapja",
       "section3_content": "Az adatkezelés célja az ajánlatkérés feldolgozása és a kapcsolatfelvétel. Jogalap: az érintett hozzájárulása (GDPR 6. cikk (1) a) pont).",
       "section4_title": "4. Adatkezelés időtartama",
-      "section4_content": "A személyes adatokat az ajánlatkérés feldolgozásáig, de legfeljebb 1 évig tároljuk. Az érintett bármikor kérheti adatai törlését.",
+      "section4_content": "A személyes adatokat a munkavégzés befejezésétől számított 1 évig tároljuk garanciális ügyintézés és karbantartás céljából. Az érintett bármikor kérheti adatai azonnali törlését az info@villiotech.hu címen, kivéve ha jogszabály vagy szerződéses kötelezettség (pl. garancia) másként rendelkezik.",
       "section5_title": "5. Adattovábbítás",
-      "section5_content": "Személyes adatait harmadik félnek nem adjuk tovább. Az adatok az Amazon Web Services (AWS) EU-s szerverein kerülnek tárolásra és feldolgozásra.",
+      "section5_content": "Személyes adatait harmadik félnek nem adjuk tovább. Az adatok az Amazon Web Services (AWS) EU-s szerverein (Frankfurt, Németország) kerülnek tárolásra és feldolgozásra.",
       "section6_title": "6. Sütik (cookie-k)",
-      "section6_content": "A weboldal technikai sütiket használ a működéshez (témaválasztás). Analitikai sütiket (Google Analytics) csak az Ön hozzájárulásával használunk.",
+      "section6_content": "A weboldal NEM használ sütiket (cookie). A téma és nyelv beállítások a böngésző helyi tárhelyén (localStorage) kerülnek mentésre, ami nem minősül süti használatnak és nem igényel hozzájárulást.",
       "section7_title": "7. Az érintett jogai",
       "section7_list": [
-        "Hozzáférés joga – tájékoztatást kérhet a kezelt adatairól",
-        "Helyesbítés joga – kérheti adatai javítását",
-        "Törlés joga – kérheti adatai törlését",
+        "Hozzáférés joga – tájékoztatást kérhet a kezelt adatairól (info@villiotech.hu)",
+        "Helyesbítés joga – kérheti adatai javítását (info@villiotech.hu)",
+        "Törlés joga – kérheti adatai azonnali törlését (info@villiotech.hu)",
         "Hozzájárulás visszavonása – bármikor, a korábbi adatkezelés jogszerűségének érintése nélkül",
-        "Panasztétel joga – a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH)"
+        "Panasztétel joga – Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)\n  Cím: 1055 Budapest, Falk Miksa utca 9-11.\n  E-mail: ugyfelszolgalat@naih.hu\n  Web: https://naih.hu"
       ],
       "section8_title": "8. Kapcsolat",
       "section8_content": "Adatvédelmi kérdéseivel forduljon hozzánk: info@villiotech.hu",
-      "last_updated": "Utolsó frissítés: 2026. február"
+      "last_updated": "Utolsó frissítés: 2026. február 11."
     },
     "aszf": {
       "seo_title": "Általános Szerződési Feltételek",
@@ -513,7 +565,6 @@
       "section3_list": [
         "Kiszállási díj Buda: 10 000 Ft",
         "Kiszállási díj Pest (kivételesen): 20 000 Ft",
-        "Minimum munkadíj: 50 000 Ft",
         "Sürgős kiszállás (4 órán belül): +50% felár",
         "A végleges árat tételes árajánlat tartalmazza",
         "Fizetés: készpénz vagy bankkártya, a helyszínen",

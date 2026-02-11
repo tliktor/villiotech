@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTheme } from '../hooks/useTheme'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Lazy-loaded Google Maps embed.
@@ -11,6 +12,7 @@ const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d430
 export default function GoogleMap() {
   const [loaded, setLoaded] = useState(false)
   const { isDark } = useTheme()
+  const { t } = useTranslation()
 
   if (!loaded) {
     return (
@@ -20,13 +22,13 @@ export default function GoogleMap() {
         role="button"
         tabIndex={0}
         onKeyDown={e => e.key === 'Enter' && setLoaded(true)}
-        aria-label="Térkép betöltése"
+        aria-label={t('map.load_label')}
       >
         <div className="flex items-center justify-center h-64 md:h-80">
           <div className="text-center">
             <p className="text-4xl mb-2">📍</p>
-            <p className="font-semibold">Budapest – Buda</p>
-            <p className="text-sm opacity-60 mt-1">Kattintson a térkép betöltéséhez</p>
+            <p className="font-semibold">{t('common.features.location')}</p>
+            <p className="text-sm opacity-60 mt-1">{t('map.click_to_load')}</p>
           </div>
         </div>
       </div>
@@ -43,7 +45,7 @@ export default function GoogleMap() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Villiotech szolgáltatási terület – Budapest Buda"
+        title={t('map.title')}
       />
     </div>
   )

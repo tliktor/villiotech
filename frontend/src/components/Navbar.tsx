@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Sun, Moon, Menu, Phone, Zap, Globe } from 'lucide-react'
+import { Sun, Moon, Menu, Phone, Zap } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -7,14 +7,9 @@ import { useTranslation } from 'react-i18next'
 export default function Navbar() {
   const { isDark, toggleTheme } = useTheme()
   const [mobileOpen, setMobileOpen] = useState(false)
-  const { t, i18n } = useTranslation()
-
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'hu' ? 'en' : 'hu')
-  }
+  const { t } = useTranslation()
 
   const navLinks = [
-    { to: '/', label: t('nav.home') },
     { to: '/lakossagnak', label: t('nav.residents') },
     { to: '/tarsashazaknak', label: t('nav.condos') },
     { to: '/munkahelyeknek', label: t('nav.businesses') },
@@ -54,7 +49,7 @@ export default function Navbar() {
               <div tabIndex={0} role="button" className="btn btn-ghost btn-sm">
                 {t('nav.services')} ▾
               </div>
-              <ul tabIndex={0} className={`dropdown-content menu rounded-box z-50 w-64 p-2 shadow-lg ${isDark ? 'glass-card-strong' : 'neu-flat bg-base-100'}`}>
+              <ul tabIndex={0} className={`dropdown-content menu rounded-box z-50 w-64 p-2 shadow-lg ${isDark ? 'bg-neutral text-neutral-content' : 'neu-flat bg-base-100'}`}>
                 {serviceLinks.map(link => (
                   <li key={link.to}>
                     <Link to={link.to}>{link.label}</Link>
@@ -75,15 +70,10 @@ export default function Navbar() {
               {t('nav.urgent')}
             </a>
 
-            {/* Language toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="btn btn-ghost btn-circle btn-sm"
-              aria-label={`${t('nav.language_toggle')} (${i18n.language === 'hu' ? 'English' : 'Magyar'})`}
-            >
-              <Globe className="w-5 h-5" />
-              <span className="text-xs font-bold">{i18n.language.toUpperCase()}</span>
-            </button>
+            {/* English Service button (moved from desktop nav) */}
+            <Link to="/en/english-speaking" className="hidden lg:flex btn btn-ghost btn-sm gap-1">
+              🇬🇧 English
+            </Link>
 
             {/* Theme toggle */}
             <button
@@ -130,6 +120,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link to="/en/english-speaking" className="block btn btn-ghost btn-sm justify-start w-full" onClick={() => setMobileOpen(false)}>🇬🇧 English Service</Link>
             <Link to="/rolam" className="block btn btn-ghost btn-sm justify-start w-full" onClick={() => setMobileOpen(false)}>{t('nav.about')}</Link>
             <Link to="/kapcsolat" className="block btn btn-ghost btn-sm justify-start w-full" onClick={() => setMobileOpen(false)}>{t('nav.contact')}</Link>
           </div>

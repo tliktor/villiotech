@@ -22,6 +22,7 @@ export default function Villanyszereles() {
       />
 
       <Hero
+        title={t('pages.villanyszereles.hero_title')}
         subtitle={t('pages.villanyszereles.hero_subtitle')}
         cta1={{ label: t('pages.villanyszereles.cta1'), to: '/kapcsolat' }}
         cta2={{ label: t('pages.villanyszereles.cta2'), href: 'tel:+36302389945' }}
@@ -42,7 +43,7 @@ export default function Villanyszereles() {
       <section className="max-w-7xl mx-auto px-4 pb-20">
         <SectionTitle title={t('pages.villanyszereles.promises_title')} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {getTranslationArray(t('pages.villanyszereles.promises', { returnObjects: true })).map((p: {title: string, desc: string}, i: number) => (
+          {getTranslationArray<{title: string, desc: string}>(t('pages.villanyszereles.promises', { returnObjects: true })).map((p, i) => (
             <ThemeCard key={i}>
               <h3 className="font-semibold mb-1">{p.title}</h3>
               <p className="text-sm opacity-70">{p.desc}</p>
@@ -58,12 +59,7 @@ export default function Villanyszereles() {
         <SectionTitle title={t('pages.villanyszereles.pricing_title')} />
         <div className="max-w-lg mx-auto">
           <PricingTable
-            rows={[
-              { label: t('pages.villanyszereles.pricing.buda'), price: '10 000 Ft' },
-              { label: t('pages.villanyszereles.pricing.pest'), price: '20 000 Ft' },
-              { label: t('pages.villanyszereles.pricing.minimum'), price: '50 000 Ft' },
-              { label: t('pages.villanyszereles.pricing.urgent'), price: '+50% felár' },
-            ]}
+            rows={getTranslationArray(t('pages.villanyszereles.pricing_rows', { returnObjects: true }))}
             note={t('pages.villanyszereles.pricing_note')}
           />
         </div>

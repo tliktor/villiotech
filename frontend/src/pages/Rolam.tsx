@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useSEO } from '../hooks/useSEO'
 import { getTranslationArray } from '../utils/i18n'
@@ -7,14 +6,13 @@ import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
 import ThemeCard from '../components/ThemeCard'
 import CTASection from '../components/CTASection'
-import { GraduationCap, Target, Award, Zap } from 'lucide-react'
+import { GraduationCap } from 'lucide-react'
 
 const qualifications = [
   'Villamosmérnöki diploma',
   'Vizsgázott villamos biztonsági felülvizsgáló',
   'Tűzvédelmi vizsgák',
   'Villámvédelmi felülvizsgáló (hamarosan)',
-  '20 év multinacionális szakmai tapasztalat',
 ]
 
 const values = [

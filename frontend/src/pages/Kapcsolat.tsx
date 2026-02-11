@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSearchParams } from 'react-router-dom'
 import { useSEO } from '../hooks/useSEO'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
@@ -16,6 +17,7 @@ interface FormData {
   email: string
   service: SERVICE_TYPES | ''
   clientType: CLIENT_TYPES | ''
+  preferredLanguage: 'hu' | 'en'
   district: string
   description: string
   preferredTime: string
@@ -24,14 +26,18 @@ interface FormData {
 }
 
 const initialForm: FormData = {
-  name: '', phone: '', email: '', service: '', clientType: '',
+  name: '', phone: '', email: '', service: '', clientType: '', preferredLanguage: 'hu',
   district: '', description: '', preferredTime: '', urgent: false, privacy: false,
 }
 
 export default function Kapcsolat() {
   const { t, i18n } = useTranslation()
   const seo = useSEO('kapcsolat')
-  const [form, setForm] = useState<FormData>(initialForm)
+  const [searchParams] = useSearchParams()
+  const [form, setForm] = useState<FormData>({
+    ...initialForm,
+    preferredLanguage: searchParams.get('lng') === 'en' ? 'en' : 'hu'
+  })
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [apiError, setApiError] = useState<string | null>(null)
@@ -242,6 +248,20 @@ export default function Kapcsolat() {
               {errors.clientType && <p id="clientType-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.clientType}</p>}
             </fieldset>
 
+            {/* Language preference */}
+            <fieldset className="fieldset">
+              <label className="fieldset-label" htmlFor="preferredLanguage">Preferred language / Előnyben részesített nyelv</label>
+              <select 
+                id="preferredLanguage" 
+                className="select select-bordered w-full" 
+                value={form.preferredLanguage} 
+                onChange={e => update('preferredLanguage', e.target.value as 'hu' | 'en')}
+              >
+                <option value="hu">🇭🇺 Magyar</option>
+                <option value="en">🇬🇧 English</option>
+              </select>
+            </fieldset>
+
             {/* District */}
             <fieldset className="fieldset">
               <label className="fieldset-label" htmlFor="district">{t('contact.form.address')} *</label>
@@ -277,9 +297,11 @@ export default function Kapcsolat() {
 
             {/* Privacy */}
             <div>
-              <label className="flex items-center gap-3 cursor-pointer">
-                <input type="checkbox" className={`checkbox ${errors.privacy ? 'checkbox-error' : 'checkbox-primary'}`} checked={form.privacy} onChange={e => update('privacy', e.target.checked)} />
-                <span>{t('contact.form.privacy_checkbox')} <a href="/adatvedelem" target="_blank" rel="noopener noreferrer" className="text-primary underline">adatvédelmi tájékoztatót</a> *</span>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input type="checkbox" className={`checkbox ${errors.privacy ? 'checkbox-error' : 'checkbox-primary'} mt-1`} checked={form.privacy} onChange={e => update('privacy', e.target.checked)} />
+                <span className="text-sm">
+                  {t('contact.form.privacy_checkbox')} <a href={`/${i18n.language === 'en' ? 'en/' : ''}adatvedelem`} target="_blank" rel="noopener noreferrer" className="link link-primary">{t('contact.form.privacy_link')}</a> {t('contact.form.privacy_suffix')} *
+                </span>
               </label>
               {errors.privacy && <p role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.privacy}</p>}
             </div>

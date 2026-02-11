@@ -19,19 +19,18 @@ const processSteps = [
   { number: 2, title: 'Egyeztetés', description: 'Visszajelzek és egyeztetjük az időpontot, a munka részleteit és a várható költséget.' },
   { number: 3, title: 'Helyszíni munka', description: 'Megérkezem a megbeszélt időpontban, elvégzem a méréseket vagy szerelési munkát.' },
   { number: 4, title: 'Dokumentáció', description: 'Felülvizsgálatnál joghatályos jegyzőkönyvet kap. Szerelésnél tételes elszámolást.' },
-  { number: 5, title: 'Fizetés', description: 'Készpénzzel vagy bankkártyával, a helyszínen. Számlát azonnal kiállítom.' },
-]
-
-const pricingRows = [
-  { label: 'Kiszállás – Buda', price: '10 000 Ft' },
-  { label: 'Kiszállás – Pest (kivételesen)', price: '20 000 Ft' },
-  { label: 'Minimum munkadíj', price: '50 000 Ft' },
-  { label: 'Sürgős (4 órán belül)', price: '+50% felár' },
+  { number: 5, title: 'Fizetés', description: 'Készpénzzel vagy bankkártyával, a helyszínen. E-számlát azonnal kiállítom.' },
 ]
 
 export default function Home() {
   const { t } = useTranslation()
   const seo = useSEO('home')
+
+  const pricingRows = [
+    { label: t('common.pricing.callout_buda'), price: '10 000 Ft' },
+    { label: t('common.pricing.callout_pest'), price: '20 000 Ft' },
+    { label: t('common.pricing.urgent'), price: t('common.pricing.urgent_surcharge') },
+  ]
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -101,6 +100,18 @@ export default function Home() {
       ],
       to: '/munkahelyeknek',
     },
+    {
+      icon: () => <span className="text-4xl mb-4">🇬🇧</span>,
+      title: 'Expats & English Speakers',
+      description: 'Licensed electrical engineer serving English-speaking residents in Buda. Safety inspections, repairs, IT networking – clear communication, official documentation.',
+      bullets: [
+        'English communication',
+        'Official documentation',
+        'Licensed engineer',
+        'Buda area service',
+      ],
+      to: '/en/english-speaking',
+    },
   ]
 
   return (
@@ -128,24 +139,26 @@ export default function Home() {
         <div className="bento-grid-home bento-grid">
           {targetCards.map((card, i) => (
             <ScrollReveal key={i} delay={i * 0.1} fallback={<SkeletonCard />}>
-              <ThemeCard className="flex flex-col justify-between h-full">
-                <div>
-                  <card.icon className="w-10 h-10 text-primary mb-4 mx-auto" />
-                  <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-                  <p className="text-sm opacity-70 mb-4">{card.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {card.bullets.map((b, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm">
-                      <span className="text-primary mt-0.5">✓</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Link to={card.to} className="btn btn-primary btn-sm gap-1 self-center">
-                {t('home.details_cta')} <ArrowRight className="w-4 h-4" />
+              <Link to={card.to} className="cursor-pointer hover:scale-105 transition-transform">
+                <ThemeCard className="flex flex-col justify-between h-full">
+                  <div>
+                    <card.icon className="w-10 h-10 text-primary mb-4 mx-auto" />
+                    <h3 className="text-xl font-bold mb-2">{card.title}</h3>
+                    <p className="text-sm opacity-70 mb-4">{card.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {card.bullets.map((b, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm">
+                        <span className="text-primary mt-0.5">✓</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="btn btn-primary btn-sm gap-1 self-center">
+                  {t('home.details_cta')} <ArrowRight className="w-4 h-4" />
+                </div>
+              </ThemeCard>
               </Link>
-            </ThemeCard>
             </ScrollReveal>
           ))}
         </div>
@@ -180,7 +193,7 @@ export default function Home() {
           <div className="max-w-lg mx-auto">
             <PricingTable
               rows={pricingRows}
-              note="Magánszemélyeknek ÁFA-mentes, vállalkozásoknak ÁFÁ-s számlát állítok ki. Társasházaknak ÁFA-mentes számlázás."
+              note={t('common.invoicing.mixed_note')}
             />
           </div>
         </ScrollReveal>

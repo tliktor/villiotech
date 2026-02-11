@@ -40,7 +40,7 @@
         - /url: /
     - listitem [ref=e38]:
       - generic [ref=e39] [cursor=pointer]: Kapcsolat
-  - main [active] [ref=e40]:
+  - main [ref=e40]:
     - generic [ref=e42]:
       - heading "Kérjen ajánlatot – válaszolok 1 munkanapon belül." [level=1] [ref=e43]
       - paragraph [ref=e44]: Töltse ki az űrlapot, vagy hívjon közvetlenül. Budán dolgozom, kalibrált műszerekkel, garanciával.
@@ -144,7 +144,7 @@
               - img [ref=e128]
               - text: Az ajánlatkéréshez el kell fogadnia az adatvédelmi tájékoztatót
           - generic [ref=e130]:
-            - button "Ajánlatot kérek" [ref=e131] [cursor=pointer]
+            - button "Ajánlatot kérek" [active] [ref=e131] [cursor=pointer]
             - link "Sürgős – hívjon vissza 4 órán belül" [ref=e132] [cursor=pointer]:
               - /url: tel:+36302389945
         - generic [ref=e133]:

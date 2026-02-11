@@ -17,6 +17,7 @@ const VillamosFelulvizsgalat = lazy(() => import('./pages/szolgaltatasok/Villamo
 const Villanyszereles = lazy(() => import('./pages/szolgaltatasok/Villanyszereles'))
 const ItHalozat = lazy(() => import('./pages/szolgaltatasok/ItHalozat'))
 const KeziszerszamFelulvizsgalat = lazy(() => import('./pages/szolgaltatasok/KeziszerszamFelulvizsgalat'))
+const EnglishSpeaking = lazy(() => import('./pages/EnglishSpeaking'))
 const Rolam = lazy(() => import('./pages/Rolam'))
 const Kapcsolat = lazy(() => import('./pages/Kapcsolat'))
 const Adatvedelem = lazy(() => import('./pages/Adatvedelem'))
@@ -55,6 +56,7 @@ export default function App() {
                   <Route path="/szolgaltatasok/villanyszereles" element={<Villanyszereles />} />
                   <Route path="/szolgaltatasok/it-halozat" element={<ItHalozat />} />
                   <Route path="/szolgaltatasok/keziszerszam-felulvizsgalat" element={<KeziszerszamFelulvizsgalat />} />
+                  <Route path="/en/english-speaking" element={<EnglishSpeaking />} />
                   <Route path="/rolam" element={<Rolam />} />
                   <Route path="/kapcsolat" element={<Kapcsolat />} />
                   <Route path="/adatvedelem" element={<Adatvedelem />} />

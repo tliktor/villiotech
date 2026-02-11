@@ -22,6 +22,7 @@ export default function VillamosFelulvizsgalat() {
       />
 
       <Hero
+        title={t('pages.villamos_felulvizsgalat.hero_title')}
         subtitle={t('pages.villamos_felulvizsgalat.hero_subtitle')}
         cta1={{ label: t('pages.villamos_felulvizsgalat.cta1'), to: '/kapcsolat' }}
         cta2={{ label: t('pages.villamos_felulvizsgalat.cta2'), to: '/kapcsolat' }}
@@ -72,12 +73,7 @@ export default function VillamosFelulvizsgalat() {
         <SectionTitle title={t('pages.villamos_felulvizsgalat.pricing_title')} />
         <div className="max-w-lg mx-auto">
           <PricingTable
-            rows={[
-              { label: t('pages.villamos_felulvizsgalat.pricing.buda'), price: '10 000 Ft' },
-              { label: t('pages.villamos_felulvizsgalat.pricing.pest'), price: '20 000 Ft' },
-              { label: t('pages.villamos_felulvizsgalat.pricing.minimum'), price: '50 000 Ft' },
-              { label: t('pages.villamos_felulvizsgalat.pricing.urgent'), price: '+50% felár' },
-            ]}
+            rows={getTranslationArray(t('pages.villamos_felulvizsgalat.pricing_rows', { returnObjects: true }))}
             note={t('pages.villamos_felulvizsgalat.pricing_note')}
           />
         </div>

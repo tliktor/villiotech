@@ -20,5 +20,6 @@ export interface ContactFormData {
   company: string;
   serviceType: SERVICE_TYPES;
   clientType: CLIENT_TYPES;
+  preferredLanguage?: 'hu' | 'en';
   message: string;
 }
