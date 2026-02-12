@@ -66,10 +66,11 @@ export default function App() {
                   <Route path="/en/adatvedelem" element={<Adatvedelem />} />
                   <Route path="/aszf" element={<ASZF />} />
                   <Route path="/en/aszf" element={<ASZF />} />
-                  <Route path="/lakas" element={<LandingLakas />} />
-                  <Route path="/tarsashaz" element={<LandingTarsashaz />} />
-                  <Route path="/ceg" element={<LandingCeg />} />
                 </Route>
+                {/* Landing pages - no navbar/footer */}
+                <Route path="/lakas" element={<LandingLakas />} />
+                <Route path="/tarsashaz" element={<LandingTarsashaz />} />
+                <Route path="/ceg" element={<LandingCeg />} />
               </Routes>
             </Suspense>
           </ErrorBoundary>

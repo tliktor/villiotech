@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useTheme } from '../../hooks/useTheme'
+import { useTheme, ThemeProvider } from '../../hooks/useTheme'
 import { Shield, FileCheck, AlertTriangle, Clock, Phone, Wrench } from 'lucide-react'
 
 const fears = [
@@ -17,18 +17,19 @@ const trust = [
   { icon: Wrench, text: 'Kéziszerszám felülvizsgálat helyszínen' },
 ]
 
-export default function LandingCeg() {
+function Page() {
   const { isDark } = useTheme()
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
-    <>
+    <div className="min-h-screen bg-base-100 text-base-content">
       <Helmet>
         <title>Munkahelyi villamos felülvizsgálat – Villiotech</title>
         <meta name="description" content="Kötelező munkahelyi villamos felülvizsgálat, kéziszerszám felülvizsgálat helyszínen. Joghatályos jegyzőkönyv, minimális üzemzavar." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
+      {/* Hero */}
       <section className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
@@ -37,13 +38,11 @@ export default function LandingCeg() {
           <p className="text-lg opacity-80 mb-8 max-w-2xl mx-auto">
             A munkahelyi villamos felülvizsgálat 3 évente kötelező. Elvégzem gyorsan, a nyitvatartáshoz alkalmazkodva, joghatályos jegyzőkönyvvel.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/munkahelyeknek" className="btn btn-primary btn-lg">Részletek és árak →</Link>
-            <a href="tel:+36302389945" className="btn btn-warning btn-lg gap-2"><Phone className="w-5 h-5" /> Hívjon most</a>
-          </div>
+          <a href="tel:+36302389945" className="btn btn-warning btn-lg gap-2"><Phone className="w-5 h-5" /> Hívjon most</a>
         </div>
       </section>
 
+      {/* Pain points */}
       <section className={`py-12 transition-theme ${isDark ? 'glass-card-strong' : 'bg-base-200'}`}>
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -58,6 +57,7 @@ export default function LandingCeg() {
         </div>
       </section>
 
+      {/* Trust */}
       <section className="py-12">
         <div className="max-w-3xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -71,16 +71,21 @@ export default function LandingCeg() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className={`py-12 transition-theme ${isDark ? 'glass-card-strong' : 'bg-base-200'}`}>
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-4">Kérjen árajánlatot</h2>
           <p className="opacity-70 mb-6">Tételes árajánlat, alkalmazkodó időpont, minimális fennakadás.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/kapcsolat" className="btn btn-primary btn-lg">Ajánlatot kérek →</Link>
+            <Link to="/munkahelyeknek" className="btn btn-primary btn-lg">Tudjon meg többet →</Link>
             <a href="tel:+36302389945" className="btn btn-outline btn-lg gap-2"><Phone className="w-5 h-5" /> +36 30 238 9945</a>
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
+}
+
+export default function LandingCeg() {
+  return <ThemeProvider><Page /></ThemeProvider>
 }
