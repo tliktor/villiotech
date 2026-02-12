@@ -65,7 +65,7 @@ export default function CTASection({ title, subtitle, cta1, cta2 }: CTASectionPr
           transition={{ ...defaultTransition, delay: 0.3 }}
         >
           <span className="flex items-center gap-1"><MapPin className="w-4 h-4" /> {t('common.features.location')}</span>
-          <Link to="/?lng=en" className="flex items-center gap-1 hover:text-primary transition-colors">🇬🇧 English service</Link>
+          <Link to="/en/english-speaking" className="flex items-center gap-1 hover:text-primary transition-colors">🇬🇧 English service</Link>
           <span className="flex items-center gap-1"><CreditCard className="w-4 h-4" /> {t('common.features.card_payment')}</span>
           <span className="flex items-center gap-1"><FileCheck className="w-4 h-4" /> {t('common.features.einvoice_onsite')}</span>
         </motion.div>
