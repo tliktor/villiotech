@@ -7,8 +7,12 @@ import { useTranslation } from 'react-i18next'
 export default function Navbar() {
   const { isDark, toggleTheme } = useTheme()
   const [mobileOpen, setMobileOpen] = useState(false)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { pathname } = useLocation()
+
+  const switchToHungarian = () => {
+    i18n.changeLanguage('hu')
+  }
 
   const navLinks = [
     { to: '/lakossagnak', label: t('nav.residents') },
@@ -32,7 +36,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 text-primary font-bold text-xl">
-            <Zap className="w-6 h-6" />
+            <img 
+              src="/logo.jpg" 
+              alt="Villiotech" 
+              className="w-10 h-10 object-contain"
+              style={{ mixBlendMode: 'multiply' }}
+            />
             Villiotech
           </Link>
 
@@ -71,7 +80,7 @@ export default function Navbar() {
             </a>
 
             {/* Language switcher */}
-            <Link to="/" className="hidden lg:flex btn btn-ghost btn-circle" aria-label="Magyar" title="Magyar">
+            <Link to="/" onClick={switchToHungarian} className="hidden lg:flex btn btn-ghost btn-circle" aria-label="Magyar" title="Magyar">
               <span className="text-4xl leading-none">🇭🇺</span>
             </Link>
             <Link to="/en/english-speaking" className="hidden lg:flex btn btn-ghost btn-circle" aria-label="English Service" title="English Service">
@@ -123,7 +132,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link to="/" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>🇭🇺 Magyar</Link>
+            <Link to="/" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/') ? 'btn-active' : ''}`} onClick={() => { switchToHungarian(); setMobileOpen(false); }}>🇭🇺 Magyar</Link>
             <Link to="/en/english-speaking" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/en/english-speaking') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>🇬🇧 English Service</Link>
             <Link to="/rolam" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/rolam') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>{t('nav.about')}</Link>
             <Link to="/kapcsolat" className={`block btn btn-ghost btn-sm justify-start w-full ${isActive('/kapcsolat') ? 'btn-active' : ''}`} onClick={() => setMobileOpen(false)}>{t('nav.contact')}</Link>
