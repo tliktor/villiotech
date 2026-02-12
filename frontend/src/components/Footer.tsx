@@ -63,9 +63,9 @@ export default function Footer() {
           >
             <h3 className="font-semibold mb-3">{t('footer.target_title')}</h3>
             <ul className="space-y-2 text-sm opacity-70">
-              <li><Link to="/lakossagnak" className="hover:text-primary transition-colors">{t('nav.residents')}</Link></li>
-              <li><Link to="/tarsashazaknak" className="hover:text-primary transition-colors">{t('nav.condos')}</Link></li>
-              <li><Link to="/munkahelyeknek" className="hover:text-primary transition-colors">{t('nav.businesses')}</Link></li>
+              <li><Link to="/lakas" className="hover:text-primary transition-colors">{t('nav.residents')}</Link></li>
+              <li><Link to="/tarsashaz" className="hover:text-primary transition-colors">{t('nav.condos')}</Link></li>
+              <li><Link to="/ceg" className="hover:text-primary transition-colors">{t('nav.businesses')}</Link></li>
               <li><Link to="/rolam" className="hover:text-primary transition-colors">{t('nav.about')}</Link></li>
             </ul>
           </motion.div>
