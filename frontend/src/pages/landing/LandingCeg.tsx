@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useTheme } from '../hooks/useTheme'
+import { useTheme } from '../../hooks/useTheme'
 import { Shield, FileCheck, AlertTriangle, Clock, Phone, Wrench } from 'lucide-react'
 
 const fears = [
