@@ -81,6 +81,15 @@ html[data-theme="villiotech-night"] {
    ACCESSIBILITY ENHANCEMENTS
    ============================================ */
 
+/* Typography */
+body {
+  font-family: 'Sora', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-bold {
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+}
+
 /* Mobile optimization */
 * {
   -webkit-tap-highlight-color: transparent;
