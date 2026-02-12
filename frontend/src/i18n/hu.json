@@ -383,7 +383,8 @@
       ],
       "pricing_note": "A végleges ár az ingatlan méretétől és a hálózat összetettségétől függ.",
       "cta_title": "Kérjen ajánlatot villamos felülvizsgálatra",
-      "cta_phone": "☎ Hívjon most"
+      "cta_quote": "Ajánlatot kérek",
+      "cta_call": "☎ Hívjon most"
     },
     "villanyszereles": {
       "hero_title": "Villanyszerelés, javítás, kivitelezés",
@@ -419,7 +420,8 @@
       ],
       "pricing_note": "A végleges árat a munka jellege és terjedelme határozza meg.",
       "cta_title": "Kérjen ajánlatot villanyszerelésre",
-      "cta_phone": "☎ Hívjon most"
+      "cta_quote": "Ajánlatot kérek",
+      "cta_call": "☎ Hívjon most"
     },
     "it_halozat": {
       "hero_title": "IT hálózat – WiFi / UTP",

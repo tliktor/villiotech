@@ -377,7 +377,8 @@
       ],
       "pricing_note": "The final price depends on the size of the property and the complexity of the network.",
       "cta_title": "Get a quote for an electrical review",
-      "cta_phone": "☎ Call now"
+      "cta_quote": "Request quote",
+      "cta_call": "☎ Call now"
     },
     "villanyszereles": {
       "hero_title": "Electrical installation, repair, construction",
@@ -413,7 +414,8 @@
       ],
       "pricing_note": "The final price is determined by the nature and scope of the work.",
       "cta_title": "Get a quote for electrical installation",
-      "cta_phone": "☎ Call now"
+      "cta_quote": "Request quote",
+      "cta_call": "☎ Call now"
     },
     "it_halozat": {
       "hero_title": "IT network – WiFi / UTP",
