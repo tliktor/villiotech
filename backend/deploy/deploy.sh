@@ -75,7 +75,7 @@ if aws lambda get-function --function-name $FUNCTION_NAME --profile $PROFILE --r
     --handler index.handler \
     --timeout 10 \
     --memory-size 256 \
-    --environment "Variables={RECIPIENT_EMAIL=info@villiotech.hu,SENDER_EMAIL=noreply@villiotech.hu,ALLOWED_ORIGIN=https://d1wsqe7tpbsupy.cloudfront.net}" \
+    --environment "Variables={RECIPIENT_EMAIL=info@villiotech.hu,SENDER_EMAIL=noreply@villiotech.hu,ALLOWED_ORIGIN=https://villiotech.hu}" \
     --profile $PROFILE \
     --region $REGION
 else
@@ -88,7 +88,7 @@ else
     --zip-file fileb://function.zip \
     --timeout 10 \
     --memory-size 256 \
-    --environment "Variables={RECIPIENT_EMAIL=info@villiotech.hu,SENDER_EMAIL=noreply@villiotech.hu,ALLOWED_ORIGIN=https://d1wsqe7tpbsupy.cloudfront.net}" \
+    --environment "Variables={RECIPIENT_EMAIL=info@villiotech.hu,SENDER_EMAIL=noreply@villiotech.hu,ALLOWED_ORIGIN=https://villiotech.hu}" \
     --tags app=villiotech \
     --profile $PROFILE \
     --region $REGION
@@ -112,7 +112,7 @@ if [ -z "$API_ID" ]; then
   API_ID=$(aws apigatewayv2 create-api \
     --name $API_NAME \
     --protocol-type HTTP \
-    --cors-configuration "AllowOrigins=https://d1wsqe7tpbsupy.cloudfront.net,AllowMethods=POST,OPTIONS,AllowHeaders=Content-Type" \
+    --cors-configuration "AllowOrigins=https://villiotech.hu,AllowMethods=POST,OPTIONS,AllowHeaders=Content-Type" \
     --tags app=villiotech \
     --profile $PROFILE \
     --region $REGION \

@@ -7,7 +7,7 @@ import { SERVICE_TYPES, CLIENT_TYPES } from './types'
 const ses = new SESClient({ region: process.env.AWS_REGION || 'eu-central-1' })
 const RECIPIENT = process.env.RECIPIENT_EMAIL || 'info@villiotech.hu'
 const SENDER = process.env.SENDER_EMAIL || 'noreply@villiotech.hu'
-const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || 'https://d1wsqe7tpbsupy.cloudfront.net'
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || 'https://villiotech.hu'
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
@@ -68,16 +68,16 @@ export const handler = async (event: APIGatewayProxyEventV2): Promise<APIGateway
 
     // Email összeállítás
     const serviceLabels: Record<string, string> = {
-      [SERVICE_TYPES.WEB_DEVELOPMENT]: 'Villamos biztonsági felülvizsgálat',
-      [SERVICE_TYPES.MOBILE_APP]: 'Villanyszerelés / javítás',
-      [SERVICE_TYPES.CLOUD_SOLUTIONS]: 'IT hálózat (WiFi / UTP)',
-      [SERVICE_TYPES.CONSULTING]: 'Kéziszerszám felülvizsgálat',
+      [SERVICE_TYPES.INSPECTION]: 'Villamos biztonsági felülvizsgálat',
+      [SERVICE_TYPES.ELECTRICAL]: 'Villanyszerelés / javítás',
+      [SERVICE_TYPES.IT_NETWORK]: 'IT hálózat (WiFi / UTP)',
+      [SERVICE_TYPES.TOOL_INSPECTION]: 'Kéziszerszám felülvizsgálat',
       [SERVICE_TYPES.OTHER]: 'Egyéb',
     }
     const clientLabels: Record<string, string> = {
       [CLIENT_TYPES.INDIVIDUAL]: 'Magánszemély',
-      [CLIENT_TYPES.SMALL_BUSINESS]: 'Társasház',
-      [CLIENT_TYPES.ENTERPRISE]: 'Vállalkozás',
+      [CLIENT_TYPES.CONDO]: 'Társasház',
+      [CLIENT_TYPES.BUSINESS]: 'Vállalkozás',
     }
 
     const name = sanitize(body.name)
