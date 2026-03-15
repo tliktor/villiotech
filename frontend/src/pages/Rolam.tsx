@@ -10,9 +10,8 @@ import { GraduationCap } from 'lucide-react'
 
 const qualifications = [
   'Villamosmérnöki diploma',
-  'Vizsgázott villamos biztonsági felülvizsgáló',
-  'Tűzvédelmi vizsgák',
-  'Villámvédelmi felülvizsgáló (hamarosan)',
+  'Villamos biztonsági felülvizsgáló',
+  'Villámvédelmi felülvizsgáló',
 ]
 
 const values = [

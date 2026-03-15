@@ -41,21 +41,6 @@ export default function VillamosFelulvizsgalat() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title={t('pages.villamos_felulvizsgalat.what_we_check_title')} />
-        <ThemeCard hover={false}>
-          <ul className="space-y-3">
-            {getTranslationArray<string>(t('pages.villamos_felulvizsgalat.what_we_check', { returnObjects: true })).map((item, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <span className="text-primary">⚡</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-sm opacity-70 italic">{t('pages.villamos_felulvizsgalat.calibrated_note')}</p>
-        </ThemeCard>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 pb-20">
         <SectionTitle title={t('pages.villamos_felulvizsgalat.results_title')} />
         <ThemeCard hover={false}>
           <ul className="space-y-3">

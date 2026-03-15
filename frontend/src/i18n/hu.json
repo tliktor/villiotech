@@ -465,7 +465,7 @@
     },
     "keziszerszam_felulvizsgalat": {
       "hero_title": "Az elektromos kéziszerszámok éves felülvizsgálata kötelező.",
-      "hero_subtitle": "10/2016. (IV. 5.) NGM rendelet, 19. § (6) bekezdés a) pontja\nHelyszínen végzem, nem kell sehová szállítani az eszközöket.",
+      "hero_subtitle": "10/2016. (IV. 5.) NGM rendelet, 19. § (6) bekezdés a) pontja\nHelyszínen végzem, hivatalosan kalibrált célműszerrel. Nem kell sehová szállítani az eszközöket.",
       "cta1": "Ajánlatot kérek",
       "cta2": "Visszahívást kérek",
       "who_mandatory_title": "Kinek kötelező?",
@@ -517,7 +517,7 @@
       ],
       "pricing_note": "Az ár az eszközök számától függ. Nagyobb mennyiségnél kedvezőbb egységár.",
       "cta_title": "Kérjen ajánlatot kéziszerszám felülvizsgálatra",
-      "cta_subtitle": "Helyszínen végzem, nem kell sehová vinni az eszközöket.",
+      "cta_subtitle": "Helyszínen végzem, hivatalosan kalibrált célműszerrel. Nem kell sehová vinni az eszközöket.",
       "cta_phone": "☎ Hívjon most"
     },
     "adatvedelem": {
