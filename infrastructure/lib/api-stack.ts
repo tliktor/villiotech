@@ -57,7 +57,7 @@ export class ApiStack extends cdk.Stack {
     // Lambda function
     const contactFunction = new lambda.Function(this, 'ContactFunction', {
       functionName: 'villiotech-contact-handler',
-      runtime: lambda.Runtime.NODEJS_20_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       handler: 'index.handler',
       code: lambda.Code.fromAsset('../backend/dist/contact'),
       role: lambdaRole,
