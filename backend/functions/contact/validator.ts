@@ -35,7 +35,7 @@ export function validateContactForm(data: unknown): ValidationResult {
   }
 
   if (d.email && typeof d.email === 'string' && d.email.trim()) {
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email.trim())) {
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(d.email.trim())) {
       errors.email = 'Kérem, adjon meg érvényes e-mail címet'
     }
   }

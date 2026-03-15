@@ -16,7 +16,7 @@
         "logs:CreateLogStream",
         "logs:PutLogEvents"
       ],
-      "Resource": "arn:aws:logs:eu-central-1:335716056515:log-group:/aws/lambda/villiotech-contact-handler:*"
+      "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/villiotech-contact-handler:*"
     }
   ]
 }

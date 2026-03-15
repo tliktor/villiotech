@@ -163,7 +163,7 @@ aws lambda add-permission \
   --statement-id apigateway-invoke \
   --action lambda:InvokeFunction \
   --principal apigateway.amazonaws.com \
-  --source-arn "arn:aws:execute-api:$REGION:335716056515:$API_ID/*/*/contact" \
+  --source-arn "arn:aws:execute-api:$REGION:$(aws sts get-caller-identity --query Account --output text --profile $PROFILE):$API_ID/*/*/contact" \
   --profile $PROFILE \
   --region $REGION 2>/dev/null || echo "Permission already exists"
 

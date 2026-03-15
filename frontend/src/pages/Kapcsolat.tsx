@@ -60,7 +60,7 @@ export default function Kapcsolat() {
     if (!form.clientType) e.clientType = t('contact.validation.client_type_required')
     if (!form.district.trim()) e.district = t('contact.validation.district_required')
     if (!form.privacy) e.privacy = t('contact.validation.privacy_required')
-    if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = t('contact.validation.email_invalid')
+    if (form.email && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(form.email)) e.email = t('contact.validation.email_invalid')
     setErrors(e)
     return Object.keys(e).length === 0
   }

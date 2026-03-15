@@ -14,7 +14,7 @@
 - **IaC**: AWS CDK (TypeScript)
 - **CI/CD**: GitHub Actions
 - **Testing**: Playwright (E2E), Vitest (unit)
-- **AWS Account**: nntech-developer (335716056515), régió: eu-central-1
+- **AWS Account**: nntech-developer (<account-id>), régió: eu-central-1
 - **AWS CLI profil**: `--profile nntech-developer`
 - **Repo**: https://github.com/tliktor/villiotech
 

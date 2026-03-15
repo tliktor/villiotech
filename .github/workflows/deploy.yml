@@ -24,6 +24,10 @@ jobs:
         working-directory: frontend
         run: npm ci
       
+      - name: Run unit tests
+        working-directory: frontend
+        run: npm test -- --run
+      
       - name: Build frontend
         working-directory: frontend
         run: npm run build
@@ -41,4 +45,4 @@ jobs:
       
       - name: Invalidate CloudFront cache
         run: |
-          aws cloudfront create-invalidation --distribution-id E3NYUDMA72TSET --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

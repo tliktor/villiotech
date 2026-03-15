@@ -58,6 +58,11 @@ function handler(event) {
           responseHttpStatus: 200,
           responsePagePath: '/index.html',
         },
+        {
+          httpStatus: 404,
+          responseHttpStatus: 200,
+          responsePagePath: '/index.html',
+        },
       ],
       priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
     });
