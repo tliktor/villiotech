@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="95" stroke="#1e5ba8" stroke-width="10" fill="none"/>
+  
+  <!-- Inner gold/bronze outline -->
+  <circle cx="100" cy="100" r="90" stroke="#b8956a" stroke-width="2" fill="none"/>
+  
+  <!-- V with lightning bolt -->
+  <g fill="#1e5ba8">
+    <!-- Left part of V -->
+    <path d="M 55 60 L 75 60 L 95 130 L 80 130 Z"/>
+    
+    <!-- Right part of V with lightning -->
+    <path d="M 85 60 L 105 60 L 110 85 L 120 70 L 130 70 L 115 100 L 125 100 L 105 140 L 110 110 L 100 110 L 105 85 Z"/>
+  </g>
+  
+  <!-- VILLIOTECH text on bottom arc -->
+  <path id="textPath" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
+  <text fill="#1e5ba8" font-family="Arial, sans-serif" font-size="20" font-weight="bold" letter-spacing="2">
+    <textPath href="#textPath" startOffset="50%" text-anchor="middle">
+      VILLIOTECH
+    </textPath>
+  </text>
+</svg>
