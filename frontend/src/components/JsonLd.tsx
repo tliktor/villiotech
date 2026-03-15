@@ -1,7 +1,4 @@
-/**
- * JSON-LD structured data for LocalBusiness schema.
- * Placed in Layout so it appears on every page.
- */
+import { Helmet } from 'react-helmet-async'
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -17,10 +14,7 @@ const localBusinessSchema = {
     addressRegion: 'Buda',
     addressCountry: 'HU',
   },
-  areaServed: {
-    '@type': 'City',
-    name: 'Budapest',
-  },
+  areaServed: { '@type': 'City', name: 'Budapest' },
   priceRange: '$$',
   currenciesAccepted: 'HUF',
   paymentAccepted: 'Cash, Credit Card',
@@ -29,31 +23,20 @@ const localBusinessSchema = {
     '@type': 'OfferCatalog',
     name: 'Szolgáltatások',
     itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Villamos biztonsági felülvizsgálat' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Villanyszerelés, javítás, kivitelezés' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'IT hálózat kiépítés (WiFi/UTP)' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Elektromos kéziszerszámok éves felülvizsgálata' },
-      },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Villamos biztonsági felülvizsgálat' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Villanyszerelés, javítás, kivitelezés' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'IT hálózat kiépítés (WiFi/UTP)' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Elektromos kéziszerszámok éves felülvizsgálata' } },
     ],
   },
 }
 
 export default function JsonLd() {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-    />
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(localBusinessSchema)}
+      </script>
+    </Helmet>
   )
 }

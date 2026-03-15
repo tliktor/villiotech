@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+Disallow: /lakas
+Disallow: /tarsashaz
+Disallow: /ceg
+
 Sitemap: https://villiotech.hu/sitemap.xml

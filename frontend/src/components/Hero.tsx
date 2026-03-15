@@ -48,7 +48,7 @@ export default function Hero({ title, subtitle, cta1, cta2 }: HeroProps) {
           </Link>
           {cta2 && (
             cta2.href ? (
-              <a href={cta2.href} className="btn btn-outline btn-lg">
+              <a href={cta2.href} className="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
                 {cta2.label}
               </a>
             ) : (

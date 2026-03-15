@@ -37,10 +37,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 text-primary font-bold text-xl">
             <img 
-              src="/logo.jpg" 
+              src="/logo.svg" 
               alt="Villiotech" 
               className="w-10 h-10 object-contain"
-              style={{ mixBlendMode: 'multiply' }}
             />
             Villiotech
           </Link>

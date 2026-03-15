@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion'
-import { useRef, type ReactNode } from 'react'
+import { useRef, useMemo, type ReactNode } from 'react'
 
 interface ScrollRevealProps {
   children: ReactNode
@@ -12,8 +12,7 @@ interface ScrollRevealProps {
 export default function ScrollReveal({ children, delay = 0, stagger = 0, className, fallback }: ScrollRevealProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
-  
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const prefersReducedMotion = useMemo(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches, [])
 
   if (prefersReducedMotion) {
     return <div ref={ref} className={className}>{children}</div>

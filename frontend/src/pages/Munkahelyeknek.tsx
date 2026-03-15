@@ -137,12 +137,12 @@ export default function Munkahelyeknek() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Így dolgozunk együtt" />
+        <SectionTitle title={t('pages.munkahelyeknek.process_section')} />
         <ProcessSteps steps={steps} />
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Átlátható árazás" />
+        <SectionTitle title={t('pages.munkahelyeknek.pricing_section')} />
         <div className="max-w-lg mx-auto">
           <PricingTable
             rows={pricingRows}
@@ -152,7 +152,7 @@ export default function Munkahelyeknek() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Mit kap kézhez?" />
+        <SectionTitle title={t('pages.munkahelyeknek.deliverables_section')} />
         <ThemeCard hover={false}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((d, i) => (
@@ -166,7 +166,7 @@ export default function Munkahelyeknek() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <SectionTitle title="Gyakori kérdések" />
+        <SectionTitle title={t('pages.munkahelyeknek.faq_section')} />
         <div className="max-w-3xl mx-auto">
           <FAQ items={faqItems} />
         </div>

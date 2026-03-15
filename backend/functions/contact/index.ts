@@ -35,6 +35,16 @@ export const handler = async (event: APIGatewayProxyEventV2): Promise<APIGateway
   try {
     const body = JSON.parse(event.body || '{}')
 
+    // Verify origin
+    const origin = event.headers?.origin || ''
+    if (ALLOWED_ORIGIN !== '*' && origin !== ALLOWED_ORIGIN) {
+      return {
+        statusCode: 403,
+        headers: corsHeaders,
+        body: JSON.stringify({ success: false, error: 'Forbidden' })
+      }
+    }
+
     // Honeypot check – ha a rejtett mező ki van töltve, bot
     if (body.website) {
       return { statusCode: 200, headers: corsHeaders, body: JSON.stringify({ success: true }) }

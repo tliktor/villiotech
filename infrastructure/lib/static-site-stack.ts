@@ -31,8 +31,8 @@ function handler(event) {
     headers['x-content-type-options'] = { value: 'nosniff' };
     headers['x-frame-options'] = { value: 'DENY' };
     headers['x-xss-protection'] = { value: '1; mode=block' };
-    headers['strict-transport-security'] = { value: 'max-age=31536000' };
-    headers['content-security-policy'] = { value: "default-src 'self' 'unsafe-inline' 'unsafe-eval' https:" };
+    headers['strict-transport-security'] = { value: 'max-age=31536000; includeSubDomains' };
+    headers['content-security-policy'] = { value: "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://qqpmxpz0kf.execute-api.eu-central-1.amazonaws.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'" };
     
     return response;
 }

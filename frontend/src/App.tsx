@@ -22,6 +22,7 @@ const Rolam = lazy(() => import('./pages/Rolam'))
 const Kapcsolat = lazy(() => import('./pages/Kapcsolat'))
 const Adatvedelem = lazy(() => import('./pages/Adatvedelem'))
 const ASZF = lazy(() => import('./pages/ASZF'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 const LandingLakas = lazy(() => import('./pages/landing/LandingLakas'))
 const LandingTarsashaz = lazy(() => import('./pages/landing/LandingTarsashaz'))
 const LandingCeg = lazy(() => import('./pages/landing/LandingCeg'))
@@ -66,6 +67,7 @@ export default function App() {
                   <Route path="/en/adatvedelem" element={<Adatvedelem />} />
                   <Route path="/aszf" element={<ASZF />} />
                   <Route path="/en/aszf" element={<ASZF />} />
+                  <Route path="*" element={<NotFound />} />
                 </Route>
                 {/* Landing pages - no navbar/footer */}
                 <Route path="/lakas" element={<LandingLakas />} />

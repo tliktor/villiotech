@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router-dom'
 import { useSEO } from '../hooks/useSEO'
@@ -41,9 +41,11 @@ export default function Kapcsolat() {
   })
 
   // Switch UI language if coming from English landing page
-  if (isEnglish && i18n.language !== 'en') {
-    i18n.changeLanguage('en')
-  }
+  useEffect(() => {
+    if (isEnglish && i18n.language !== 'en') {
+      i18n.changeLanguage('en')
+    }
+  }, [isEnglish, i18n])
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [apiError, setApiError] = useState<string | null>(null)
@@ -52,11 +54,11 @@ export default function Kapcsolat() {
 
   const validate = (): boolean => {
     const e: Partial<Record<keyof FormData, string>> = {}
-    if (!form.name.trim()) e.name = 'Kérem, adja meg a nevét'
+    if (!form.name.trim()) e.name = t('contact.validation.name_required')
     if (!form.phone.trim()) e.phone = t('contact.validation.phone_required')
     if (!form.service) e.service = t('contact.validation.service_required')
     if (!form.clientType) e.clientType = t('contact.validation.client_type_required')
-    if (!form.district.trim()) e.district = 'Kérem, adja meg a kerületet vagy címet'
+    if (!form.district.trim()) e.district = t('contact.validation.district_required')
     if (!form.privacy) e.privacy = t('contact.validation.privacy_required')
     if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = t('contact.validation.email_invalid')
     setErrors(e)
@@ -180,6 +182,7 @@ export default function Kapcsolat() {
                 className={`input input-bordered w-full ${errors.name ? 'input-error' : ''}`} 
                 value={form.name} 
                 onChange={e => update('name', e.target.value)}
+                maxLength={200}
                 aria-describedby={errors.name ? 'name-error' : undefined}
               />
               {errors.name && <p id="name-error" role="alert" className="text-error text-xs mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.name}</p>}
@@ -290,7 +293,7 @@ export default function Kapcsolat() {
             {/* Description */}
             <fieldset className="fieldset">
               <label className="fieldset-label" htmlFor="description">{t('contact.form.description')}</label>
-              <textarea id="description" className="textarea textarea-bordered w-full" rows={4} placeholder={t('contact.form.description_placeholder')} value={form.description} onChange={e => update('description', e.target.value)} />
+              <textarea id="description" className="textarea textarea-bordered w-full" rows={4} placeholder={t('contact.form.description_placeholder')} value={form.description} onChange={e => update('description', e.target.value)} maxLength={2000} />
             </fieldset>
 
             {/* Preferred time */}

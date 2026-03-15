@@ -52,7 +52,7 @@ export default function CTASection({ title, subtitle, cta1, cta2 }: CTASectionPr
           )}
           {cta2 && (
             cta2.href ? (
-              <a href={cta2.href} className="btn btn-outline btn-lg">{cta2.label}</a>
+              <a href={cta2.href} className="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">{cta2.label}</a>
             ) : (
               <Link to={cta2.to!} className="btn btn-outline btn-lg">{cta2.label}</Link>
             )
