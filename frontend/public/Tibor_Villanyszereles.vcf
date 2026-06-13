@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Villanyszerelés;Tibor;;;
+FN:Tibor Villanyszerelés
+ORG:Villiotech Kft;
+TEL;type=CELL;type=VOICE;type=pref:+36 30 238 9945
+EMAIL;type=INTERNET;type=WORK;type=pref:info@villiotech.hu
+URL:https://villiotech.hu
+NOTE:Villamos biztonsági felülvizsgálat\, villanyszerelés\, IT hálózat. Budapest - Buda.
+END:VCARD

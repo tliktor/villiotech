@@ -9,7 +9,7 @@ import ThemeCard from '../components/ThemeCard'
 import GoogleMap from '../components/GoogleMap'
 import { submitContactForm } from '../services/contact'
 import { SERVICE_TYPES, CLIENT_TYPES } from '../types/contact'
-import { Phone, Mail, MapPin, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
+import { Phone, Mail, MapPin, CheckCircle, AlertCircle, Loader2, UserPlus } from 'lucide-react'
 
 interface FormData {
   name: string
@@ -152,6 +152,12 @@ export default function Kapcsolat() {
               <p>{t('footer.location')}</p>
             </div>
           </ThemeCard>
+        </div>
+        <div className="mt-6 text-center">
+          <a href="/Tibor_Villanyszereles.vcf" download className="btn btn-primary btn-lg gap-2">
+            <UserPlus className="w-5 h-5" />
+            {t('contact.save_contact')}
+          </a>
         </div>
       </section>
 

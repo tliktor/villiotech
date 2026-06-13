@@ -142,6 +142,7 @@
     },
     "phone": "Phone",
     "email": "Email",
+    "save_contact": "Save to my contacts",
     "service_area": "Service area",
     "form_title": "Quote request",
     "success": {
