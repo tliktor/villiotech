@@ -22,6 +22,7 @@ const mockFormData = {
 describe('submitContactForm', () => {
   beforeEach(() => {
     vi.clearAllMocks()
+    vi.stubEnv('VITE_CONTACT_API_URL', 'https://api.test.com/contact')
   })
 
   it('submits form successfully', async () => {

@@ -1,5 +1,3 @@
-const API_URL = import.meta.env.VITE_CONTACT_API_URL || ''
-
 export interface ContactFormPayload {
   name: string
   phone: string
@@ -23,6 +21,7 @@ export interface ContactResponse {
 }
 
 export async function submitContactForm(data: ContactFormPayload): Promise<ContactResponse> {
+  const API_URL = import.meta.env.VITE_CONTACT_API_URL || ''
   if (!API_URL) {
     // Dev mode – nincs backend
     if (import.meta.env.DEV) {
